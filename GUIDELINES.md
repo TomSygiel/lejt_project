@@ -6,6 +6,7 @@ Use REM with font-size
 Use % with image-sizing
 Use BOOTSTRAP
 Use SASS, make new file for each viewpage, have one file with common css for all pages where we use variables
+Mobile-first
 
 PHP & HTML
 Use snake_case for classnames
