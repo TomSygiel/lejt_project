@@ -1,0 +1,10 @@
+@import "mixins";
+
+h2{
+    font-family: $font_header;
+    color: blue;
+}
+
+p{
+    font-family: $font_main;
+}
