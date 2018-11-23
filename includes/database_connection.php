@@ -7,7 +7,7 @@ $options = [
 
 
 $pdo = new PDO(
-                   "mysql:host=localhost:8888;dbname=millhouse;charset=utf8",
+                   "mysql:host=localhost:8889;dbname=millhouse;charset=utf8",
                     "root",
                     "root",
                     $options
