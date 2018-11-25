@@ -26,5 +26,3 @@ session_start();
         </body> 
     <!-- include Head -->
     <?php include '../includes/footer.php';?> 
-
-    </Html>
