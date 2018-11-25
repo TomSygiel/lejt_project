@@ -8,11 +8,37 @@ session_start();
 
 <body>
 
+<?php
+
+//Error handling, checking for empty fields
+        
+$fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        
+if (strpos($fullUrl, "error=empty") == true) {
+    echo "<p class='error'>* No blog post to submit!</p>";
+    header ('refresh:5;url=new_blog.php');
+    exit();
+}
+
+elseif (strpos($fullUrl, "error=notitle") == true) {
+    echo "<p class='error'>* Blog title is missing!</p>";
+    header ('refresh:5;url=new_blog.php');
+    exit();
+}
+
+elseif (strpos($fullUrl, "error=nodescription") == true) {
+    echo "<p class='error'>* No blog description!</p>";
+    header ('refresh:5;url=new_blog.php');
+    exit();
+}
+
+?>
+
     <div class="row text-center justify-content-center">
         
             <div class="col-12 col-md-12 text-center card">
 
-                <form action="./includes/login.php" method="POST">
+                <form action="./includes/new_blog_server.php" method="POST">
                     
                     <h2>New Blog Post</h2>
 
@@ -20,7 +46,7 @@ session_start();
                     <input type="text" name="title" placeholder="Title" id="blog_title"><br/>
 
                     <label for="blog_text">Text</label><br/>
-                    <input type="text" name="blog_text" placeholder="..." id="blog_text"><br/>
+                    <input type="text" name="description" placeholder="..." id="blog_text"><br/>
 
                     <label>Category: </label><br/>
                     <select>
