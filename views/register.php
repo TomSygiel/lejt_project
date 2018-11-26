@@ -8,7 +8,7 @@
         <div class="col-12 col-md-12 text-center card" style="max-width: 30rem;">
 
             <form action="../includes/register_server.php" method="POST">
-                <h2>Register</h2>
+                <h2 class="register">Register</h2>
                 <label for="login_username">username</label><br/>
                 <input type="text" name="username" placeholder="username" id="login_username"><br/>
                 <label for="login_password">password</label><br/>

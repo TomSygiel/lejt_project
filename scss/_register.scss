@@ -6,23 +6,15 @@
 
 body {
 
-    h2{
+    .register{
 
         font-family: $font_header;
     }
-    p{
-        font-family: $font_main;
-        text-align: center;
 
-    }
-
-    div{
-        justify-content: center;
-
-
-    }
+   
 
     .card{
+        justify-content: center;
         background-color: $secondary_green;
         padding: 1rem;
 
@@ -31,6 +23,10 @@ body {
         border-radius: .5rem;
 
 
+    }
+    
+    .member{
+        text-align: center;
     }
 
 }
