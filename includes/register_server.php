@@ -1,27 +1,13 @@
 <?php
 
 include ("database_connection.php");
-
-$username = $_POST["username"];
-$password = $_POST["password"];
+include ("../classes/Register.php");
 
 
-// password_hash must always have two arguments
-$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-// save users information to database
-$statement = $pdo->prepare("INSERT INTO users
-  (username, password) VALUES (:username, :password)");
-// Execute populates the statement and runs it
-$statement->execute(
-    [
-        ":username" => $username,
-        ":password" => $hashed_password
+$register = new Register($pdo);
+$register->register($_POST["username"], $_POST["password"]);
 
-    ]
-
-
-);
 // registrate then go back to index.php for login
 header("location:../index.php");
 ?>
