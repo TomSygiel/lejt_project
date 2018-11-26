@@ -13,7 +13,7 @@ session_start();
 
 
             <form action="../includes/login_server.php" method="POST">
-                <h2>Login</h2>
+                <h2 class="login">Login</h2>
                 <label for="login_username">username</label><br/>
                 <input type="text" name="username" placeholder="username" id="login_username"><br/>
                 <label for="login_password">password</label><br/>
@@ -25,7 +25,7 @@ session_start();
     </div>
 
 
-    <p>not a member? <a href="register.php">register here</a></p>
+    <p class="member">not a member? <a class="register_link" href="register.php">register here</a></p>
 
       
 
