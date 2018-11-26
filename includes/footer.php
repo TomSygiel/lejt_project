@@ -13,7 +13,7 @@
 
         <div class="col-md-2 col-lg-2">
           <h5 class="my-2">About</h5>
-          <ul class="list-unstyled">
+          <ul class="list-unstyled link-unstyled">
             <li>
               <a href="#!">Blog</a>
             </li>

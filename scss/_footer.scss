@@ -16,6 +16,12 @@
     }
 }
 
+a:hover{
+    color: $primary_beige;
+    text-decoration: none;
+    opacity: 0.5;
+}
+
 hr{
     border: 0.25px solid $primary_beige;
 }
