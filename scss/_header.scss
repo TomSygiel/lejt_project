@@ -1,5 +1,12 @@
 @import "mixins";
 
+
+.header_wrapper{
+    @media (min-width: 768px){
+        padding: 0 2em 0 2em;
+    }
+}
+
 .navbar_logo{
     @media (min-width: 992px){
         position: relative;
@@ -38,4 +45,10 @@
             margin-top: unset;
         }
     }
+}
+
+header a:hover{
+    color: $primary_blue;
+    text-decoration: none;
+    opacity: 0.3;
 }
