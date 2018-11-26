@@ -1,0 +1,27 @@
+@import "mixins";
+
+.footer{
+    background-color: $primary_blue;
+}
+.millhouse_footer{
+    font-family: $font_main;
+    font-weight: 100;
+    color: $primary_beige;
+    font-size: 0.75em;
+    
+    h5{
+        font-family: $font_main;
+        font-weight: 100;
+        font-size: 1,2em;
+    }
+}
+
+a:hover{
+    color: $primary_beige;
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+hr{
+    border: 0.25px solid $primary_beige;
+}
