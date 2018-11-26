@@ -38,7 +38,7 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
         
             <div class="col-12 col-md-12 col-lg-6 text-center card">
 
-                <form action="./includes/new_blog_server.php?action=create_post" method="POST" enctype="multipart/form-data">
+                <form action="../includes/post_server.php" method="POST" enctype="multipart/form-data">
                     
                     <h2>New Blog Post</h2>
                     
@@ -53,9 +53,9 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
 
                     <label>Category: </label><br/>
                     <select>
-                        <option>Watches</option>
-                        <option>Sunglasses</option>
-                        <option>Home accesories</option>
+                        <option name="watches">Watches</option>
+                        <option name="sunglasses">Sunglasses</option>
+                        <option name="home_accesories">Home accesories</option>
                     </select>
 
                     <br/>

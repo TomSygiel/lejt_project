@@ -7,6 +7,7 @@ Use % with image-sizing
 Use BOOTSTRAP
 Use SASS, make new file for each viewpage, have one file with common css for all pages where we use variables
 Mobile-first
+We will use classes for EVERYTHING, to avoid conflict between different stylesheets
 
 PHP & HTML
 Use snake_case for classnames
