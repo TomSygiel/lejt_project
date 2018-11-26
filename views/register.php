@@ -23,5 +23,8 @@
         </body> 
     <!-- include Head -->
     <?php include '../includes/footer.php';?> 
+<<<<<<< HEAD
 
    
+=======
+>>>>>>> fe653981b6f53837a0b19059bbe9c72c7a0ab508
