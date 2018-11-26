@@ -38,6 +38,8 @@ class Register
 
 }
 
+$_SESSION["username"] = $_POST["username"]
+
 
 
 ?>

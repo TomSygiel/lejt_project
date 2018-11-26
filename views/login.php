@@ -7,7 +7,8 @@ session_start();
 
 
 
-<body> 
+<body>
+   
     <div class="row text-center justify-content-center">
         <div class="col-12 col-md-12 text-center card" style="max-width: 30rem;">
 
@@ -26,8 +27,12 @@ session_start();
 
 
     <p class="member">not a member? <a class="register_link" href="register.php">register here</a></p>
+    
+    <?php if (isset($_SESSION["username"])){ ?>
+                       <p>Du är inloggad som <b><?= $_SESSION['username']; ?></b></p>
+                       <a href="../views/logout.php">Logga ut</a>
 
-      
+               <?php } ?>
 
 </body>  
 <?php include '../includes/footer.php';?> 
