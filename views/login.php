@@ -8,26 +8,26 @@ session_start();
 
 
 <body> 
-    <div class="row">
+    <div class="row text-center justify-content-center">
         <div class="col-12 col-md-12 border-primary text-center card" style="max-width: 30rem;">
 
 
             <form action="./includes/login.php" method="POST">
-               <h2>Login</h2>
-                <label for="login_username">username</label>
-                <input type="text" name="username" placeholder="username" id="login_username">
-                <label for="login_password">password</label>
-                <input type="password" name="password" placeholder="password" id="login_password">
-                <input type="hidden" name="user_ID" id="user_ID">
+                <h2>Login</h2>
+                <label for="login_username">username</label><br/>
+                <input type="text" name="username" placeholder="username" id="login_username"><br/>
+                <label for="login_password">password</label><br/>
+                <input type="password" name="password" placeholder="password" id="login_password"><br/>
+                <input type="hidden" name="user_ID" id="user_ID"><br/>
                 <input type="submit" value="Login" class="btn btn-primary" >
             </form>
         </div>
     </div>
 
 
-    <h3>not a member? register here</h3>
-    <form action="register.php" method="POST"> 
-        <input type="submit" value="submit" class="btn btn-primary"></form>
+    <p>not a member? <a href="register.php">register here</a></p>
+
+      
 
 </body>  
 <?php include '../includes/footer.php';?> 

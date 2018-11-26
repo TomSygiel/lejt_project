@@ -1,6 +1,40 @@
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
+@import "mixins";
+
+
+body {
+
+    h2{
+
+        font-family: $font_header;
+    }
+    p{
+        font-family: $font_main;
+        text-align: center;
+
+    }
+
+    div{
+        justify-content: center;
+
+
+    }
+
+    .card{
+        background-color: $secondary_green;
+        padding: 1rem;
+
+        /*width: 50%;*/
+        margin: 20px;
+        border-radius: .5rem;
+
+
+    }
+
+}
+
 
 
 // Small devices (landscape phones, 576px and up)
@@ -15,6 +49,10 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px){
+
+    body {
+        background-color: red;
+    }
 
 }
 
