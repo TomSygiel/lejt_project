@@ -1,58 +1,41 @@
 @import "mixins";
 
-.navigation_bar{
-    background-color: $primary_beige;
-    font-family: $font_main;
-    font-weight: 100;
-    position: sticky;
-    width: 100%;
-    margin-bottom: 3em;
-    height: 6em;
-    
-    .navbar_logo{
-        width: 120px;
-        padding-top: 1em;
-        left: 50%;
-        display: block;
-    }
+.navbar_logo{
+    @media (min-width: 992px){
+        position: relative;
+        left: 40%;
+    }   
 }
 
-.header_icons{
+.navbar_image{
+    width: 150px;
+}
+
+.navbar-brand{
+    margin-right: 0;
     color: $primary_blue;
-    size: 5rem;
-    border: none;
-    padding-top: 1em;
 }
 
-.navbar_brand{
-    position: relative;
-    left: 50%;
-    display: block;
+.navbar{
+    margin-bottom: 3em;
 }
 
-.nav_item{
-    background-color: $primary_beige;
+.nav-link{
+    color: $primary_blue;
 }
 
 .navbar-nav{
     height: 100vh;
+    text-align: center;
     @media (min-width: 992px){
-        height: 0;
+        height: unset;
+        text-align: unset;
     }
+
     .nav_item_top{
-        padding-top: 10em;
+        margin-top: 50%;
         @media (min-width: 992px){
-           padding: 0;
+            margin-top: unset;
         }
     }
 }
-
-.header_links{
-    text-align: center;
-    color: $primary_beige;
-    }
-
-button.navbar-toggler{
-    border: none;
-}
-
