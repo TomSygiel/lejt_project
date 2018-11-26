@@ -1,45 +1,40 @@
 <?php
 
-class blog() {
+require '../includes/database_connection.php';
+include '../classes/Posts.php';
 
-    function __constructor() {
+/* Pass along the $pdo variable when you create a new instance
+ * of the class, $pdo becomes $this->pdo. $posts is used
+ * to call the specific methods inside of the Posts class
+ * */
 
-        include '../includes/database_connection.php';
+$posts = new Posts($pdo);
 
-    }
+/**
+ * This is how we would call this file in a HTML-form if we want to
+ * utilize both the GET variable and the POST variable as we do below
+ * 
+ * ---> TO create new post with form
+ * <form action="includes/posts.php?action=create_post" method="POST">
+ *  <input type="text" name="title">
+ *  <input type="text" name="description">
+ * </form>
+ * 
+ * ---> To delete a post with link or form
+ * <a href="includes/posts.php?action=delete&id=3" > Delete Post </a>
+ */
+$action = $_GET["action"] ?? '';
 
-    function blogPost() { 
-
-        if (!empty($title) && !empty($description)){
-
-            $statement = $this->prepare("SELECT FROM posts WHERE title=? AND description=?");
-            $statement->execute();
-        }
-
-        if (empty($title) && empty($description)) {
-
-            header('Location: ../login_and_registration.php?error=empty');
-            exit();
-            
-        } 
-        
-        if (empty($title)) {
-        
-            header('Location: ../login_and_registration.php?error=notitle');
-            exit();
-            
-        } 
-        
-        if (empty($description)) {
-        
-            header('Location: ../login_and_registration.php?error=nodescription');
-            exit();
-
-        $statement = $this->prepare("INSERT INTO posts (title, description) VALUES (:title, :description)");
-
-    }
-
-
+if($action === "delete_post")
+{ 
+  $id_to_delete = $_GET["id"];
+  // Let the class handle what happens after this
+  $posts->delete($id_to_delete);
+}
+if($action === "create_post")
+{
+  // Let the class handle what happens after this
+  $posts->create($_POST);
 }
 
 

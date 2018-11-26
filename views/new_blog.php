@@ -36,11 +36,14 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
 
     <div class="row text-center justify-content-center">
         
-            <div class="col-12 col-md-12 text-center card">
+            <div class="col-12 col-md-12 col-lg-6 text-center card">
 
-                <form action="./includes/new_blog_server.php" method="POST">
+                <form action="./includes/new_blog_server.php?action=create_post" method="POST" enctype="multipart/form-data">
                     
                     <h2>New Blog Post</h2>
+                    
+                    <label for="image">Image</label><br/>
+                    <input type="file" name="image" id="image"><br/>
 
                     <label for="blog_title">Title</label><br/>
                     <input type="text" name="title" placeholder="Title" id="blog_title"><br/>
