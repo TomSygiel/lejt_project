@@ -9,15 +9,12 @@
     margin-bottom: 3em;
     height: 6em;
     
-    img{
+    .navbar_logo{
         width: 120px;
         padding-top: 1em;
+        left: 50%;
+        display: block;
     }
-}
-
-.navbar_logo {
-    left: 50%;
-    display: block;
 }
 
 .header_icons{
@@ -25,6 +22,16 @@
     size: 5rem;
     border: none;
     padding-top: 1em;
+}
+
+.navbar_brand{
+    position: relative;
+    left: 50%;
+    display: block;
+}
+
+.nav_item{
+    background-color: $primary_beige;
 }
 
 .navbar-nav{
@@ -40,20 +47,12 @@
     }
 }
 
-a{
+.header_links{
     text-align: center;
     color: $primary_beige;
     }
 
-button{
-    padding-top: 1em;
-}
-
 button.navbar-toggler{
     border: none;
-}
-
-.dropdown-toggle{
-    background-color: aqua;
 }
 
