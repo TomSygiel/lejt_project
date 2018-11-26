@@ -4,9 +4,10 @@
     background-color: $primary_beige;
     font-family: $font_main;
     font-weight: 100;
-    position: fixed;
+    position: sticky;
     width: 100%;
-    padding-bottom: 2em;
+    margin-bottom: 3em;
+    height: 6em;
     
     img{
         width: 120px;
@@ -15,9 +16,7 @@
 }
 
 .navbar_logo {
-    position: absolute;
     left: 50%;
-    margin-left: -50px !important;  /* 50% of your logo width */
     display: block;
 }
 
@@ -54,15 +53,15 @@ button.navbar-toggler{
     border: none;
 }
 
-.nav-link{
-    color: $primary_blue;
-}
+// .nav-link{
+//     color: $primary_blue;
+// }
 
-.navbar-light .navbar-toggler .navbar-nav .nav-link{
-    color: $primary_blue;
-}
+// .navbar-light .navbar-toggler .navbar-nav .nav-link{
+//     color: $primary_blue;
+// }
 
-.navbar-light .navbar-nav .nav-link:hoover{
-    color: $primary_blue;
-}
+// .navbar-light .navbar-nav .nav-link:hoover{
+//     color: $primary_blue;
+// }
 
