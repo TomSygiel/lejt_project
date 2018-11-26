@@ -1,7 +1,56 @@
 @import "mixins";
 
-
-
-img{
-    width: 20%;
+.navigation_bar{
+    background-color: $primary_beige;
+    font-family: $font_main;
+    font-weight: 100;
+    
+    img{
+        width: 120px;
+        align-self: center;
+    }
 }
+
+.header_icons{
+    color: $primary_blue;
+    size: 5rem;
+    border: none;
+}
+
+.navbar-nav{
+    height: 100vh;
+    @media (min-width: 992px){
+        height: 0;
+    }
+    .nav_item_top{
+        padding-top: 10em;
+        @media (min-width: 992px){
+           padding: 0;
+        }
+    }
+}
+
+.nav-item{
+    a{
+        text-align: center;
+        color: $primary_blue;
+    }
+}
+
+button{
+    border: 0px;
+    margin: 0px;
+}
+
+.nav-link{
+    color: $primary_blue;
+}
+
+.navbar-light .navbar-toggler .navbar-nav .nav-link{
+    color: $primary_blue;
+}
+
+.navbar-light .navbar-nav .nav-link:hoover{
+    color: $primary_blue;
+}
+
