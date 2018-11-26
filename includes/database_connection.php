@@ -1,15 +1,11 @@
 <?php
-$options = [
-        "PDO::ATTR_ERRMODE" => PDO::ERRMODE_EXCEPTION,
-        "PDO::ATTR_DEFAULT_FETCH_MODE" => PDO::FETCH_ASSOC
-        ];
 
+$database_host = 'mysql:host=localhost:8889;dbname=millhouse;charset=utf8';
+$database_username = 'root';
+$database_password = 'root';
 
+$pdo = new PDO($database_host, $database_username, $database_password);
+// Display all query errors that occur, otherwise these are muted
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$pdo = new PDO(
-                   "mysql:host=localhost:8889;dbname=millhouse;charset=utf8",
-                    "root",
-                    "root",
-                    $options
-                    );
 ?>
