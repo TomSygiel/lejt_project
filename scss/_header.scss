@@ -9,7 +9,6 @@
     
     img{
         width: 120px;
-        align-self: center;
     }
 }
 
@@ -17,6 +16,13 @@
     color: $primary_blue;
     size: 5rem;
     border: none;
+}
+
+.navbar_logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block;
 }
 
 .navbar-nav{

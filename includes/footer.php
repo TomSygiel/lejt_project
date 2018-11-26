@@ -1,7 +1,5 @@
 
 <footer class="footer">
-
-
     <div class="container text-center text-md-left millhouse_footer">
       <div class="row">
         <div class="col-md-4 col-lg-3">
@@ -55,6 +53,18 @@
         </a>
         </div>
       </div>
+
+      <hr class="w-100 d-md-none">
+
+        <div class="row text-center">
+            <div class="col-12">
+                <p>@2018 LEJT</p>
+            </div>
+        </div>
+    </div>
+    
+        
+
     </div>
 </footer>
 
