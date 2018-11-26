@@ -31,5 +31,3 @@ session_start();
 
 </body>  
 <?php include '../includes/footer.php';?> 
-
-</Html>
