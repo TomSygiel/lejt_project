@@ -2,60 +2,23 @@
 
 session_start();
 
-$image = $_POST["image"];
-$title = $_POST["title"];
-$description = $_POST["description"];
-$created_by = $_SESSION["username"];
+class Post {
 
-$temporary_location = $image["temp_name"];
+    private $pdo;
 
-$new_location = "uploads/" . $image["name"];
+    public function __construct($pdo) {
+        $this->pdo = $pdo;
+    }
 
-$upload_ok = move_upload_file($temporary_location, $new_location);
+    public function deletePost(){
 
+    }
 
-//Basic structure for posts classes
-class Posts
-{
-  private $pdo;
-  /* Inject the pdo connection so it is available inside of the class
-   * so we can call it with '$this->pdo', always available inside of the class
-   */
-  public function __construct($pdo)
-  {
-    $this->pdo = $pdo;
-  }
-  public function delete()
-  {
-    return true;
-  }
-  public function create($newPost)
-  {
-    return true;
-  }
-}
+    public function blogPost($image, $title, $description, $created_by, $upload_ok) {
 
-//
-class Post() {
+        if (empty($title) && empty($description)) {
 
-    function blogPost() { 
-
-        if (!empty($title) && !empty($description) && $upload_ok) {
-
-            $statement = $this->prepare("INSERT INTO posts (title, description, created_by, image) VALUES(:title, :description, :created_by, :image)");
-            $statement->execute(
-                [
-
-                ":title" => $title,
-                ":description" => $description,
-                ":created_by" => $created_by,
-                ":image" => $new_location
-                 ]
-            );
-
-        } if (empty($title) && empty($description)) {
-
-            header('Location: ../new_blog.php?error=empty');
+            header('Location: ../new_post_form.php?error=empty');
             exit();
             
         } if (empty($title)) {
@@ -70,9 +33,52 @@ class Post() {
 
         }
 
-    }
+        if (!empty($title) && !empty($description) && $upload_ok) {
+            $statement = $this->pdo->prepare("INSERT INTO posts (title, description, created_by, image) VALUES(:title, :description, :created_by, :image)");
+            $statement->execute(
+                    [
+
+                    ":title" => $title,
+                    ":description" => $description,
+                    ":created_by" => $created_by,
+                    ":image" => $new_location
+                    ]
+                );
+
+                return true;
+
+            } 
+
+        }
 
 }
+
+//Basic structure for posts classes
+/*
+class Posts
+{
+  private $pdo;
+  /* Inject the pdo connection so it is available inside of the class
+   * so we can call it with '$this->pdo', always available inside of the class
+   */
+
+   /*
+  public function __construct($pdo)
+  {
+    $this->pdo = $pdo;
+  }
+  public function delete()
+  {
+    return true;
+  }
+  public function create($newPost)
+  {
+    return true;
+  }
+}
+*/
+
+
 
 
 ?>
