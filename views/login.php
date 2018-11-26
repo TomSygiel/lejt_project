@@ -9,7 +9,7 @@ session_start();
 
 <body> 
     <div class="row text-center justify-content-center">
-        <div class="col-12 col-md-12 border-primary text-center card" style="max-width: 30rem;">
+        <div class="col-12 col-md-12 text-center card" style="max-width: 30rem;">
 
 
             <form action="./includes/login.php" method="POST">

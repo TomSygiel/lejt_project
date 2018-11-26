@@ -1,5 +1,22 @@
 <?php
 session_start();
+include "../includes/db.php";
+
+if(isset($_POST['submit']))
+{
+    
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    if($login->register($username, $password))
+    {
+        header("location:../index.php");
+    }
+    
+    
+    
+}
 ?>
 
 <!-- include Head -->
@@ -8,9 +25,9 @@ session_start();
 
 <body> 
     <div class="row text-center justify-content-center">
-        <div class="col-12 col-md-12 border-primary text-center card" style="max-width: 30rem;">
+        <div class="col-12 col-md-12 text-center card" style="max-width: 30rem;">
 
-            <form action="../includes/register_server.php" method="POST">
+            <form action="../classes/Register.php" method="POST">
                 <h2>Register</h2>
                 <label for="login_username">username</label><br/>
                 <input type="text" name="username" placeholder="username" id="login_username"><br/>
@@ -27,4 +44,4 @@ session_start();
     <!-- include Head -->
     <?php include '../includes/footer.php';?> 
 
-    </Html>
+   
