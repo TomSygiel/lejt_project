@@ -6,16 +6,12 @@
     font-weight: 100;
     position: fixed;
     width: 100%;
+    padding-bottom: 2em;
     
     img{
         width: 120px;
+        padding-top: 1em;
     }
-}
-
-.header_icons{
-    color: $primary_blue;
-    size: 5rem;
-    border: none;
 }
 
 .navbar_logo {
@@ -23,6 +19,13 @@
     left: 50%;
     margin-left: -50px !important;  /* 50% of your logo width */
     display: block;
+}
+
+.header_icons{
+    color: $primary_blue;
+    size: 5rem;
+    border: none;
+    padding-top: 1em;
 }
 
 .navbar-nav{
@@ -44,8 +47,11 @@ a{
     }
 
 button{
-    border: 0px;
-    margin: 0px;
+    padding-top: 1em;
+}
+
+button.navbar-toggler{
+    border: none;
 }
 
 .nav-link{
