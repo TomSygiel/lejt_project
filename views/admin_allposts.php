@@ -1,16 +1,18 @@
 <!-- include Head -->
 <?php include '../includes/head.php';?>
 <?php include '../includes/header.php';?>
+<?php include '../classes/Admin_posts.php';?>
+
 
 <div class="card text-center">
-    <h3>your cart</h3>
+    <h3>Admin panel</h3>
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>Post ID</th>
-                <th>Title</th>
-                <th>Description</th>
                 <th>Created_by</th>
+                <th>Title</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
 
@@ -18,28 +20,33 @@
             <tr class="table-active">
 
                 <?php
-                foreach($cart as $key):
+                /*foreach($posts as $key):
                 ?>
 
-                <?php echo "<td>" ?><?php echo $key['product']?><?php echo "</td>"?>
-                <?php echo "<td>" ?><?php echo $key['price']." sek"?><?php echo "</td>"?>
-                <?php echo "<td>" ?><?php echo $key["quantity"]?><?php echo "</td>"?>
-                <?php echo "<td>"?><a href="../includes/remove_product.php?cart_id=<?= $key["cart_id"]; ?>">Remove</a><?php echo "</td>"?>
-                <?php echo "</tr>" ?>
-                <?php
-    endforeach; 
+                        <?php echo "<td>" ?><?php echo $key['title']?><?php echo "</td>"?>
+                        <?php echo "<td>" ?><?php echo $key['created_by']?><?php echo "</td>"?>
+                        <?php echo "<td>"?><a href="admin_allposts.php">Remove</a><?php echo "</td>"?>
+                        <?php echo "</tr>" ?>
+                        <?php
+    endforeach; */
                 ?>
+                
+                
+                
             </tr>
     </table>
-    <form action=checkout.php method=POST><input class="btn btn-primary" type=submit name="checkout" value="chek out"></form>
+
+
+
+    <tbody>
+
+
+
+
+    </tbody>
 </div>
 
-
-
-
-
-
-
+<?php print_r($posts); ?>
 
 <!-- include Footer -->
 <?php include '../includes/footer.php';?> 
