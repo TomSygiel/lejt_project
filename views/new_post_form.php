@@ -6,7 +6,7 @@ session_start();
 <!--including head-->
 <?php include '../includes/head.php';?>
 
-<body>
+<body class="blog_form_page">
 
 <?php
 
@@ -34,24 +34,23 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
 
 ?>
 
-    <div class="row text-center justify-content-center">
+    <div class="row justify-content-center">
         
-            <div class="col-12 col-md-12 col-lg-6 text-center card">
+            <div class="col-12 col-md-12 col-lg-6 card">
 
-                <form action="../includes/post_server.php" method="POST" enctype="multipart/form-data">
-                    
-                    <h2>New Blog Post</h2>
-                    
-                    <label for="image">Image</label><br/>
-                    <input type="file" name="image" id="image"><br/>
+                <h2 class="blog_heading">New Blog Post</h2>
 
-                    <label for="blog_title">Title</label><br/>
+                <form class="post_form" action="../includes/post_server.php" method="POST" enctype="multipart/form-data">
+
+                    <br/>
+                    
+                    <label for="image"><h4>Image</h4></label><br/>
+                    <input type="file" name="image" id="image">
+
+                    <label for="blog_title"><h4>Title</h4></label><br/>
                     <input type="text" name="title" placeholder="Title" id="blog_title"><br/>
 
-                    <label for="blog_text">Text</label><br/>
-                    <input type="text" name="description" placeholder="..." id="blog_text"><br/>
-
-                    <label>Category: </label><br/>
+                    <label><h4>Category: </h4></label><br/>
                     <select>
                         <option name="watches">Watches</option>
                         <option name="sunglasses">Sunglasses</option>
@@ -59,6 +58,10 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
                     </select>
 
                     <br/>
+
+                    <label for="blog_text"><h4>Text</h4></label><br/>
+                    <!--<input type="text" name="description" placeholder="..." id="blog_text"><br/>-->
+                    <textarea type="text" name="description" placeholder="..." id="text" ></textarea><br/>
 
                     <input type="hidden" name="user_ID" id="user_ID"><br/>
 
