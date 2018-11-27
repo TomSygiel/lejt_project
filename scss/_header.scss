@@ -7,7 +7,7 @@
 
     .logged_in{
         font-size: .8rem;
-        margin-bottom: 3em;
+        margin: 3em;
 
             p a{
                 color: #1C3045;
@@ -17,8 +17,12 @@
 
 .navbar_logo{
     @media (min-width: 992px){
-        position: relative;
-        left: 40%;
+        //position: relative;
+        position: absolute;
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }   
 }
 
@@ -63,3 +67,7 @@ header a:hover{
     text-decoration: none;
     opacity: 0.3;
 }
+
+
+
+
