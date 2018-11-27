@@ -49,7 +49,8 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
                     <input type="text" name="title" placeholder="Title" id="blog_title"><br/>
 
                     <label for="blog_text">Text</label><br/>
-                    <input type="text" name="description" placeholder="..." id="blog_text"><br/>
+                    <!--<input type="text" name="description" placeholder="..." id="blog_text"><br/>-->
+                    <textarea name="text" id="text" ></textarea><br/>
 
                     <label>Category: </label><br/>
                     <select>
