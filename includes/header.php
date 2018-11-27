@@ -23,7 +23,7 @@
 
         </div>
 
-        <a class="navbar-brand navbar_logo" href="index.php"><img class="navbar_image" src="<?= $SITE_URL ?>/images/logo_dark.png" alt="Millhouse logo"></a>
+        <a class="navbar-brand navbar_logo" href="../index.php"><img class="navbar_image" src="<?= $SITE_URL ?>/images/logo_dark.png" alt="Millhouse logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars header_icons"></i>
         </button>
@@ -46,7 +46,7 @@
             <?php
                 if (isset($_SESSION["username"])){ ?>
                     <p>You are logged in as <b><?= $_SESSION["username"]; ?></b><br>
-                    <a href="includes/logout.php">Log out</a></p>
+                    <a href="../includes/logout.php">Log out</a></p>
             <?php } ?>
         </div>
 </header>
