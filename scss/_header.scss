@@ -1,9 +1,17 @@
 @import "mixins";
 
-
 .header_wrapper{
     @media (min-width: 768px){
         padding: 0 2em 0 2em;
+    }
+
+    .logged_in{
+        font-size: .8rem;
+        margin-bottom: 3em;
+
+            p a{
+                color: #1C3045;
+            }
     }
 }
 
@@ -24,7 +32,10 @@
 }
 
 .navbar{
-    margin-bottom: 3em;
+
+    .header_icons{
+        margin-right: .5em;
+    }
 }
 
 .nav-link{
