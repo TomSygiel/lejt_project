@@ -67,10 +67,12 @@ class Posts
   {
     $this->pdo = $pdo;
   }
+
   public function delete()
   {
     return true;
   }
+  
   public function create($newPost)
   {
     return true;
