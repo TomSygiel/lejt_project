@@ -2,7 +2,26 @@
 
 .footer{
     background-color: $primary_blue;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    @media (min-width: 768px){
+        position: absolute;
+
+    }
 }
+
+.footer_heading_first{
+    padding-top: 2em;
+}
+
+.footer_heading{
+    @media (min-width: 768px){
+        padding-top: 3em;
+    }
+}
+
+
 .millhouse_footer{
     font-family: $font_main;
     font-weight: 100;
@@ -16,12 +35,25 @@
     }
 }
 
-a:hover{
-    color: $primary_beige;
-    text-decoration: none;
-    opacity: 0.5;
-}
+
 
 hr{
-    border: 0.25px solid $primary_beige;
+    border: 0.5px solid $primary_beige;
+}
+
+.footer_link{
+    color: $primary_beige;
+}
+
+footer a:hover{
+    color: $primary_beige;
+    text-decoration: none;
+    opacity: 0.3;
+}
+
+.footer_social_last{
+    margin-bottom: 5em;
+    @media (min-width: 768px){
+        margin-bottom: 11em;
+    }
 }

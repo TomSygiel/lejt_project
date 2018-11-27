@@ -1,68 +1,54 @@
 @import "mixins";
 
-.navigation_bar{
-    background-color: $primary_beige;
-    font-family: $font_main;
-    font-weight: 100;
-    position: fixed;
-    width: 100%;
-    padding-bottom: 2em;
-    
-    img{
-        width: 120px;
-        padding-top: 1em;
+
+.header_wrapper{
+    @media (min-width: 768px){
+        padding: 0 2em 0 2em;
     }
 }
 
-.navbar_logo {
-    position: absolute;
-    left: 50%;
-    margin-left: -50px !important;  /* 50% of your logo width */
-    display: block;
-}
-
-.header_icons{
-    color: $primary_blue;
-    size: 5rem;
-    border: none;
-    padding-top: 1em;
-}
-
-.navbar-nav{
-    height: 100vh;
+.navbar_logo{
     @media (min-width: 992px){
-        height: 0;
-    }
-    .nav_item_top{
-        padding-top: 10em;
-        @media (min-width: 992px){
-           padding: 0;
-        }
-    }
+        position: relative;
+        left: 40%;
+    }   
 }
 
-a{
-    text-align: center;
-    color: $primary_beige;
-    }
-
-button{
-    padding-top: 1em;
+.navbar_image{
+    width: 150px;
 }
 
-button.navbar-toggler{
-    border: none;
+.navbar-brand{
+    margin-right: 0;
+    color: $primary_blue;
+}
+
+.navbar{
+    margin-bottom: 3em;
 }
 
 .nav-link{
     color: $primary_blue;
 }
 
-.navbar-light .navbar-toggler .navbar-nav .nav-link{
-    color: $primary_blue;
+.navbar-nav{
+    height: 100vh;
+    text-align: center;
+    @media (min-width: 992px){
+        height: unset;
+        text-align: unset;
+    }
+
+    .nav_item_top{
+        margin-top: 50%;
+        @media (min-width: 992px){
+            margin-top: unset;
+        }
+    }
 }
 
-.navbar-light .navbar-nav .nav-link:hoover{
+header a:hover{
     color: $primary_blue;
+    text-decoration: none;
+    opacity: 0.3;
 }
-
