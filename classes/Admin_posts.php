@@ -10,6 +10,8 @@ include ("../includes/database_connection.php");
 
 
 //Prepare a SQL-statement
+
+
 $statement = $pdo->prepare("SELECT * FROM posts");
 //Execute it
 $statement->execute();
@@ -19,7 +21,6 @@ $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
 //print_r($products);// check that I have the associative array
-
 
 /*class Admin
 {
@@ -32,22 +33,26 @@ $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     }
 
-    public function posts($posts) 
+    public function posts($post_id, $title, $created_by) 
     { 
+        try{
+            $stmt = $this->pdo->prepare("SELECT post_id, title, created_by FROM posts");
+            $stmt->execute();
+            $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        $stmt = $this->pdo->prepare("SELECT * FROM posts");
-        $stmt->execute(
-            [
+            return true;
+        }
 
-            ]
-        );
+        catch(PDOException $ex){
+            die($ex->getMessage());
+            return false;
 
-        return true;
+        } 
+    }
 
-    } 
 }
-
 */
+
 
 
 ?>

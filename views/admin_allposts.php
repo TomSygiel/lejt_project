@@ -9,8 +9,8 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>Created_by</th>
                 <th>Title</th>
+                <th>Created_by</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -20,19 +20,21 @@
             <tr class="table-active">
 
                 <?php
-                /*foreach($posts as $key):
+                foreach($posts as $key):
                 ?>
 
-                        <?php echo "<td>" ?><?php echo $key['title']?><?php echo "</td>"?>
-                        <?php echo "<td>" ?><?php echo $key['created_by']?><?php echo "</td>"?>
-                        <?php echo "<td>"?><a href="admin_allposts.php">Remove</a><?php echo "</td>"?>
-                        <?php echo "</tr>" ?>
-                        <?php
-    endforeach; */
+                <?php echo "<td>" ?><?php echo $key['title']?><?php echo "</td>"?>
+                <?php echo "<td>" ?><?php echo $key['created_by']?><?php echo "</td>"?>
+                <?php echo "<td>" ?><?php echo $key['created_by']?><?php echo "</td>"?>
+                <?php echo "<td>"?><a href="../includes/delete_posts.php?post_id=<?= $key['post_id']; ?>">Remove</a><?php echo "</td>"?>
+
+                <?php echo "</tr>" ?>
+                <?php
+    endforeach; 
                 ?>
-                
-                
-                
+
+
+
             </tr>
     </table>
 
