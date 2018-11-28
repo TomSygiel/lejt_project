@@ -6,7 +6,7 @@ include ("../classes/Admin_posts.php");
 
 
 $admin = new Admin($pdo);
-$admin->admin($posts);
+$admin->admin($post_id, $title, $created_by);
 
 
 header("location:../views/admin_allposts.php");

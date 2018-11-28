@@ -25,8 +25,8 @@
 
                 <?php echo "<td>" ?><?php echo $key['title']?><?php echo "</td>"?>
                 <?php echo "<td>" ?><?php echo $key['created_by']?><?php echo "</td>"?>
-                <?php echo "<td>" ?><?php echo $key['created_by']?><?php echo "</td>"?>
-                <?php echo "<td>"?><a href="../includes/delete_posts.php?post_id=<?= $key['post_id']; ?>">Remove</a><?php echo "</td>"?>
+                <?php echo "<td>" ?><a href="../views/admin_allposts.php"><i class="fas fa-pen-fancy"></i></a><?php echo "</td>"?>
+                <?php echo "<td>"?><a href="../includes/delete_posts.php?post_id=<?= $key['post_id']; ?>"><i class="fas fa-trash-alt"></i></a><?php echo "</td>"?>
 
                 <?php echo "</tr>" ?>
                 <?php

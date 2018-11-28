@@ -25,7 +25,7 @@ $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
     public function posts($post_id, $title, $created_by) 
     { 
         try{
-            $stmt = $this->pdo->prepare("SELECT post_id, title, created_by FROM posts");
+            $stmt = $this->pdo->prepare("SELECT * FROM posts");
             $stmt->execute();
             $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -40,8 +40,8 @@ $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
 }
-*/
 
+*/
 
 
 ?>
