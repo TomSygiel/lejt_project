@@ -20,6 +20,7 @@
             <tr class="table-active">
 
                 <?php
+               
                 foreach($posts as $key):
                 ?>
 

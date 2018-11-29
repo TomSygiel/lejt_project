@@ -9,7 +9,7 @@ $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-//print_r($products);// check that I have the associative array
+
 
 /*class Admin
 {
@@ -22,10 +22,21 @@ $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     }
 
-    public function posts($post_id, $title, $created_by) 
+    public function select() 
     { 
-        try{
-            $stmt = $this->pdo->prepare("SELECT * FROM posts");
+
+        $statement = $this->$pdo->prepare("SELECT * FROM posts");
+        //Execute it
+        $statement->execute();
+        //Fetch every row that it returns. $posts is now an Associative array
+        $posts = $this->$statement->fetchAll(PDO::FETCH_ASSOC);
+        return true;       
+    }  
+
+
+}          
+print_r($posts);// check that I have the associative array
+/* $stmt = $this->pdo->prepare("SELECT * FROM posts");
             $stmt->execute();
             $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
