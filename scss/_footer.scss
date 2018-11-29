@@ -1,57 +1,50 @@
 @import "mixins";
 
-.footer{
-    background-color: $primary_blue;
-    bottom: 0;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 5em;
-    @media (min-width: 768px){
-        position: absolute;
-    }
-}
-
-.footer_heading_first{
-    padding-top: 2em;
-}
-
-.footer_heading{
-    @media (min-width: 768px){
-        padding-top: 3em;
-    }
-}
-
-
 .millhouse_footer{
     font-family: $font_main;
     font-weight: 100;
     color: $primary_beige;
     font-size: 0.75em;
-    
-    h5{
+    background-color: $primary_blue;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5em;
+
+        @media (min-width: 768px){
+            position: absolute;
+        }
+
+    .footer_heading{
         font-family: $font_main;
         font-weight: 100;
         font-size: 1,2em;
+
+            @media (min-width: 768px){
+                padding-top: 3em;
+            }
     }
-}
-
-hr{
-    border: 0.5px solid $primary_beige;
-}
-
-.footer_link{
-    color: $primary_beige;
-}
-
-footer a:hover{
-    color: $primary_beige;
-    text-decoration: none;
-    opacity: 0.3;
-}
-
-.footer_social_last{
-    margin-bottom: 5em;
-    @media (min-width: 768px){
-        margin-bottom: 11em;
+    
+    hr{
+        border: 0.5px solid $primary_beige;
     }
+    
+    .footer_link{
+        color: $primary_beige;
+    }
+    
+    footer a:hover{
+        color: $primary_beige;
+        text-decoration: none;
+        opacity: 0.3;
+    }
+    
+    .footer_social_last{
+        margin-bottom: 5em;
+        @media (min-width: 768px){
+            margin-bottom: 11em;
+        }
+
+}
+
 }

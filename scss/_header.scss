@@ -2,71 +2,78 @@
 
 .header_wrapper{
     @media (min-width: 768px){
-        padding: 0 2em 0 2em;
+        padding: 0 2em 2em 2em;
     }
 
     .logged_in{
-        font-size: .8rem;
-        margin: 3em;
+
+        @media (min-width: 300px){
+            margin: 3em 0 1em 1em;
+        }
+
+        @media (min-width: 576px){
+            margin: 0em 0 1em 1em;
+        }
 
             p a{
                 color: #1C3045;
             }
     }
-}
 
-.navbar_logo{
-    @media (min-width: 992px){
-        //position: relative;
-        position: absolute;
-        margin: 0;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }   
-}
-
-.navbar_image{
-    width: 150px;
-}
-
-.navbar-brand{
-    margin-right: 0;
-    color: $primary_blue;
-}
-
-.navbar{
-
-    .header_icons{
-        margin-right: .5em;
-    }
-}
-
-.nav-link{
-    color: $primary_blue;
-}
-
-.navbar-nav{
-    height: 100vh;
-    text-align: center;
-    @media (min-width: 992px){
-        height: unset;
-        text-align: unset;
+    .navbar-brand{
+        margin-right: 0;
+        color: $primary_blue;
     }
 
-    .nav_item_top{
-        margin-top: 50%;
+    .navbar_logo{
         @media (min-width: 992px){
-            margin-top: unset;
+            //position: relative;
+            position: absolute;
+            margin: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }   
+    }
+    
+    .navbar_image{
+        width: 150px;
+    }
+    
+    .nav-link{
+        color: $primary_blue;
+    }
+    
+    .navbar-nav{
+        height: 100vh;
+        text-align: center;
+
+        @media (min-width: 576px){
+            float: right;
+        }
+
+        @media (min-width: 992px){
+            height: unset;
+            text-align: unset;
+        }
+    
+        .nav_item_top{
+            margin-top: 50%;
+            display: inline-block !important;
+            @media (min-width: 992px){
+                margin-top: unset;
+            }
         }
     }
+    
+    header a:hover{
+        color: $primary_blue;
+        text-decoration: none;
+        opacity: 0.3;
+    }    
+
 }
 
-header a:hover{
-    color: $primary_blue;
-    text-decoration: none;
-    opacity: 0.3;
-}
 
 
 

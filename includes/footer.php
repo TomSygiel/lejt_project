@@ -1,8 +1,9 @@
 
   <footer class="row justify-content-center footer text-center text-md-left millhouse_footer">
       <div class="col-md-4 col-lg-3">
-        <h5 class="my-2 footer_heading footer_heading_first">Millhouse</h5>
-        <p>Beatae, vero consectetur? Ea, illum corporis sed dolor!</p>
+        <h5 class="my-2 footer_heading">Millhouse</h5>
+        <p>Beatae, vero consectetur? Ea, illum corporis sed dolor! Est eaque, vel, impedit inventore doloribus ducimus iusto maiores fugiat magni perferendis vero odit assumenda corrupti provident.
+        </p>
       </div>
    
       <hr class="w-100 d-md-none">
@@ -11,10 +12,13 @@
         <h5 class="my-2 footer_heading">About</h5>
         <ul class="list-unstyled link-unstyled">
           <li>
-            <a class="footer_link" href="#!">Blog</a>
+            <a class="footer_link" href="#!">Our team</a>
           </li>
           <li>
-            <a class="footer_link" href="#!">XX</a>
+            <a class="footer_link" href="#!">Our vision</a>
+          </li>
+          <li>
+            <a class="footer_link" href="#!">About us</a>
           </li>
         </ul>
       </div>
@@ -25,20 +29,16 @@
         <h5 class="my-2 footer_heading">Address</h5>
         <ul class="list-unstyled">
           <li>
-            <p>Tulegatan 41, 113 53 Stockholm</p>
-          </li>
-          <li>
-            <p>blog@millhouse.se</p>
-          </li>
-          <li>
-            <p>07 345 67 544</p>
+            <p>Tulegatan 41, 113 53 Stockholm<br>
+            blog@millhouse.se<br>
+            073 4567 544</p>
           </li>
         </ul>
       </div>
     
       <hr class="w-100 d-md-none">
 
-      <div class="col-md-2 col-lg-2 text-center">
+      <div class="col-md-2 text-center">
         <h5 class="my-2 footer_heading">Follow Us</h5>
         <a>
           <i class="fab fa-facebook-f"></i>
