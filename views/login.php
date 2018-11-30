@@ -33,6 +33,8 @@ session_start();
                        <a href="../views/logout.php">Logga ut</a>
 
                <?php } ?>
+               
+               
 
 </body>  
 <?php include '../includes/footer.php';?> 
