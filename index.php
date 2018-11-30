@@ -10,11 +10,12 @@ session_start();
 
 <body>
 
-<div class="container">
+<div class="container blog_post_window">
     <div class="row">
         <div class="col-12">
 
             <?php
+
             require 'includes/database_connection.php';
 
             $fetch_all_posts_statement = $pdo->prepare("SELECT * FROM posts");
@@ -27,17 +28,19 @@ session_start();
                 </div>
 
                 <div>
-                <img src="<?= $single_post["image"]; ?>" alt="blog post image">
+                    <img src="<?= $single_post["image"]; ?>" alt="blog post image">
 
-                <div>
-                    <?= $single_post["description"]; ?>
+                    <div>
+                        <?= $single_post["description"]; ?>
+                    </div>
+
+                    <div>
+                        <?= $single_post["category"]; ?>
+                    </div>
+
                 </div>
+                <br/>
 
-               <!--<div>
-                    <?php /*$single_post["category"];*/ ?>
-                </div>-->
-
-                </div>
             <?php
             }
             ?>
