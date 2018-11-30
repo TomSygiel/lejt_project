@@ -21,12 +21,14 @@ body {
     .card{
         justify-content: center;
         background-color: $secondary_green;
-        padding: 1rem;
+        padding: 1em;
         border-radius: .5rem;
+        margin-top: 2em;
     }
     
     .member{
         text-align: center;
+        padding: 2em;
     }
 
 }
@@ -43,11 +45,6 @@ body {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px){
-
-    body {
-        
-    }
-
 }
 
 
