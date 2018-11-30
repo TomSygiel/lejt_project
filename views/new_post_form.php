@@ -16,19 +16,19 @@ $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         
 if (strpos($fullUrl, "error=empty") == true) {
     echo "<p class='error'>* No blog post to submit!</p>";
-    header ('refresh:5;url=new_blog.php');
+    header ('refresh:5;url=new_post_form.php');
     exit();
 }
 
 elseif (strpos($fullUrl, "error=notitle") == true) {
     echo "<p class='error'>* Blog title is missing!</p>";
-    header ('refresh:5;url=new_blog.php');
+    header ('refresh:5;url=new_post_form.php');
     exit();
 }
 
 elseif (strpos($fullUrl, "error=nodescription") == true) {
     echo "<p class='error'>* No blog description!</p>";
-    header ('refresh:5;url=new_blog.php');
+    header ('refresh:5;url=new_post_form.php');
     exit();
 }
 
@@ -50,11 +50,11 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
                     <label for="blog_title"><h4>Title</h4></label><br/>
                     <input type="text" name="title" placeholder="Title" id="blog_title"><br/>
 
-                    <label><h4>Category: </h4></label><br/>
-                    <select>
-                        <option name="watches">Watches</option>
-                        <option name="sunglasses">Sunglasses</option>
-                        <option name="home_accesories">Home accesories</option>
+                    <label for="category"><h4>Category: </h4></label><br/>
+                    <select name="category_select">
+                        <option value="watches">Watches</option>
+                        <option value="sunglasses">Sunglasses</option>
+                        <option value="home_accesories">Home accesories</option>
                     </select>
 
                     <br/>
