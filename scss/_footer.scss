@@ -1,45 +1,48 @@
 @import "mixins";
 
-.footer{
-    background-color: $primary_blue;
-    bottom: 0;
-    width: 100%;
-    margin-top: 5em;
-    @media (min-width: 768px){
-        //position: absolute;
-    }
-}
-
-.footer_heading_first{
-    padding-top: 2em;
-}
-
-.footer_heading{
-    @media (min-width: 768px){
-        padding-top: 3em;
-    }
-}
-
-
 .millhouse_footer{
     font-family: $font_main;
     font-weight: 100;
     color: $primary_beige;
-    font-size: 0.75em;
-    
-    h5{
+    font-size: 1rem;
+    background-color: $primary_blue;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4em 0 4em 0;
+
+    //margin-top: 5em;
+
+        @media (min-width: 768px){
+            position: sticky;
+        }
+
+    .footer_heading{
         font-family: $font_main;
         font-weight: 100;
-        font-size: 1,2em;
+        font-size: 1.5rem;
+
+            @media (min-width: 768px){
+                //padding-top: 3em;
+            }
     }
-}
+    
+    hr{
+        border: 0.5px solid $primary_beige;
+    }
 
-hr{
-    border: 0.5px solid $primary_beige;
-}
+    .footer_link{
+        color: $primary_beige;
+    }
+    
+    .footer_social_last{
+        margin-bottom: 5em;
+        @media (min-width: 768px){
+            margin-bottom: 11em;
+        }
 
-.footer_link{
-    color: $primary_beige;
+    }
+
 }
 
 footer a:hover{
@@ -48,9 +51,8 @@ footer a:hover{
     opacity: 0.3;
 }
 
-.footer_social_last{
-    margin-bottom: 5em;
-    @media (min-width: 768px){
-        margin-bottom: 11em;
-    }
+.footer_icons{
+    font-size: 2rem;
+    padding: 0.5em;
+    color: $primary_beige;
 }
