@@ -12,7 +12,7 @@ $login->login($_POST["username"]);
 
 
 
-header("location:../views/login.php");
+header("location:../index.php");
 
 
 ?>
