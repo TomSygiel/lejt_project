@@ -13,7 +13,6 @@ session_start();
 <div class="container blog_post_window">
     <div class="row">
         <div class="col-12">
-<<<<<<< HEAD
 
             <?php
 
@@ -49,22 +48,6 @@ session_start();
 
 
              
-=======
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, itaque quia incidunt odio, libero ad ratione maiores corporis id commodi quibusdam laborum recusandae omnis laboriosam aspernatur deleniti perferendis earum voluptatibus!</p>
->>>>>>> 5063cb3aa2b7ee91594f5227685b1ac5db906211
         </div>
 
     </div>
