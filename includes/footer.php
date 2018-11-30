@@ -1,15 +1,15 @@
 
   <footer class="row justify-content-center footer text-center text-md-left millhouse_footer">
-      <div class="col-md-4 col-lg-3">
-        <h5 class="my-2 footer_heading">Millhouse</h5>
+      <div class="col-md-4">
+        <h4 class="my-2 footer_heading"><b>Millhouse</b></h4>
         <p>Beatae, vero consectetur? Ea, illum corporis sed dolor! Est eaque, vel, impedit inventore doloribus ducimus iusto maiores fugiat magni perferendis vero odit assumenda corrupti provident.
         </p>
       </div>
    
       <hr class="w-100 d-md-none">
 
-      <div class="col-md-2 col-lg-2">
-        <h5 class="my-2 footer_heading">About</h5>
+      <div class="col-md-2">
+        <h4 class="my-2 footer_heading"><b>About</b></h4>
         <ul class="list-unstyled link-unstyled">
           <li>
             <a class="footer_link" href="#!">Our team</a>
@@ -25,8 +25,8 @@
 
       <hr class="w-100 d-md-none">
 
-      <div class="col-md-4 col-lg-3">
-        <h5 class="my-2 footer_heading">Address</h5>
+      <div class="col-md-2 col-lg-2">
+        <h4 class="my-2 footer_heading"><b>Address</b></h4>
         <ul class="list-unstyled">
           <li>
             <p>Tulegatan 41, 113 53 Stockholm<br>
@@ -39,15 +39,15 @@
       <hr class="w-100 d-md-none">
 
       <div class="col-md-2 text-center">
-        <h5 class="my-2 footer_heading">Follow Us</h5>
-        <a>
-          <i class="fab fa-facebook-f"></i>
+        <h4 class="my-2 footer_heading"><b>Follow Us</b></h4>
+        <a href="#">
+          <i class="footer_icons fab fa-facebook-f"></i>
         </a>
-        <a>
-          <i class="fab fa-twitter"></i>
+        <a href="#">
+          <i class="footer_icons fab fa-twitter"></i>
         </a>
-        <a>
-          <i class="fab fa-instagram footer_social_last"></i>
+        <a href="#">
+          <i class="footer_icons fab fa-instagram"></i>
         </a>
       </div>  
 </footer>

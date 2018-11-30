@@ -65,16 +65,11 @@
             }
         }
     }
-    
-    header a:hover{
-        color: $primary_blue;
-        text-decoration: none;
-        opacity: 0.3;
-    }    
 
 }
 
-
-
-
-
+header a:hover{
+    color: $primary_blue;
+    text-decoration: none;
+    opacity: 0.3;
+}    
