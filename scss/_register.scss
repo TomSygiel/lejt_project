@@ -7,32 +7,31 @@
 body {
 
     .register{
-
         font-family: $font_header;
     }
 
-   
+    .register_link a{
+        color: black;
+    }
+
+    .register_link a:hover{
+        color: darkcyan;
+    }
 
     .card{
         justify-content: center;
         background-color: $secondary_green;
-        padding: 1rem;
-
-        /*width: 50%;*/
-        margin: 2em;
+        padding: 1em;
         border-radius: .5rem;
-        margin-bottom: 10em;
-
-
+        margin-top: 2em;
     }
     
     .member{
         text-align: center;
+        padding: 2em;
     }
 
 }
-
-
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px){
@@ -46,11 +45,6 @@ body {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px){
-
-    body {
-        
-    }
-
 }
 
 

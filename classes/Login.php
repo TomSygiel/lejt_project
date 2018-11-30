@@ -32,6 +32,7 @@ class Login
 
             $_SESSION["username"] = $fetched_user["username"];
             $_SESSION["user_id"] = $fetched_user["user_id"];
+            $_SESSION["admin"] = $fetched_user["admin"];
 
             $is_password_correct = password_verify($password, $fetched_user["password"]);
 
