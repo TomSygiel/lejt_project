@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!-- include Head -->
 <?php include '../includes/head.php';?>
 <?php include '../includes/header.php';?>
@@ -21,9 +26,10 @@
     </div>
     
     <div class="col-5 col-lg-10">
-        <button type="button" class="btn btn-sm admin_allposts_button">New post</button>
+        <a href="new_post_form.php"class="btn btn-sm admin_allposts_button">New post</a>
     </div>
 </div>
+
 
     <table class="table table-hover">
         <thead>
