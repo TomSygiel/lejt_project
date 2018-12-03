@@ -45,7 +45,6 @@ session_start();
             <tr class="table">
 
                 <?php
-                
                 foreach($posts as $key):
                 ?>
 
@@ -56,22 +55,12 @@ session_start();
 
                 <?php echo "</tr>" ?>
                 <?php
-    endforeach; 
+                endforeach; 
                 ?>
 
-
-
             </tr>
+        </tbody>
     </table>
-
-
-
-    <tbody>
-
-
-
-
-    </tbody>
 </div>
 
 <?php print_r($posts); ?>
