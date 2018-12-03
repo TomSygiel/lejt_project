@@ -5,43 +5,37 @@
 
 .card_admin_allposts{
     background-color: white;
-    padding: 1rem;
+    padding: 1em;
     margin: 2em;
-    border-radius: .5rem;
+    border-radius: .5em;
     margin-bottom: 10em;
-    font-size: 0.7em;
+    font-size: 1rem;
     @media (min-width: 576px){
-        font-size: 1em;
+        font-size: 1.2rem;
     }
 }
 
 
 .admin_h3{
     font-family: $font_header;
-    font-size: 1.3em;
-    padding-bottom: 1rem;
+    font-size: 1.3rem;
+    padding-bottom: 1em;
     @media (min-width: 576px){
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
 }
 
 
 .admin_allposts_button{
-    background-color: $secondary_green;
-    //margin-bottom: 1rem;
+    background-color: $secondary_light_purple;
     align-self: center;
+    color: black;
 }
 
 
 .admin_icon{
     color: $primary_blue;
 }
-
-
-
-
-
-
 
 
 // Small devices (landscape phones, 576px and up)
