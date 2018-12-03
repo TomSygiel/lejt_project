@@ -6,6 +6,8 @@ session_start();
 <!--including head-->
 <?php include '../includes/head.php';?>
 
+<?php include '../includes/header.php';?>
+
 <body class="blog_form_page">
 
 <?php
