@@ -34,7 +34,7 @@ class Post {
         }
 
         if (/*$upload_ok && */!empty($title) && !empty($description)) {
-            $statement = $this->pdo->prepare("INSERT INTO posts (title, description, created_by, image, category, post_date) VALUES(:title, :description, :created_by, :image, :category)");
+            $statement = $this->pdo->prepare("INSERT INTO posts (title, description, created_by, image, category, post_date) VALUES(:title, :description, :created_by, :image, :category, :post_date)");
             $statement->execute(
                     [
                     ":title" => $title,
