@@ -14,7 +14,7 @@ class Post {
 
     }
 
-    public function blogPost($image, $title, $description, $created_by, $category/*, $upload_ok*/) {
+    public function blogPost($new_location, $title, $description, $created_by, $category, $post_date/*, $upload_ok*/) {
 
         if (empty($title) && empty($description)) {
 
@@ -34,14 +34,15 @@ class Post {
         }
 
         if (/*$upload_ok && */!empty($title) && !empty($description)) {
-            $statement = $this->pdo->prepare("INSERT INTO posts (title, description, created_by, image, category) VALUES(:title, :description, :created_by, :image, :category)");
+            $statement = $this->pdo->prepare("INSERT INTO posts (title, description, created_by, image, category, post_date) VALUES(:title, :description, :created_by, :image, :category)");
             $statement->execute(
                     [
                     ":title" => $title,
                     ":description" => $description,
                     ":created_by" => $created_by,
                     ":image" => $new_location,
-                    ":category" => $category
+                    ":category" => $category,
+                    ":post_date" => $post_date
                     ]
                 );
 
