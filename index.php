@@ -28,7 +28,7 @@ session_start();
                 </div>
 
                 <div>
-                    <img src="<?= $single_post["image"]; ?>" alt="blog post image">
+                    <img src="uploads/<?= $single_post["image"]; ?>" alt="blog post image">
 
                     <div>
                         <?= $single_post["description"]; ?>
