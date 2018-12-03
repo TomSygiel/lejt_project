@@ -22,11 +22,11 @@ session_start();
 <div class="row">
 <div class="col-10 card_admin_allposts text-left admin_panel">
 <div class="row align-items-center">
-      <div class="col-5 col-lg-2">
+      <div class="col-5 col-lg-4">
        <h3 class="admin_h3">Admin panel</h3>
     </div>
     
-    <div class="col-5 col-lg-10">
+    <div class="col-5 col-lg-6">
         <a href="new_post_form.php"class="btn btn-sm admin_allposts_button">New post</a>
     </div>
 </div>
@@ -41,16 +41,6 @@ session_start();
                 <th>Delete</th>
             </tr>
         </thead>
-
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Created by</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
 
                 <?php
                 foreach($posts as $key):
@@ -71,7 +61,6 @@ session_start();
     </table>
 </div>
 
-<?php print_r($posts); ?>
 </div>
 </div>
 
