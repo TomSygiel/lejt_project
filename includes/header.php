@@ -5,7 +5,7 @@
 
 <header class="header_wrapper">
     <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> vill ändra färgen på navbaren ...gör en egen klass och ta bort bottstrap stylingen-->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-md">
         <!--ändra färgerna på rubrikerna i navbaren, jobba med egna klasser eller använd deras vilket är bäst-->
         <div class="navbar-icons">
             <a class="navbar-brand" href="<?php if(isset($_SESSION["username"])){

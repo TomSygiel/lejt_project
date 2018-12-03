@@ -26,8 +26,7 @@
     }
 
     .navbar_logo{
-        @media (min-width: 992px){
-            //position: relative;
+        @media (min-width: 768px){
             position: absolute;
             margin: 0;
             top: 50%;
@@ -52,7 +51,7 @@
             float: right;
         }
 
-        @media (min-width: 992px){
+        @media (min-width: 576px){
             height: unset;
             text-align: unset;
         }
@@ -60,7 +59,7 @@
         .nav_item_top{
             margin-top: 50%;
             display: inline-block !important;
-            @media (min-width: 992px){
+            @media (min-width: 576px){
                 margin-top: unset;
             }
         }
