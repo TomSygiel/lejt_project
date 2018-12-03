@@ -1,8 +1,8 @@
 <!-- include Head -->
 <?php include '../includes/head.php';?>
 <?php include '../includes/header.php';?>
-<?php include '../classes/Admin_posts.php';?>
-<?php /*include '../includes/admin_server.php'*/;?>
+<?php /*include '../classes/Admin_posts.php'*/;?>
+<?php include '../includes/admin_server.php';?>
 
 
 <div class="container">
@@ -95,9 +95,9 @@
             </tbody>
         </div>
 
-        <?php print_r($posts); ?>
-    </div>
-</div>
-
-<!-- include Footer -->
+        <?php /*print_r($posts); */?>
+            </div>
+        </div>
+        
+        <!-- include Footer--!>
 <?php include '../includes/footer.php';?> 

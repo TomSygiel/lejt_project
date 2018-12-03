@@ -3,11 +3,11 @@ include ("../includes/database_connection.php");
 
 
 
-$statement = $pdo->prepare("SELECT * FROM `posts` JOIN users ON posts.post_id = users.user_id");
+/*$statement = $pdo->prepare("SELECT * FROM `posts` JOIN users ON posts.post_id = users.user_id");
 //Execute it
 $statement->execute();
 //Fetch every row that it returns. $posts is now an Associative array
-$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+$posts = $statement->fetchAll(PDO::FETCH_ASSOC);*/
 
 /*class Admin
 {
@@ -21,25 +21,30 @@ $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
 
-    public function admin($posts) 
+    public function admin() 
     {
-        $statement = $this->pdo->prepare("SELECT title FROM posts");
+        
+        try{
+        $statement = $this->pdo->prepare("SELECT * FROM `posts` JOIN users ON posts.post_id = users.user_id");
         //Execute it
         $statement->execute();
         //Fetch every row that it returns. $posts is now an Associative array
-        
+        $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
         return true;       
 
 
     }
 
-
+  catch(PDOException $ex){
+            die($ex->getMessage());
+            return false;
+        }
 
 }
 
 
 
-
+}*/
 
 
 

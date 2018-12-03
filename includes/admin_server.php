@@ -1,31 +1,12 @@
 <?php
 
 include ("database_connection.php");
-include ("../classes/Admin_posts.php");
 
 
-/*public function getPosts($sql)
-{
-    $statement = $this->pdo->prepare($sql);
-    $statement->execute();
-    while($row = $statement->fetch())
-    {
-        $dataSet[] = new AdminData($row);
+$statement = $pdo->prepare("SELECT * FROM `posts` JOIN users ON posts.post_id = users.user_id");
+//Execute it
+$statement->execute();
+//Fetch every row that it returns. $posts is now an Associative array
+$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-    }
-
-if(!empty($dataSet))
-    return $dataSet;
-
-else
-    return null;
-
-
-}*/
-
-$admin = new Admin($pdo);
-$admin->admin($posts);
-
-
-header("location:../views/admin_allposts.php");
 ?>
