@@ -6,15 +6,16 @@ session_start();
 <!-- include Head -->
 <?php include '../includes/head.php';?>
 <?php include '../includes/header.php';?>
-<?php include '../classes/Admin_posts.php';?>
+<?php /*include '../classes/Admin_posts.php'*/;?>
+<?php include '../includes/admin_server.php';?>
 
 
 <div class="container">
-<!--
+    <!--
 <div class="row">
-    <div class="col-10">
-        <button type="button" class="btn admin_allposts_button">New post</button>
-    </div>
+<div class="col-10">
+<button type="button" class="btn admin_allposts_button">New post</button>
+</div>
 </div>
 -->
 
@@ -41,8 +42,15 @@ session_start();
             </tr>
         </thead>
 
-        <tbody>
-            <tr class="table">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Created by</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
 
                 <?php
                 foreach($posts as $key):
@@ -67,5 +75,9 @@ session_start();
 </div>
 </div>
 
-<!-- include Footer -->
+        <?php /*print_r($posts); */?>
+            </div>
+        </div>
+        
+        <!-- include Footer--!>
 <?php include '../includes/footer.php';?> 

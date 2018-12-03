@@ -26,7 +26,18 @@ session_start();
     </div>
 
 
+
+    
+    <?php if (isset($_SESSION["username"])){ ?>
+                       <p>Du är inloggad som <b><?= $_SESSION['username']; ?></b></p>
+                       <a href="../views/logout.php">Logga ut</a>
+
+               <?php } ?>
+               
+               
+
     <p class="member">Not a member? <a class="register_link" href="register.php">Register here</a></p>
+
 
 </body>  
 <?php include '../includes/footer.php';?> 

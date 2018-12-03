@@ -1,13 +1,12 @@
 <?php
 
 include ("database_connection.php");
-include ("../classes/Admin_posts.php");
 
 
+$statement = $pdo->prepare("SELECT * FROM `posts` JOIN users ON posts.post_id = users.user_id");
+//Execute it
+$statement->execute();
+//Fetch every row that it returns. $posts is now an Associative array
+$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-/*$admin = new Admin($pdo);
-$admin->admin($title);*/
-
-
-header("location:../views/admin_allposts.php");
 ?>
