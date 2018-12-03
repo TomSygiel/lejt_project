@@ -19,15 +19,16 @@
 .admin_h3{
     font-family: $font_header;
     font-size: 1.3em;
+    padding-bottom: 1rem;
     @media (min-width: 576px){
-        font-size: 1em;
+        font-size: 1.5em;
     }
 }
 
 
 .admin_allposts_button{
     background-color: $secondary_green;
-    margin-bottom: 1rem;
+    //margin-bottom: 1rem;
     align-self: center;
 }
 

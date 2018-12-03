@@ -33,7 +33,10 @@
                     <a class="nav-link text-uppercase" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="#">Links</a>
+                    <a class="nav-link text-uppercase" href="#">Our vision</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#">Posts</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-uppercase" href="#">Contact</a>

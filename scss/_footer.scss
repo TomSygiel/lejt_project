@@ -8,11 +8,9 @@
     background-color: $primary_blue;
     bottom: 0;
     min-width: 100%;
-    margin: 0 auto;
     padding: 5em 0 5em 0;
 
         @media (min-width: 768px){
-            position: relative;
         }
 
     .footer_heading{
