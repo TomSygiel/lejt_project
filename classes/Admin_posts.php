@@ -1,19 +1,13 @@
 <?php
 include ("../includes/database_connection.php");
 
-/*$statement = $pdo->prepare("SELECT * FROM posts");
+
+
+/*$statement = $pdo->prepare("SELECT * FROM `posts` JOIN users ON posts.post_id = users.user_id");
 //Execute it
 $statement->execute();
 //Fetch every row that it returns. $posts is now an Associative array
 $posts = $statement->fetchAll(PDO::FETCH_ASSOC);*/
-
-$statement = $pdo->prepare("SELECT * FROM `posts` JOIN users ON posts.post_id = users.user_id");
-//Execute it
-$statement->execute();
-//Fetch every row that it returns. $posts is now an Associative array
-$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
- 
-
 
 /*class Admin
 {
@@ -26,19 +20,44 @@ $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     }
 
-    public function admin($title) 
-    { 
 
-        $statement = $this->pdo->prepare("SELECT title FROM posts");
+    public function admin() 
+    {
+        
+        try{
+        $statement = $this->pdo->prepare("SELECT * FROM `posts` JOIN users ON posts.post_id = users.user_id");
         //Execute it
         $statement->execute();
         //Fetch every row that it returns. $posts is now an Associative array
-        $posts = $this->statement->fetchAll(PDO::FETCH_ASSOC);
+        $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
         return true;       
-    }  
 
 
-}          
+    }
+
+  catch(PDOException $ex){
+            die($ex->getMessage());
+            return false;
+        }
+
+}
+
+
+
+}*/
+
+
+
+/*$statement = $this->pdo->prepare("SELECT title FROM posts");
+//Execute it
+$statement->execute();
+//Fetch every row that it returns. $posts is now an Associative array
+$posts = $this->statement->fetchAll(PDO::FETCH_ASSOC);
+return true;       
+}  
+
+
+}   */       
 /*print_r($admin);// check that I have the associative array
 /* $stmt = $this->pdo->prepare("SELECT * FROM posts");
             $stmt->execute();
