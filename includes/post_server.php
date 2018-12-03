@@ -20,14 +20,10 @@ $new_location = "uploads/" . $image["name"];
 
 $upload_ok = move_uploaded_file($temporary_location, $new_location);
 
-/*if($upload_ok){
-    $statement = $pdo->prepare("INSERT INTO images (image, image_text) VALUES (:image, :image_text)");
-    $statement->execute([
-      ":image" => $new_location,
-      ":Image_text"  => $image_text
-    ]);
-}*/
-
 $posts = new Post($pdo);
-$posts->blogPost($new_location, $title, $description, $created_by, $category, $post_date/*, $upload_ok*/);
+$posts->blogPost($new_location, $title, $description, $created_by, $category, $post_date);
 $posts->deletePost();
+
+header ('Location: ../index.php');
+
+?>

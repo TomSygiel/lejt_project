@@ -1,7 +1,5 @@
 <?php 
 
-session_start();
-
 class Post {
 
     private $pdo;
@@ -10,11 +8,13 @@ class Post {
         $this->pdo = $pdo;
     }
 
+    
     public function deletePost(){
 
     }
+    
 
-    public function blogPost($new_location, $title, $description, $created_by, $category, $post_date/*, $upload_ok*/) {
+    public function blogPost($new_location, $title, $description, $created_by, $category, $post_date) {
 
         if (empty($title) && empty($description)) {
 
@@ -33,7 +33,7 @@ class Post {
 
         }
 
-        if (/*$upload_ok && */!empty($title) && !empty($description)) {
+        if (!empty($title) && !empty($description)) {
             $statement = $this->pdo->prepare("INSERT INTO posts (title, description, created_by, image, category, post_date) VALUES(:title, :description, :created_by, :image, :category, :post_date)");
             $statement->execute(
                     [
@@ -53,35 +53,5 @@ class Post {
         }
 
 }
-
-//Basic structure for posts classes
-/*
-class Posts
-{
-  private $pdo;
-  /* Inject the pdo connection so it is available inside of the class
-   * so we can call it with '$this->pdo', always available inside of the class
-   */
-
-   /*
-  public function __construct($pdo)
-  {
-    $this->pdo = $pdo;
-  }
-
-  public function delete()
-  {
-    return true;
-  }
-  
-  public function create($newPost)
-  {
-    return true;
-  }
-}
-*/
-
-
-
 
 ?>
