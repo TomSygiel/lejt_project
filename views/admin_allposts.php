@@ -19,7 +19,7 @@ session_start();
 </div>
 -->
 
-<div class="row">
+<div class="row align-items-center justify-content-center">
 <div class="col-10 card_admin_allposts text-left admin_panel">
 <div class="row align-items-center">
       <div class="col-5 col-lg-4">
