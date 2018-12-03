@@ -36,6 +36,7 @@ session_start();
         <thead>
             <tr>
                 <th>Title</th>
+                <th>Date</th>
                 <th>Created by</th>
                 <th>Edit</th>
                 <th>Delete</th>
@@ -47,7 +48,8 @@ session_start();
                 ?>
 
                 <?php echo "<td>" ?><?php echo $key['title']?><?php echo "</td>"?>
-                <?php echo "<td>" ?><?php echo $key['username']?><?php echo "</td>"?>
+                <?php echo "<td>" ?><?php echo $key['post_date']?><?php echo "</td>"?>
+                <?php echo "<td>" ?><?php echo $key['created_by']?><?php echo "</td>"?>
                 <?php echo "<td>" ?><a href="../views/admin_allposts.php"><i class="fas fa-pen admin_icon"></i></a><?php echo "</td>"?>
                 <?php echo "<td>"?><a href="../includes/delete_posts.php?post_id=<?= $key['post_id']; ?>"><i class="fas fa-trash-alt admin_icon"></i></a><?php echo "</td>"?>
 
