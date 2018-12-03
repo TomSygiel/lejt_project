@@ -12,11 +12,11 @@ $title = $_POST["title"];
 $description = $_POST["description"];
 $created_by = $_SESSION["username"];
 $category = $_POST["category_select"];
-$post_date = date_default_timezone_set('UTC');
+$post_date = date('Y/m/d');
 
 $temporary_location =  $image["tmp_name"];
 
-$new_location = "../uploads/" . $image["name"];
+$new_location = "uploads/" . $image["name"];
 
 $upload_ok = move_uploaded_file($temporary_location, $new_location);
 

@@ -28,8 +28,11 @@ session_start();
                 </div>
 
                 <div>
-                    <img src="uploads/<?= $single_post["image"]; ?>" alt="blog post image">
+                    <?php
 
+                    echo '<img src="includes/'. $single_post["image"] . '" > ';
+
+                    ?>
                     <div>
                         <?= $single_post["description"]; ?>
                     </div>
@@ -42,6 +45,8 @@ session_start();
                 <br/>
 
             <?php
+
+var_dump($single_post["image"]);
             }
             ?>
 
