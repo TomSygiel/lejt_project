@@ -10,6 +10,8 @@ session_start();
 
 <body>
 
+<!--Skeleton structure to work with for the landing site: Tomasz-->
+
 <div class="container blog_post_window">
     <div class="row">
         <div class="col-12">
@@ -45,20 +47,14 @@ session_start();
                 <br/>
 
             <?php
-
-var_dump($single_post["image"]);
             }
             ?>
 
-
-
-             
         </div>
 
     </div>
 
 </div>
-
 
 <!-- include Footer -->
 <?php include 'includes/footer.php';?>
