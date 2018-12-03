@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!-- include Head -->
 <?php include '../includes/head.php';?>
 <?php include '../includes/header.php';?>
@@ -14,61 +19,32 @@
 </div>
 -->
 
-    <div class="row">
-        <div class="col-10 card_admin_allposts text-left admin_panel">
-            <div class="row align-items-center">
-                <div class="col-5 col-lg-2">
-                    <h3 class="admin_h3">Admin panel</h3>
-                </div>
-
-                <div class="col-5 col-lg-10">
-                    <button type="button" class="btn btn-sm admin_allposts_button">New post</button>
-                </div>
-            </div>
-
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Created by</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr class="table">
-
-                        <?php
-                        /*$admin = new Admin($pdo);
-                        $admin->admin($title)
-
-                        $admin = new Admin($pdo);
-                        $dataSet = $admin->getPosts("SELECT * From 'posts'");
-
-                        if($dataSet)
-                        {
-                            foreach($dataSet as $data)
-                            {
-                                echo "ID".$data->getId(). "<br/>";
-                                echo "Name".$data->getTitle(). "<br/>";
-
-                            }
-                        }
-
-                        else
-                            echo "No posts!";*/
+<div class="row">
+<div class="col-10 card_admin_allposts text-left admin_panel">
+<div class="row align-items-center">
+      <div class="col-5 col-lg-4">
+       <h3 class="admin_h3">Admin panel</h3>
+    </div>
+    
+    <div class="col-5 col-lg-6">
+        <a href="new_post_form.php"class="btn btn-sm admin_allposts_button">New post</a>
+    </div>
+</div>
 
 
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Created by</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
 
-
-
-
-                       
-                        
-                
-                    foreach($posts as $key):
-                        ?>
+                <?php
+                foreach($posts as $key):
+                ?>
 
                 <?php echo "<td>" ?><?php echo $key['title']?><?php echo "</td>"?>
                 <?php echo "<td>" ?><?php echo $key['username']?><?php echo "</td>"?>
@@ -77,23 +53,16 @@
 
                 <?php echo "</tr>" ?>
                 <?php
-    endforeach; 
-                 ?>
+                endforeach; 
+                ?>
 
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-
-                    </tr>
-            </table>
-
-
-
-            <tbody>
-
-
-
-
-            </tbody>
-        </div>
+</div>
+</div>
 
         <?php /*print_r($posts); */?>
             </div>
