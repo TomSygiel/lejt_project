@@ -24,13 +24,29 @@ session_start();
             $fetch_all_posts_statement->execute();
             $all_posts = $fetch_all_posts_statement->fetchAll(PDO::FETCH_ASSOC);  
 
-            foreach($all_posts as $single_post){
-                echo '<div class="main_picture_frame"><img class="main_picture" src="includes/' . $single_post["image"] . '"></div>';
-                echo '<h1 class="h1_index">' . $single_post["title"] . '</h1>';
-                echo '<div>' . $single_post["post_date"] . '</div>';
-                echo '<div>' . $single_post["category"] . '</div>';
-                echo '<div>' . $single_post["description"] . '</div>';
+            //foreach($all_posts as $single_post){
+               
+            foreach($all_posts as $key => $single_posts){
+                echo $key;
+            
+                
+                // if($key == 0){
+                //     echo '<div class="main_picture_frame"><img class="main_picture" src="includes/' . $single_post["image"] . '"></div>';
+                // }
             }
+        
+                
+            //     
+              
+            //     echo '<h1 class="h1_index">' . $single_post["title"] . '</h1>';
+            //     echo '<div>' . $single_post["post_date"] . '</div>';
+            //     echo '<div>' . $single_post["category"] . '</div>';
+            //     echo '<div>' . $single_post["description"] . '</div>';
+
+            //     echo '<div class="secondary_picture_frame"><img class="secondary_picture" src="includes/' . $single_post["image"] . '"></div>';
+            //     echo '<div class="secondary_picture_frame"><img class="secondary_picture" src="includes/' . $single_post["image"] . '"></div>';
+            
+            // }
 
             ?>
 

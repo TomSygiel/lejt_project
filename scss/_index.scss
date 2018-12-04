@@ -29,4 +29,15 @@ body{
     }
 }
 
+.secondary_picture_frame{
+    height: 200px;
+    width: 50%;
+    overflow: hidden;
+    
+    .secondary_picture{
+        object-fit: cover;
+        max-width: 100%;
+        min-height: 100%;
+    }
+}
 
