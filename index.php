@@ -20,7 +20,7 @@ session_start();
 
             require 'includes/database_connection.php';
 
-            $fetch_all_posts_statement = $pdo->prepare("SELECT * FROM posts");
+            $fetch_all_posts_statement = $pdo->prepare("SELECT * FROM `posts` ORDER BY post_date DESC LIMIT 3");
             $fetch_all_posts_statement->execute();
             $all_posts = $fetch_all_posts_statement->fetchAll(PDO::FETCH_ASSOC);  
 
