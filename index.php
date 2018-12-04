@@ -24,34 +24,41 @@ session_start();
             $fetch_all_posts_statement->execute();
             $all_posts = $fetch_all_posts_statement->fetchAll(PDO::FETCH_ASSOC);  
 
-            //foreach($all_posts as $single_post){
-               
-            foreach($all_posts as $key => $single_posts){
-                echo $key;
-            
-                
-                // if($key == 0){
-                //     echo '<div class="main_picture_frame"><img class="main_picture" src="includes/' . $single_post["image"] . '"></div>';
-                // }
-            }
-        
-                
-            //     
-              
-            //     echo '<h1 class="h1_index">' . $single_post["title"] . '</h1>';
-            //     echo '<div>' . $single_post["post_date"] . '</div>';
-            //     echo '<div>' . $single_post["category"] . '</div>';
-            //     echo '<div>' . $single_post["description"] . '</div>';
+            //check if correct array is returned
+            //highlight_string("<?php =\n" . var_export($all_posts, true) . ";\n");
 
-            //     echo '<div class="secondary_picture_frame"><img class="secondary_picture" src="includes/' . $single_post["image"] . '"></div>';
-            //     echo '<div class="secondary_picture_frame"><img class="secondary_picture" src="includes/' . $single_post["image"] . '"></div>';
-            
-            // }
-
+                //Loops through associative array
+                foreach($all_posts as $i => $i_array) {
+                
+                    //Check value of variable i. If 0 then echo main blog post.
+                    if($i === 0){
+                        echo '<div class="main_picture_frame"><img class="main_picture" src="includes/' . $i_array["image"] . '"></div>';
+                        echo '<h1 class="h1_index">' . $i_array["title"] . '</h1>';
+                        echo '<div>' . $i_array["post_date"] . '</div>';
+                        echo '<div>' . $i_array["category"] . '</div>';
+                        echo '<div>' . $i_array["description"] . '</div>';
+                    }
+                    
+                    //Check value of variable i. If 1 then echo secondary blog post.
+                    if($i === 1)  {
+                        echo '<div class="secondary_picture_frame"><img class="secondary_picture" src="includes/' . $i_array["image"] . '"></div>';
+                        echo '<h1 class="h1_index">' . $i_array["title"] . '</h1>';
+                        echo '<div>' . $i_array["post_date"] . '</div>';
+                        echo '<div>' . $i_array["category"] . '</div>';
+                        echo '<div>' . $i_array["description"] . '</div>';
+                    }
+                    
+                    //Check value of variable i. If 2 then echo secondary blog post.
+                    if($i === 2)  {
+                        echo '<div class="secondary_picture_frame"><img class="secondary_picture" src="includes/' . $i_array["image"] . '"></div>';
+                        echo '<h1 class="h1_index">' . $i_array["title"] . '</h1>';
+                        echo '<div>' . $i_array["post_date"] . '</div>';
+                        echo '<div>' . $i_array["category"] . '</div>';
+                        echo '<div>' . $i_array["description"] . '</div>';
+                    }
+                }
             ?>
-
             <br/>
-
         </div>
     </div>
 </div>
