@@ -5,3 +5,39 @@ body{
     font-family: $font_main;
     overflow-x: hidden;
 }
+
+
+.blog_post_window{
+    max-width: 100%;
+}
+
+
+.h1_index{
+    font-family: $font_header;
+}
+
+
+.main_picture_frame{
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+    
+    .main_picture{
+        object-fit: cover;
+        max-width: 100%;
+        min-height: 100%;
+    }
+}
+
+.secondary_picture_frame{
+    height: 200px;
+    width: 50%;
+    overflow: hidden;
+    
+    .secondary_picture{
+        object-fit: cover;
+        max-width: 100%;
+        min-height: 100%;
+    }
+}
+
