@@ -2,8 +2,8 @@
 
 include ("database_connection.php");
 
-//Selects title, created by and date from database
-$statement = $pdo->prepare("SELECT title, created_by, post_date FROM `posts`");
+//Selects from database in descending order
+$statement = $pdo->prepare("SELECT post_id, title, created_by, post_date FROM `posts` ORDER BY post_date DESC");
 //Execute it
 $statement->execute();
 //Fetch every row that it returns. $posts is now an Associative array

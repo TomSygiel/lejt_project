@@ -4,10 +4,16 @@ session_start();
 
 <!-- include Head -->
 <?php include '../includes/head.php';?>
+
+<!-- include Header -->
 <?php include '../includes/header.php';?>
+
 <?php /*include '../classes/Admin_posts.php'*/;?>
+
+<!-- include database connection -->
 <?php include '../includes/admin_server.php';?>
 
+<!-- sceleton for page -->
 <div class="container">
     <div class="row align-items-center justify-content-center">
         <div class="col-10 card_admin_allposts text-left admin_panel">
@@ -32,6 +38,7 @@ session_start();
                     </tr>
                 </thead>
 
+                <!-- Loops out table with title, date, created by, edit link and delete link -->
                 <?php
                 foreach($posts as $key):
                 ?>
