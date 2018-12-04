@@ -4,10 +4,16 @@ session_start();
 
 <!-- include Head -->
 <?php include '../includes/head.php';?>
+
+<!-- include Header -->
 <?php include '../includes/header.php';?>
+
 <?php /*include '../classes/Admin_posts.php'*/;?>
+
+<!-- include database connection -->
 <?php include '../includes/admin_server.php';?>
 
+<!-- sceleton for page -->
 <div class="container">
     <div class="row align-items-center justify-content-center">
         <div class="col-10 card_admin_allposts text-left admin_panel">
@@ -32,23 +38,24 @@ session_start();
                     </tr>
                 </thead>
 
+                <!-- Loops out table with title, date, created by, edit link and delete link -->
                 <?php
-                foreach($posts as $key):
+                foreach($admin as $single_admin):
                 ?>
 
-                <?php echo "<td>" ?><?php echo $key['title']?><?php echo "</td>"?>
-                <?php echo "<td>" ?><?php echo $key['post_date']?><?php echo "</td>"?>
-                <?php echo "<td>" ?><?php echo $key['created_by']?><?php echo "</td>"?>
+                <?php echo "<td>" ?><?php echo $single_admin['title']?><?php echo "</td>"?>
+                <?php echo "<td>" ?><?php echo $single_admin['post_date'] ?><?php echo "</td>"?>
+                <?php echo "<td>" ?><?php echo $single_admin['created_by']?><?php echo "</td>"?>
                 <?php echo "<td>" ?><a href="../views/admin_allposts.php"><i class="fas fa-pen admin_icon"></i></a><?php echo "</td>"?>
-                <?php echo "<td>"?><a href="../includes/delete_posts.php?post_id=<?= $key['post_id']; ?>"><i class="fas fa-trash-alt admin_icon"></i></a><?php echo "</td>"?>
+                <?php echo "<td>"?><a href="../includes/delete_posts.php?post_id=<?= $single_admin['post_id']; ?>"><i class="fas fa-trash-alt admin_icon"></i></a><?php echo "</td>"?>
 
                 <?php echo "</tr>" ?>
+                
+                
                 <?php
                 endforeach; 
                 ?>
-
-                </tr>
-                </tbody>
+               
             </table>
         </div>
     </div>
