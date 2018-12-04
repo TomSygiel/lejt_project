@@ -13,9 +13,10 @@ include '../includes/database_connection.php';
 include '../classes/Single_post.php';
 
 ?>
+<main class="container-fluid single_post_main">  
 
-<div class="container single_post">
-    <div class="col-10">
+<!--<div class="container-fluid single_post">
+    <div class="col-10">-->
 
         <?php
 
@@ -27,35 +28,45 @@ include '../classes/Single_post.php';
             /* Looping through and showing chosen values to display a specific blog post from reaching out to database above. sp_part stands for single post part */
             foreach($array as $sp_part){ ?>
 
-                <div class="single_title">
-                    <?php echo "<h2>" . $sp_part["title"] . "</h2> <br>"; ?>
-                </div>
+                    <div class="row justify-content-center">
 
-                <div class="single_img">
-                    <img src="../includes/<?php echo $sp_part['image']; ?>" alt="blog post image">
-                </div>
+                        <div class="col-12 single_post_title">
+                            <?php echo "<h2>" . $sp_part["title"] . "</h2>"; ?>
+                        </div>
 
-                <div class="single_description">
-                    <?php echo "<p>" . $sp_part["description"] . "</p> <br>"; ?>
-                </div>
-                    
-                <div class="single_category">
-                    <?php echo "<p>" . $sp_part["category"] . "</p> <br>"; ?>
-                </div>
+                    </div>
 
-                <div class="single_date">
-                    <?php echo "<p>" . $sp_part["post_date"] . "</p> <br>"; ?>
-                </div>
+                    <div class="row justify-content-center">
+
+                        <div class="col-6 single_post_image_frame">
+                            <img class="single_post_image" src="../includes/<?php echo $sp_part['image']; ?>" alt="blog post image">
+                        </div>
+
+                        <div class="col-6 single_post_description">
+                            <?php echo "<p>" . $sp_part["description"] . "</p>"; ?>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                            
+                        <td class="col-12 single_post_category_date">
+                            <?php echo "<p class='single_post_category'>" . $sp_part["category"] . "</p>" . " "; ?>
+                            
+                            <?php echo "<p class='single_post_date'>" . $sp_part["post_date"] . "</p>"; ?>
+                        </td>
+
+                    </div>
 
         <?php
         }
 
         ?>
 
-    </div>
+    <!--</div>
 
-</div>
-
+</div>-->
+</main>
 <?php
 // Include footer
 include '../includes/footer.php';

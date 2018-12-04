@@ -1,0 +1,18 @@
+.single_post_main{
+
+    padding: 0 5em;
+
+    img.single_post_image{
+        max-height: 200px;
+        padding: auto 0;
+    }
+
+    .single_post_title{
+        font-family: $font_header;
+    }
+
+    .single_post_description{
+        font-family: $font_main;
+    }
+
+}
