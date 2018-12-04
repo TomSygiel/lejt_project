@@ -18,8 +18,9 @@ session_start();
                 <input type="password" name="password" placeholder="password" id="login_password" ><br/>
                 <input type="hidden" name="user_id" id="user_id"><br/>
                 <input type="submit" value="submit" class="btn btn-primary" ><br/>
-                
+
             </form>
+            <br/>
 
 
 
