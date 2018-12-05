@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 ?>
@@ -71,7 +72,7 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
 
                     <input type="hidden" name="user_ID" id="user_ID"><br/>
 
-                    <input type="submit" value="Blog it!" class="btn btn-primary">
+                    <input name="post" type="submit" value="Blog it!" class="btn btn-primary">
 
                 </form>
             
