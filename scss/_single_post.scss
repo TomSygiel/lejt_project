@@ -3,10 +3,6 @@
     padding: 0 5em;
     max-width: 100rem;
 
-    .single_post_image_frame{
-        align-self: center;
-    }
-
     img.single_post_image{
         max-height: 250px;
         padding: auto 0;
@@ -26,8 +22,23 @@
         font-family: $font_header;
     }
 
-}
+    .single_comment_form{
+        padding-bottom: 2em;
+        margin-bottom: 2em;
 
-/**{
-    border: 1px solid red;
-}*/
+        .single_h2_form{
+            font-family: $font_header;
+        }
+
+        input.single_comment_title{
+            margin-bottom: 2em;
+        }
+
+        textarea.single_comment_text{
+            width: 100%;
+            margin-bottom: 1.5em;
+        }
+
+    }
+
+}

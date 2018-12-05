@@ -28,7 +28,7 @@ include '../classes/Single_post.php';
                     <div class="row text-center">
 
                         <div class="col-12 single_post_title">
-                            <?php echo "<h2>" . $sp_part["title"] . "</h2>"; ?>
+                            <?php echo "<h1>" . $sp_part["title"] . "</h1>"; ?>
                         </div>
 
                     </div>
@@ -64,9 +64,40 @@ include '../classes/Single_post.php';
             }
         ?>
 
+    <div class="row">
 
+        <section class="card col-6 single_comment_form">
+
+            <form action="../includes/single_post_comment_server.php" method="POST">
+
+                <h2 class="single_h2_form">Comment</h2>
+                            
+                    <label for="comment_title">Title</label><br/>
+                            
+                    <input type="text" name="single_title" placeholder="Title"
+                    id="single_comment_title" class="single_comment_title"><br/>
+
+                    <label for="single_comment_text">What do you think?</label><br/>
+                    
+                    <textarea type="text" name="single_comment_text" placeholder="What do you think?" id="single_comment_text"
+                    class="single_comment_text" rows="5"></textarea>
+
+                    <br>
+
+                    <label for="single_comment_submit">Post your comment</label><br/>
+
+                    <input type="submit" value="Comment" class="btn btn-primary">
+
+                </h2>
+
+            </form>
+
+        </section>
+
+    </div>
 
 </main>
+
 <?php
 // Include footer
 include '../includes/footer.php';
