@@ -58,9 +58,9 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
 
                     <select name="category_select">
 
-                        <option value="watches">Watches</option>
-                        <option value="sunglasses">Sunglasses</option>
-                        <option value="home_accesories">Home accesories</option>
+                        <option value="Watches">Watches</option>
+                        <option value="Sunglasses">Sunglasses</option>
+                        <option value="Home accessories">Home accessories</option>
 
                     </select>
 
