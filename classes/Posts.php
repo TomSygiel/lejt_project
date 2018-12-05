@@ -33,24 +33,30 @@ class Post {
 
         }
 
-        if (!empty($title) && !empty($description)) {
-            $statement = $this->pdo->prepare("INSERT INTO posts (title, description, created_by, image, category, post_date) VALUES(:title, :description, :created_by, :image, :category, :post_date)");
-            $statement->execute(
-                    [
-                    ":title" => $title,
-                    ":description" => $description,
-                    ":created_by" => $created_by,
-                    ":image" => $new_location,
-                    ":category" => $category,
-                    ":post_date" => $post_date
-                    ]
-                );
+        if (isset($_POST["post"])) {
+            $title = strip_tags($_POST["title"]);
+            $description = strip_tags($_POST["description"]);
 
-                return true;
+            if (!empty($title) && !empty($description)) {
+                $statement = $this->pdo->prepare("INSERT INTO posts (title, description, created_by, image, category, post_date) VALUES(:title, :description, :created_by, :image, :category, :post_date)");
+                $statement->execute(
+                        [
+                        ":title" => $title,
+                        ":description" => $description,
+                        ":created_by" => $created_by,
+                        ":image" => $new_location,
+                        ":category" => $category,
+                        ":post_date" => $post_date
+                        ]
+                    );
 
-            } 
+                    return true;
 
+             } 
+        
         }
+
+    }
 
 }
 

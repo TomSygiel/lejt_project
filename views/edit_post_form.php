@@ -9,31 +9,10 @@ session_start();
 
 <?php include '../includes/header.php';?>
 
-<body class="blog_form_page">
+<body class="edit_post_form_page">
 
 <?php
 
-//Error handling, checking for empty fields: Tomasz
-        
-$fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        
-if (strpos($fullUrl, "error=empty") == true) {
-    echo "<p class='error'>* No blog post to submit!</p>";
-    header ('refresh:5;url=new_post_form.php');
-    exit();
-}
-
-elseif (strpos($fullUrl, "error=notitle") == true) {
-    echo "<p class='error'>* Blog title is missing!</p>";
-    header ('refresh:5;url=new_post_form.php');
-    exit();
-}
-
-elseif (strpos($fullUrl, "error=nodescription") == true) {
-    echo "<p class='error'>* No blog description!</p>";
-    header ('refresh:5;url=new_post_form.php');
-    exit();
-}
 
 ?>
     <!--Blog post form with image file uplad functionality: Tomasz-->
@@ -87,4 +66,5 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
 </body> 
 
 <!--include footer-->
+
 <?php include '../includes/footer.php';?> 
