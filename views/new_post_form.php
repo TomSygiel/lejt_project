@@ -36,7 +36,7 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
 }
 
 ?>
-    <!--Blog post form with image file uplad functionality: Tomasz-->
+    <!--Blog post form with image file upload functionality: Tomasz-->
 
     <div class="row justify-content-center">
         
