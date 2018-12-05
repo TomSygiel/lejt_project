@@ -1,18 +1,33 @@
 .single_post_main{
 
     padding: 0 5em;
+    max-width: 100rem;
+
+    .single_post_image_frame{
+        align-self: center;
+    }
 
     img.single_post_image{
-        max-height: 200px;
+        max-height: 250px;
         padding: auto 0;
     }
 
-    .single_post_title{
+    .single_post_title, .single_post_date{
         font-family: $font_header;
+        margin-bottom: 2em;
     }
 
     .single_post_description{
         font-family: $font_main;
     }
 
+    .single_post_category{
+        margin-top: 1.5em;
+        font-family: $font_header;
+    }
+
 }
+
+/**{
+    border: 1px solid red;
+}*/
