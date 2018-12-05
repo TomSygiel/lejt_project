@@ -72,7 +72,7 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
 
                     <input type="hidden" name="user_ID" id="user_ID"><br/>
 
-                    <input name="post" type="submit" value="Blog it!" class="btn btn-primary">
+                    <input name="post" type="submit" value="Blog it!" class="btn btn-primary blog_submit_button">
 
                 </form>
             

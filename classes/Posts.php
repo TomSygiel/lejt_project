@@ -9,10 +9,30 @@ class Post {
     }
 
     
-    public function deletePost(){
+    /*public function deletePost() {
 
+    }*/
+
+//Edit post
+
+    public function editPost($title, $description, $created_by, $new_location, $category, $post_date) {
+
+        if (isset($_POST["update"])) {
+            $title = strip_tags($_POST["title"]);
+            $description = strip_tags($_POST["description"]);
+
+            if (!empty($title) && !empty($description)) {
+                $statement_to_edit = $this->pdo->prepare("UPDATE posts SET title = . $title. , description = . $description . , created_by = . $created_by. , image = . $new_location . , . category = $category. , post_date = . $post_date . WHERE post_id = . $post_id . ");
+                $statement_to_edit->execute();
+
+                    return true;
+
+             } 
+        
+        }
     }
     
+//Create new post
 
     public function blogPost($new_location, $title, $description, $created_by, $category, $post_date) {
 

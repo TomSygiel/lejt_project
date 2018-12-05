@@ -11,49 +11,74 @@ session_start();
 
 <body class="edit_post_form_page">
 
-<?php
-
-
-?>
     <!--Blog post form with image file uplad functionality: Tomasz-->
 
     <div class="row justify-content-center">
         
          <div class="col-12 col-md-12 col-lg-6 card">
 
-            <h2 class="blog_heading">New Blog Post</h2>
+            <h2 class="blog_heading">Edit Blog Post</h2>
 
-                <form class="post_form" action="../includes/post_server.php" method="POST" enctype="multipart/form-data">
+                <?php
 
-                    <br/>
+                $post_id = $_GET["post_id"];
+
+                //Fetch selected post from database
+
+                $fetch_selected_post_statement = $pdo->prepare("SELECT * FROM posts WHERE post_id = :post_id");
+                $fetch_selected_post_statement->execute(
+                    [
+                        ":post_id" => $post_id
+                    ]
+                );
+
+                $all_selected_post = $fetch_selected_post_statement->fetchAll(PDO::FETCH_ASSOC);
+
+                foreach ($all_selected_post as $index => $single_post) {
+
+                    if ($index > 0) { ?>
+
+                        <form class="post_form" action="../includes/edit_server.php?post_id=<?php $post_id; ?>" method="POST" enctype="multipart/form-data">
                     
-                    <label for="image"><h4>Image</h4></label><br/>
-                    <input type="file" name="image" id="image">
+                    <?php
 
-                    <label for="blog_title"><h4>Title</h4></label><br/>
-                    <input type="text" name="title" placeholder="Title" id="blog_title"><br/>
+                    //var_dump($post_id);
 
-                    <label for="category"><h4>Category: </h4></label><br/>
+                    }
 
-                    <select name="category_select">
+                }
+                
+                ?>
 
-                        <option value="Watches">Watches</option>
-                        <option value="Sunglasses">Sunglasses</option>
-                        <option value="Home accessories">Home accessories</option>
+                        <br/>
+                        
+                        <label for="image"><h4>Update Image</h4></label><br/>
+                        <input type="file" name="image" id="image">
 
-                    </select>
+                        <label for="blog_title"><h4>Update Title</h4></label><br/>
+                        <input type="text" name="title" placeholder="Title" id="blog_title"><br/>
 
-                    <br/>
+                        <label for="category"><h4>Update Category: </h4></label><br/>
 
-                    <label for="blog_text"><h4>Text</h4></label><br/>
-                   
-                    <textarea type="text" name="description" placeholder="..." id="text" ></textarea><br/>
+                        <select name="category_select">
 
-                    <input type="hidden" name="user_ID" id="user_ID"><br/>
+                            <option value="Watches">Watches</option>
+                            <option value="Sunglasses">Sunglasses</option>
+                            <option value="Home accessories">Home accessories</option>
 
-                    <input name="post" type="submit" value="Blog it!" class="btn btn-primary">
+                        </select>
 
-                </form>
+                        <br/>
+
+                        <label for="blog_text"><h4>Update Text</h4></label><br/>
+                    
+                        <textarea type="text" name="description" placeholder="..." id="text" ></textarea><br/>
+
+                        <input type="hidden" name="user_ID" id="user_ID"><br/>
+
+                        <input name="update" type="submit" value="Update!" class="btn btn-primary blog_submit_button">
+
+                    </form>
             
             </div>
         
