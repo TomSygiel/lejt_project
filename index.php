@@ -1,60 +1,82 @@
 <?php
 session_start();
+
+// Include Head
+include ("includes/head.php");
+
+// Include Header
+include ("includes/header.php");
+
+// Include database connection
+include ("includes/database_connection.php");
+
+// Fetch selected posts from database
+$fetch_all_posts_statement = $pdo->prepare("SELECT * FROM `posts` ORDER BY post_id DESC LIMIT 3");
+$fetch_all_posts_statement->execute();
+$all_posts = $fetch_all_posts_statement->fetchAll(PDO::FETCH_ASSOC);
+
+//check if correct array is returned
+//highlight_string("<?php =\n" . var_export($all_posts, true) . "\n")
 ?>
-
-<!-- include Head -->
-<?php include 'includes/head.php';?>
-
-<!-- include Header -->
-<?php include 'includes/header.php';?>
 
 <body>
 
-<!--Skeleton structure to work with for the landing site: Tomasz-->
-
+<!--Index structure: Linda-->
 <div class="container blog_post_window">
-    <div class="row">
-        <div class="col-12">
+ 
 
+        <?php
+        //Loops through associative array
+        foreach($all_posts as $i => $i_array) {
+            
+            //Check value of variable i. If 0 echo main blog post.
+            if($i === 0){?>
+
+            <div class="row">
+                <div class="col-12 main_post_wrapper">
+                    <div class="main_picture_frame">
+                        <img class="main_picture" src="includes/<?= $i_array['image']; ?>">
+                    </div>
+                    <div class="post_content">
+                        <div class="post_inner">
+                            <h1 class="h1_index"><?= $i_array['title']; ?></h1>
+                            <div><?= $i_array['post_date']; ?></div>
+                            <div><?= $i_array['category']; ?></div>
+                            <div><?= $i_array['description']; ?></div> 
+                        </div>
+                        <div class="post_share_left"><i class="mainpic_icon fas fa-share"></i></div>
+                        <div class="post_share_right"><i class="mainpic_icon fas fa-book-open"></i></div>
+                    </div>
+                </div>
+ 
             <?php
+            //If value not 0 echo secondary posts.
+            }else{?>
 
-            require 'includes/database_connection.php';
-
-            $fetch_all_posts_statement = $pdo->prepare("SELECT * FROM `posts` ORDER BY post_id DESC LIMIT 3");
-            $fetch_all_posts_statement->execute();
-            $all_posts = $fetch_all_posts_statement->fetchAll(PDO::FETCH_ASSOC);  
-
-            //foreach($all_posts as $single_post){
-               
-            foreach($all_posts as $key => $single_posts){
-                echo $key;
-            
-                
-                // if($key == 0){
-                //     echo '<div class="main_picture_frame"><img class="main_picture" src="includes/' . $single_post["image"] . '"></div>';
-                // }
+                <div class="col-6 small_post_wrapper">
+                    <div class="secondary_picture_frame">
+                        <img class="secondary_picture" src="includes/<?= $i_array['image']; ?>">
+                    </div>
+                    <div class="small_post_content">
+                        <div class="small_post_inner">
+                            <h1 class="h2_index"><?= $i_array['title']; ?></h1>
+                            <div><?= $i_array['post_date']; ?></div>
+                            <div><?= $i_array['category']; ?></div>
+                            <div><?= $i_array['description']; ?></div>
+                            <div class="small_post_share_left"></div>
+                            <div class="small_post_share_right"></div>
+                        </div>
+                    </div>
+                </div>
+            <?php
+                }
             }
-        
-                
-            //     
-              
-            //     echo '<h1 class="h1_index">' . $single_post["title"] . '</h1>';
-            //     echo '<div>' . $single_post["post_date"] . '</div>';
-            //     echo '<div>' . $single_post["category"] . '</div>';
-            //     echo '<div>' . $single_post["description"] . '</div>';
-
-            //     echo '<div class="secondary_picture_frame"><img class="secondary_picture" src="includes/' . $single_post["image"] . '"></div>';
-            //     echo '<div class="secondary_picture_frame"><img class="secondary_picture" src="includes/' . $single_post["image"] . '"></div>';
-            
-            // }
-
             ?>
-
-            <br/>
-
         </div>
-    </div>
+
+    <br/>
+       
 </div>
 
 <!-- include Footer -->
-<?php include 'includes/footer.php';?>
+<?php include ("includes/footer.php");?>
