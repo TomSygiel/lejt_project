@@ -32,25 +32,17 @@ session_start();
                     ]
                 );
 
-                $all_selected_post = $fetch_selected_post_statement->fetchAll(PDO::FETCH_ASSOC);
+                $selected_post = $fetch_selected_post_statement->fetch(PDO::FETCH_ASSOC);
 
-                foreach ($all_selected_post as $index => $single_post) {
-
-                    if ($index > 0) { 
-
-
-                    }
-
-                }
                 
                 ?>
 
-                 <form class="post_form" action="../includes/edit_server.php?post_id=$post_id" method="POST" enctype="multipart/form-data">
+                 <form class="post_form" action="../includes/edit_post_server.php?post_id=$post_id" method="POST" enctype="multipart/form-data">
 
                     <br/>
 
                     <label for="image"><h4>Image</h4></label><br/>
-                    <input type="file" name="image" id="image">
+                    <input type="file" name="image" value="<?= $selected_post["title"]; ?>. " id="image">
 
                     <label for="blog_title"><h4>Title</h4></label><br/>
                     <input type="text" name="title" placeholder="Title" id="blog_title"><br/>

@@ -30,7 +30,7 @@ $upload_ok = move_uploaded_file($temporary_location, $new_location);
 //Call on functions in class
 
 $posts = new Post($pdo);
-$posts->editPost($title, $description, $created_by, $new_location, $category, $post_date);
+$posts->editPost($title, $description, $created_by, $new_location, $category, $post_date, $post_id);
 
 //Re-direct to index
 

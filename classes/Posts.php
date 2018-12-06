@@ -15,7 +15,7 @@ class Post {
 
 //Edit post
 
-    public function editPost($title, $description, $created_by, $new_location, $category, $post_date) {
+    public function editPost($title, $description, $created_by, $new_location, $category, $post_date, $post_id) {
 
         if (isset($_POST["update"])) {
             $title = strip_tags($_POST["title"]);
