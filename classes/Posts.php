@@ -15,11 +15,7 @@ class Post {
 
 //Edit post
 
-    public function editPost(/*$title, $description/*, $created_by, $category, $post_date, $post_id*/) {
-
-        $post_id = $_GET["post_id"];
-        $title = $_POST["title"];
-        $description = $_POST["description"];
+    public function editPost($title, $description, $post_id) {
 
         if (isset($_POST["update"])) {
             $title = strip_tags($_POST["title"]);
@@ -34,15 +30,14 @@ class Post {
                         ":post_id" => $post_id
                     ]
                 );
-                    $edit_post = $statement_to_edit;
-                    return $edit_post;
+                    return true;
 
              } 
         
         }
     }
     
-//Create new post
+//Create new post with error handling
 
     public function blogPost($new_location, $title, $description, $created_by, $category, $post_date) {
 
