@@ -1,11 +1,20 @@
 .single_post_main{
 
-    padding: 0 5em;
-    max-width: 100rem;
+    img.single_post_image_frame{
+        max-height: 250px;
+        width: 100%;
+        overflow: hidden;
+        padding: auto 0;
+    }
 
     img.single_post_image{
-        max-height: 250px;
-        padding: auto 0;
+        min-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .comment_title, .single_comment_text{
+        font-family: $font_header;
     }
 
     .single_post_title, .single_post_date{

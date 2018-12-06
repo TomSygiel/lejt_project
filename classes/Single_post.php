@@ -16,7 +16,7 @@ class SinglePost
 
     public function getSinglePost()
     {
-        $statement = $this->pdo->prepare("SELECT * FROM posts");
+        $statement = $this->pdo->prepare("SELECT * FROM posts where post_id = 5");
 
         $statement->execute();
 

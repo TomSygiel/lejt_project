@@ -22,9 +22,9 @@
 
 
     // THIS WORKS IF ALL ABOVE IS COMMENTED OUT
-    $statement = $pdo->prepare("SELECT title, description, created_by, image FROM posts 
+    /*$statement = $pdo->prepare("SELECT title, description, created_by, image FROM posts 
     WHERE post_id = 3");
 
     $statement->execute();
 
-    $single_post = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $single_post = $statement->fetchAll(PDO::FETCH_ASSOC);*/
