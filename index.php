@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if(!isset($_SESSION["username"])){
+    header('Location: views/register.php');
+}
+
 // Include Head
 include ("includes/head.php");
 
@@ -44,8 +48,12 @@ $all_posts = $fetch_all_posts_statement->fetchAll(PDO::FETCH_ASSOC);
                             <div><?= $i_array['category']; ?></div>
                             <div><?= $i_array['description']; ?></div> 
                         </div>
-                        <div class="post_share_left"><i class="mainpic_icon fas fa-share"></i></div>
-                        <div class="post_share_right"><i class="mainpic_icon fas fa-book-open"></i></div>
+                        <div class="post_share_left">
+                            <i class="mainpic_icon fas fa-pen"></i>
+                        </div>
+                        <div class="post_share_right">
+                            <i class="mainpic_icon fas fa-trash-alt"></i>
+                        </div>
                     </div>
                 </div>
  
@@ -53,7 +61,7 @@ $all_posts = $fetch_all_posts_statement->fetchAll(PDO::FETCH_ASSOC);
             //If value not 0 echo secondary posts.
             }else{?>
 
-                <div class="col-6 small_post_wrapper">
+                <div class="col-12 col-lg-6 small_post_wrapper">
                     <div class="secondary_picture_frame">
                         <img class="secondary_picture" src="includes/<?= $i_array['image']; ?>">
                     </div>
@@ -63,19 +71,29 @@ $all_posts = $fetch_all_posts_statement->fetchAll(PDO::FETCH_ASSOC);
                             <div><?= $i_array['post_date']; ?></div>
                             <div><?= $i_array['category']; ?></div>
                             <div><?= $i_array['description']; ?></div>
-                            <div class="small_post_share_left"></div>
-                            <div class="small_post_share_right"></div>
+                            <div class="d-none d-lg-block small_post_share_left">
+                                <i class="secondarypic_icon fas fa-pen"></i>
+                            </div>
+                            <div class="d-none d-lg-block small_post_share_right">
+                                <i class="secondarypic_icon fas fa-trash-alt"></i>
+                            </div>
+                            <div class="d-lg-none post_share_left">
+                                <i class="mainpic_icon fas fa-pen"></i>
+                            </div>
+                            <div class="d-lg-none post_share_right">
+                                <i class="mainpic_icon fas fa-trash-alt"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             <?php
                 }
             }
             ?>
-        </div>
 
-    <br/>
-       
+        </div>
+    <br/>     
 </div>
 
 <!-- include Footer -->
