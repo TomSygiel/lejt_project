@@ -36,7 +36,7 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
 }
 
 ?>
-    <!--Blog post form with image file uplad functionality: Tomasz-->
+    <!--Blog post form with image file upload functionality: Tomasz-->
 
     <div class="row justify-content-center">
         
@@ -58,9 +58,9 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
 
                     <select name="category_select">
 
-                        <option value="watches">Watches</option>
-                        <option value="sunglasses">Sunglasses</option>
-                        <option value="home_accesories">Home accesories</option>
+                        <option value="Watches">Watches</option>
+                        <option value="Sunglasses">Sunglasses</option>
+                        <option value="Home accessories">Home accessories</option>
 
                     </select>
 
@@ -72,7 +72,7 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
 
                     <input type="hidden" name="user_ID" id="user_ID"><br/>
 
-                    <input name="post" type="submit" value="Blog it!" class="btn btn-primary">
+                    <input name="post" type="submit" value="Blog it!" class="btn btn-primary blog_submit_button">
 
                 </form>
             

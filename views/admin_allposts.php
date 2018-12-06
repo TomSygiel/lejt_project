@@ -8,7 +8,6 @@ session_start();
 <!-- include Header -->
 <?php include '../includes/header.php';?>
 
-<?php /*include '../classes/Admin_posts.php'*/;?>
 
 <!-- include database connection -->
 <?php include '../includes/admin_server.php';?>
@@ -46,7 +45,7 @@ session_start();
                 <?php echo "<td>" ?><?php echo $single_admin['title']?><?php echo "</td>"?>
                 <?php echo "<td>" ?><?php echo $single_admin['post_date'] ?><?php echo "</td>"?>
                 <?php echo "<td>" ?><?php echo $single_admin['created_by']?><?php echo "</td>"?>
-                <?php echo "<td>" ?><a href="../views/admin_allposts.php"><i class="fas fa-pen admin_icon"></i></a><?php echo "</td>"?>
+                <?php echo "<td>" ?><a href="../views/edit_post_form.php?post_id=<?php $post_id; ?>"><i class="fas fa-pen admin_icon"></i></a><?php echo "</td>"?>
                 <?php echo "<td>"?><a href="../includes/delete_posts.php?post_id=<?= $single_admin['post_id']; ?>"><i class="fas fa-trash-alt admin_icon"></i></a><?php echo "</td>"?>
 
                 <?php echo "</tr>" ?>
