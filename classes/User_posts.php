@@ -12,9 +12,9 @@ class User
     }
 
     public function getAlluserPosts() {
-        $statement_to_collect = $this->pdo->prepare("SELECT * FROM posts ORDER BY post_id DESC");
-        $statement_to_collect->execute();
-        $admin = $statement_to_collect->fetchAll();
+        $statement = $this->pdo->prepare("SELECT * FROM posts ORDER BY post_id DESC");
+        $statement ->execute();
+        $admin = $statement ->fetchAll();
 
         return $user;
     }

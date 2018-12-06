@@ -8,7 +8,6 @@ session_start();
 <!-- include Header -->
 <?php include '../includes/header.php';?>
 
-<?php /*include '../classes/Admin_posts.php'*/;?>
 
 <!-- include database connection -->
 <?php include '../includes/admin_server.php';?>

@@ -33,7 +33,7 @@ body {
 
 }
 
-.error{
+/*.error{
     width: 92%;
     margin: 0px auto;
     padding: 10px;
@@ -42,8 +42,12 @@ body {
     background: #f2dede;
     border-radius: 5px;
     text-align: left;
-}
+}*/
 
+
+.readmore{
+    text-align: right;
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px){
