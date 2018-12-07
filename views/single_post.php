@@ -102,7 +102,7 @@ include '../classes/Comments.php';
         <?php
 
            $comments = new Comments($pdo);
-           $comments->getComments();
+           $comments->getComments($post_id);
            $comments->all_comments;
            $comments_array = $comments->all_comments;
 
@@ -118,7 +118,8 @@ include '../classes/Comments.php';
                             </div>
                             
                             <div class="comment_date">
-                                <p><i><?php echo $comments_part["comment_date"] . " "; ?></i><a href="../includes/single_post_delete_comment_server.php?comments_id=<?php echo $comments_part["comments_id"]?>"><i class="fas fa-trash-alt"></i></a></p>
+                                <p><i><?php echo $comments_part["comment_date"] . " "; ?></i></p>
+                                <a href="../includes/single_post_delete_comment_server.php?comments_id=<?php echo $comments_part["comments_id"]?>"><i class="fas fa-trash-alt"></i></a>
                             </div>
 
                             <hr class="hr_printed_comment">

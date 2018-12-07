@@ -32,11 +32,15 @@ class Comments
 
     }
 
-    public function getComments()
+    public function getComments($post_id)
     {
-        $statement = $this->pdo->prepare("SELECT * FROM comments");
+        $statement = $this->pdo->prepare("SELECT * FROM comments where post_id = :post_id");
 
-        $statement->execute();
+        $statement->execute(
+            [
+                ":post_id" => $post_id,
+            ]
+        );
 
         $all_comments = $statement->fetchAll(PDO::FETCH_ASSOC);
 
