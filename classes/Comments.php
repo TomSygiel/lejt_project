@@ -13,21 +13,7 @@ class Comments
     {
         $this->pdo = $pdo;
     }
-    /*public function register($username, $password) 
-    { 
 
-        try{
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            $stmt = $this->pdo->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
-
-            $stmt->execute(     
-                [
-                    ":username" => $username,
-                    ":password" => $hashed_password
-
-                ]);
-            return true;
-        }*/
     public function postComment($content, $post_id, $created_by, $comment_date)
     {
         $statement = $this->pdo->prepare("INSERT INTO comments (content, post_id, created_by, comment_date) VALUES (:content, :post_id, :created_by, :comment_date)");
@@ -38,7 +24,6 @@ class Comments
             ":post_id" => $post_id,
             ":created_by" => $created_by,
             ":comment_date" => $comment_date
-
             ]
         );
 
@@ -46,15 +31,41 @@ class Comments
 
     }
 
-    public function getComments()
+    public function getComments($post_id)
     {
-        $statement = $this->pdo->prepare("SELECT * FROM comments");
+        $statement = $this->pdo->prepare("SELECT * FROM comments where post_id = :post_id");
 
-        $statement->execute();
+        $statement->execute(
+            [
+                ":post_id" => $post_id,
+            ]
+        );
 
         $all_comments = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         $this->all_comments = $all_comments;
+    }
+
+    public function deleteComments()
+
+    /* Go through this code if you push delete product in single_post.php, meaning delete specific comment from comments table from specific post */
+    {
+        if(isset($_GET["comments_id"])){
+
+           $comments_id = $_GET["comments_id"];
+
+        $statement = $this->pdo->prepare("DELETE FROM comments
+        WHERE comments_id = :comments_id");
+
+        $statement->execute(
+            [
+                ":comments_id" => $comments_id
+            ]
+        );
+
+        return true;
+
+        }
     }
 
 }

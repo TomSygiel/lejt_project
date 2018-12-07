@@ -31,21 +31,36 @@
         font-family: $font_header;
     }
 
-    .single_comment_form{
-        padding-bottom: 2em;
-        margin-bottom: 2em;
+    .comments{
+            margin: 0 2em;
 
-        .single_h2_form{
-            font-family: $font_header;
-        }
-
-        input.single_comment_title{
+        .single_comment_form{
+            padding-bottom: 2em;
             margin-bottom: 2em;
+            max-height: 35rem;
+
+            .single_h2_form{
+                font-family: $font_header;
+                margin-bottom: 1.5em;
+            }
+
+            input.single_comment_title{
+                margin-bottom: 2em;
+            }
+
+            textarea.single_comment_text{
+                width: 100%;
+                margin-bottom: 1.5em;
+            }
         }
 
-        textarea.single_comment_text{
-            width: 100%;
-            margin-bottom: 1.5em;
+        .printed_comments{
+            padding-top: 1.5em;
+            padding-left: 3em;
+
+            .hr_printed_comment{
+                border-top: 1px solid $secondary_light_purple;
+            }
         }
 
     }

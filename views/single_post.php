@@ -13,7 +13,7 @@ include '../classes/Single_post.php';
 include '../classes/Comments.php';
 ?>
 
-<main class="container single_post_main">  
+<main class="container single_post_main">
 
         <?php
 
@@ -65,11 +65,11 @@ include '../classes/Comments.php';
             }
         ?>
 
-    <div class="row">
+    <div class="row comments">
 
         <section class="card col-12 col-md-6 single_comment_form">
 
-            <form action="../includes/single_post_comment_server.php" method="POST">
+            <form action="../includes/single_post_comment_server.php?post_id=<?php echo $post_id; ?>" method="POST">
 
                 <h2 class="single_h2_form">Comment</h2>
 
@@ -84,6 +84,9 @@ include '../classes/Comments.php';
                     <!-- Sending $post_id to single_post_comment_server.php -->
                     <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
 
+                    <!-- Sending $comments_id to single_post_delete_comment_server.php -->
+                    <input type="hidden" name="comments_id" value="<?php echo $comments_id; ?>">
+
                     <br>
 
                     <label for="single_comment_submit">Post your comment</label><br/>
@@ -94,29 +97,37 @@ include '../classes/Comments.php';
 
         </section>
 
-        <section>
+        <section class="col-12 col-md-6 printed_comments">
 
         <?php
+        
+            $post_id = $_GET["post_id"];
 
-           $comments = new Comments($pdo);
-           $comments->getComments();
-           $comments->all_comments;
-           $comments_array = $comments->all_comments;
+            $comments = new Comments($pdo);
+            $comments->getComments($post_id);
+            $comments->all_comments;
+            $comments_array = $comments->all_comments;
 
                      /* Looping through and showing all comments posted on this specific post */
-                     foreach($comments_array as $comments_part){ ?>
+                     foreach($comments_array as $comments_part){ 
+
+                    $comments_id = $comments_part["comments_id"];
+                    //$post_id = $_GET["post_id"];
+                    ?>
     
-                            <div class="col-12 col-md-12 comment_created_by">
+                            <div class="comment_created_by_content">
                                 <h4><b><?php echo $comments_part["created_by"] . ":"?></b></h4>
-                            </div>
-    
-                            <div class="col-12 col-md-12 comment_content">
+                        
                                 <p><?php echo $comments_part["content"]; ?></p>
                             </div>
                             
-                            <div class="col-12 text-center comment_date">
-                                <p><i><?php echo $comments_part["comment_date"]; ?></i></p>
+                            <div class="comment_date">
+                                <p><i><?php echo $comments_part["comment_date"] . " "; ?></i></p>
+                                <a href="../includes/single_post_delete_comment_server.php?post_id=<?php echo $comments_part["post_id"]?>&comments_id=<?php echo $comments_part["comments_id"];?>"><i class="fas fa-trash-alt"></i></a>
+
                             </div>
+
+                            <hr class="hr_printed_comment">
 
             <?php
                 }

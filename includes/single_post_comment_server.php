@@ -13,6 +13,6 @@ $new_comment = new Comments($pdo);
 $new_comment->postComment($content, $post_id, $created_by, $comment_date);
 
 // Create a new comment and then go back to the specific post you've commented
-header('Location: ../views/single_post.php');
+header("Location: ../views/single_post.php?post_id=".$_GET['post_id']);
 
 ?>
