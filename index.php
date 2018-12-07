@@ -55,13 +55,17 @@ $all_posts = $fetch_all_posts_statement->fetchAll(PDO::FETCH_ASSOC);
                                 else {
                                     echo $i_array['description'];
                                 }?>
-                            <i class="mainpic_icon far fa-comments"></i>
+                            
+                            <!-- Link with post_id to single post page with comments -->
+                            <a href="views/single_post.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon far fa-comments"></i>
                         </div>
-                        <div class="post_share_left">
-                            <i class="mainpic_icon fas fa-pen"></i>
+                        <div>
+                            <!-- Link with post_id to edit post -->
+                            <a href="views/edit_post_form.php?post_id=<?= $i_array['post_id'];?>"><i class="post_share_left mainpic_icon fas fa-pen"></i>
                         </div>
-                        <div class="post_share_right">
-                            <i class="mainpic_icon fas fa-trash-alt"></i>
+                        <div>
+                            <!-- Link with post_id to delete post -->
+                            <a href="includes/delete_posts_index.php?post_id=<?= $i_array['post_id'];?>"><i class="post_share_right mainpic_icon fas fa-trash-alt"></i>
                         </div>
                     </div>
                 </div>
