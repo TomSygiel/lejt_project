@@ -123,7 +123,7 @@ include '../classes/Comments.php';
                             
                             <div class="comment_date">
                                 <p><i><?php echo $comments_part["comment_date"] . " "; ?></i></p>
-                                <a href="../includes/single_post_delete_comment_server.php?comments_id=<?php echo $comments_part["comments_id"]?>"><i class="fas fa-trash-alt"></i></a>
+                                <a href="../includes/single_post_delete_comment_server.php?post_id=<?php echo $comments_part["post_id"]?>&comments_id=<?php echo $comments_part["comments_id"];?>"><i class="fas fa-trash-alt"></i></a>
 
                             </div>
 
