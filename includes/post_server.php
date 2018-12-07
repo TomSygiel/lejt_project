@@ -22,7 +22,7 @@ $upload_ok = move_uploaded_file($temporary_location, $new_location);
 
 $posts = new Post($pdo);
 $posts->blogPost($new_location, $title, $description, $created_by, $category, $post_date);
-$posts->deletePost();
+//$posts->deletePost();
 
 header ('Location: ../index.php');
 
