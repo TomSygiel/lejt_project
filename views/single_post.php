@@ -118,7 +118,7 @@ include '../classes/Comments.php';
                             </div>
                             
                             <div class="comment_date">
-                                <p><i><?php echo $comments_part["comment_date"]; ?></i><a href="../includes/single_post_delete_comment_server.php?comments_id=<?php echo $comments_part["comments_id"]?>"><i class="fas fa-trash-alt"></i></a><br></p>
+                                <p><i><?php echo $comments_part["comment_date"] . " "; ?></i><a href="../includes/single_post_delete_comment_server.php?comments_id=<?php echo $comments_part["comments_id"]?>"><i class="fas fa-trash-alt"></i></a></p>
                             </div>
 
                             <hr class="hr_printed_comment">
