@@ -8,10 +8,22 @@ class Post {
         $this->pdo = $pdo;
     }
 
+//Remove post from database
     
-    /*public function deletePost() {
+    public function deletePost() {
 
-    }*/
+        if(isset($_GET['post_id'])){
+            $statement_to_delete = $this->pdo->prepare("DELETE FROM posts WHERE post_id = :post_id");
+            $statement_to_delete->execute(
+                [
+                    ":post_id" => $_GET["post_id"]
+                ]
+            );
+
+                return true;
+        }
+
+    }
 
 //Edit post
 
