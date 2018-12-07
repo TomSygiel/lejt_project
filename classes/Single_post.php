@@ -16,9 +16,13 @@ class SinglePost
 
     public function getSinglePost()
     {
-        $statement = $this->pdo->prepare("SELECT * FROM posts where post_id = 5");
+        $statement = $this->pdo->prepare("SELECT * FROM posts where post_id = 5/*:post_id*/");
 
-        $statement->execute();
+        $statement->execute(
+            [
+                //":post_id" => $post_id
+            ]
+        );
 
         $single_post = $statement->fetchAll(PDO::FETCH_ASSOC);
 

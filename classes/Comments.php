@@ -43,4 +43,26 @@ class Comments
         $this->all_comments = $all_comments;
     }
 
+    public function deleteComments()
+
+    /* Go through this code if you push delete product in confirm.php, meaning delete specific product from addToCart table from specific userID */
+    {
+        if(isset($_GET["comments_id"])){
+
+           $comments_id = $_GET["comments_id"];
+
+        $statement = $this->pdo->prepare("DELETE FROM comments
+        WHERE comments_id = :comments_id");
+
+        $statement->execute(
+            [
+                ":comments_id" => $comments_id
+            ]
+        );
+
+        return true;
+
+        }
+    }
+
 }
