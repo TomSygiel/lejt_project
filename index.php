@@ -62,7 +62,7 @@ $all_posts = $fetch_all_posts_statement->fetchAll(PDO::FETCH_ASSOC);
                             
                             <!-- Link with post_id to single post page with comments -->
                             <div>
-                                <a href="views/single_post.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon_comment far fa-comments"></i>
+                                <a href="views/single_post.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon far fa-comments"></i>
                             </div>
                         </div>
 
@@ -99,27 +99,29 @@ $all_posts = $fetch_all_posts_statement->fetchAll(PDO::FETCH_ASSOC);
                                 else {
                                     echo $i_array['description'];
                                 }?>
-
-                            <!-- Read more tag -->
+                            
                             <div>
+                                <!-- Read more tag -->
                                 <a href="views/single_post.php?post_id=<?= $i_array['post_id'];?>"><p class='index_readmore'>Read more</p></a>
                             </div>
 
-                            <!-- Link with post_id to single post page with comments -->
-                            <div>
-                                <a href="views/single_post.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon_comment far fa-comments"></i>
+                            <!-- Comments on small screens - Link with post_id to single post page with comments -->
+                            <div class="d-lg-none">
+                            <a href="views/single_post.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon_comment far fa-comments"></i>
+                            </div>
+
+                            <!-- Icons on lg screen -->
+                            <div class="d-none d-lg-flex row justify-content-center">
+                                <!-- Link with post_id to edit post on lg screens -->
+                                <a href="views/edit_post_form.php?post_id=<?= $i_array['post_id'];?>"><i class="col-lg-3 d-none d-lg-block mainpic_icon_comment fas fa-pen"></i>
+                            
+                                <!-- Link with post_id to delete post on lg screens -->
+                                <a href="includes/delete_posts_index.php?post_id=<?= $i_array['post_id'];?>"><i class="col-lg-3 d-none d-lg-block mainpic_icon_comment fas fa-trash-alt"></i>
+
+                                <!-- Link with post_id to single post page with comments -->
+                                <a href="views/single_post.php?post_id=<?= $i_array['post_id'];?>"><i class="col-lg-3 d-lg-block mainpic_icon_comment far fa-comments"></i>
                             </div>
                         
-                            <!-- Link with post_id to edit post on lg screens -->
-                            <div>
-                                <a href="views/edit_post_form.php?post_id=<?= $i_array['post_id'];?>"><i class="d-none d-lg-block small_post_share_left secondarypic_icon fas fa-pen"></i>
-                            </div>
-
-                            <!-- Link with post_id to delete post on lg screens -->
-                            <div>
-                                <a href="includes/delete_posts_index.php?post_id=<?= $i_array['post_id'];?>"><i class="d-none d-lg-block small_post_share_right secondarypic_icon fas fa-trash-alt"></i>
-                            </div>
-
                             <!-- Link with post_id to edit post on small screens-->
                             <div>
                                 <a href="views/edit_post_form.php?post_id=<?= $i_array['post_id'];?>"><i class="d-lg-none post_share_left mainpic_icon fas fa-pen"></i>
