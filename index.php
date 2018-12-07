@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION["username"])){
-    header('Location: views/register.php');
+    header('Location: views/login.php');
 }
 
 // Include Head
@@ -46,13 +46,26 @@ $all_posts = $fetch_all_posts_statement->fetchAll(PDO::FETCH_ASSOC);
                             <h1 class="h1_index"><?= $i_array['title']; ?></h1>
                             <div><?= $i_array['post_date']; ?></div>
                             <div><?= $i_array['category']; ?></div>
-                            <div><?= $i_array['description']; ?></div> 
+
+                            <!-- if string legth is 70 characters or more, show only 70 characters -->
+                            <?php if(strlen($i_array['description']) >= 70){
+                                echo substr($i_array['description'],0,70);
+                                echo "<a href='/views/single_post.php'><p class='index_readmore'>Read more</p></a>";
+                                }
+                                else {
+                                    echo $i_array['description'];
+                                }?>
+                            
+                            <!-- Link with post_id to single post page with comments -->
+                            <a href="views/single_post.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon far fa-comments"></i>
                         </div>
-                        <div class="post_share_left">
-                            <i class="mainpic_icon fas fa-pen"></i>
+                        <div>
+                            <!-- Link with post_id to edit post -->
+                            <a href="views/edit_post_form.php?post_id=<?= $i_array['post_id'];?>"><i class="post_share_left mainpic_icon fas fa-pen"></i>
                         </div>
-                        <div class="post_share_right">
-                            <i class="mainpic_icon fas fa-trash-alt"></i>
+                        <div>
+                            <!-- Link with post_id to delete post -->
+                            <a href="includes/delete_posts_index.php?post_id=<?= $i_array['post_id'];?>"><i class="post_share_right mainpic_icon fas fa-trash-alt"></i>
                         </div>
                     </div>
                 </div>
@@ -70,7 +83,16 @@ $all_posts = $fetch_all_posts_statement->fetchAll(PDO::FETCH_ASSOC);
                             <h1 class="h2_index"><?= $i_array['title']; ?></h1>
                             <div><?= $i_array['post_date']; ?></div>
                             <div><?= $i_array['category']; ?></div>
-                            <div><?= $i_array['description']; ?></div>
+
+                            <!-- if string legth is 20 characters or more, show only 20 characters -->
+                            <?php if(strlen($i_array['description']) >= 20){
+                                echo substr($i_array['description'],0,20);
+                                echo "<a href='/views/single_post.php'><p class='index_readmore'>Read more</p></a>";
+                                }
+                                else {
+                                    echo $i_array['description'];
+                                }?>
+
                             <div class="d-none d-lg-block small_post_share_left">
                                 <i class="secondarypic_icon fas fa-pen"></i>
                             </div>
