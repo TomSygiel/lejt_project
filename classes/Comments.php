@@ -24,7 +24,6 @@ class Comments
             ":post_id" => $post_id,
             ":created_by" => $created_by,
             ":comment_date" => $comment_date
-
             ]
         );
 
@@ -51,16 +50,19 @@ class Comments
 
     /* Go through this code if you push delete product in confirm.php, meaning delete specific product from addToCart table from specific userID */
     {
-        if(isset($_GET["comments_id"])){
+        if(isset($_GET["comments_id"]) && ($_GET["post_id"])){
 
            $comments_id = $_GET["comments_id"];
+           $post_id = $_GET["post_id"];
 
         $statement = $this->pdo->prepare("DELETE FROM comments
-        WHERE comments_id = :comments_id");
+        WHERE comments_id = :comments_id
+        AND post_id = :post_id");
 
         $statement->execute(
             [
-                ":comments_id" => $comments_id
+                ":comments_id" => $comments_id,
+                ":post_id" => $post_id
             ]
         );
 
