@@ -6,19 +6,24 @@
 
 body {
 
-    .register{
+    h2.login, h2.register{
         font-family: $font_header;
     }
 
-    .register_link a{
-        color: black;
+    a.register_link{
+        color: $primary_blue;
     }
 
-    .register_link a:hover{
-        color: darkcyan;
+    .register_link:hover{
+        color: $secondary_light_purple;
+        text-decoration: none;
+    }
+
+    label{
+        font-family: $font_main;
     }
     
-    .member{
+    p.member{
         text-align: center;
         padding: 2em;
     }
@@ -35,11 +40,6 @@ body {
     border-radius: 5px;
     text-align: left;
 }*/
-
-
-.readmore{
-    text-align: right;
-}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px){
