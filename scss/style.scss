@@ -11,6 +11,27 @@
 @import "single_post";
 @import "blog";
 
+.card{
+    justify-content: center;
+    background-color: white;
+    padding: 1em;
+    border-radius: .5rem;
+    margin-top: 2em;
+}
+
+.btn-primary{
+        background-color: $secondary_light_purple;
+        border-color: $secondary_light_purple;
+        color: $primary_blue;
+}
+
+.btn-primary:hover{
+    background-color: $primary_blue;
+    border-color: $primary_blue;
+    color: $primary_beige;
+}
+
+
 @media (min-width: 576px){
 
 }

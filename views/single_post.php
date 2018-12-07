@@ -13,7 +13,7 @@ include '../classes/Single_post.php';
 include '../classes/Comments.php';
 ?>
 
-<main class="container single_post_main">  
+<main class="container single_post_main">
 
         <?php
 
@@ -65,7 +65,7 @@ include '../classes/Comments.php';
             }
         ?>
 
-    <div class="row">
+    <div class="row comments">
 
         <section class="card col-12 col-md-6 single_comment_form">
 
@@ -94,7 +94,7 @@ include '../classes/Comments.php';
 
         </section>
 
-        <section>
+        <section class="col-12 col-md-6 printed_comments">
 
         <?php
 
@@ -106,17 +106,17 @@ include '../classes/Comments.php';
                      /* Looping through and showing all comments posted on this specific post */
                      foreach($comments_array as $comments_part){ ?>
     
-                            <div class="col-12 col-md-12 comment_created_by">
+                            <div class="comment_created_by_content">
                                 <h4><b><?php echo $comments_part["created_by"] . ":"?></b></h4>
-                            </div>
-    
-                            <div class="col-12 col-md-12 comment_content">
+                        
                                 <p><?php echo $comments_part["content"]; ?></p>
                             </div>
                             
-                            <div class="col-12 text-center comment_date">
+                            <div class="comment_date">
                                 <p><i><?php echo $comments_part["comment_date"]; ?></i></p>
                             </div>
+
+                            <hr class="hr_printed_comment">
 
             <?php
                 }
