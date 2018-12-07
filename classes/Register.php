@@ -35,12 +35,30 @@ class Register
 
     }
 
+    public function fetched_user($username) 
+    { 
 
+
+        $statement = $this->pdo->prepare("SELECT * FROM users WHERE username=:username");
+
+        $statement->execute(     
+            [
+                ":username" => $username
+
+            ]);
+
+        $fetched_user = $statement->fetchAll();
+        
+        return $fetched_user;
+        
+        $_SESSION["username"] = $fetched_user["username"];
+        
+    }
+    
 
 }
-
-$_SESSION["username"] = $_POST["username"]
 
 
 
 ?>
+
