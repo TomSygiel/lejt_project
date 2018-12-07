@@ -11,8 +11,9 @@ $login = new Login($pdo);
 $login->login($_POST["username"]);
 
 
-
-header("location:../index.php");
+if(!empty($_SESSION["username"])) {
+    header("location:../index.php");
+}
 
 
 ?>

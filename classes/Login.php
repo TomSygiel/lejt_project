@@ -37,8 +37,22 @@ class Login
             $is_password_correct = password_verify($password, $fetched_user["password"]);
 
             return true;
+            header("location:../index.php");
 
         } 
+        
+        elseif(empty($username) || empty($password)) {
+
+            header('Location: ../views/login.php?error=empty');
+            exit();
+            
+        } 
+        
+        else{
+    
+            header ('Location: ../views/login.php?error=login_failed');
+            
+        }
     }
 }
 

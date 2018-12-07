@@ -3,17 +3,23 @@ session_start();
 ?>
 
 <!-- include Head -->
-<?php include '../includes/head.php';?>
+<?php 
 
-<?php include '../includes/header.php';?>
+include '../includes/head.php';
+
+include '../includes/header.php';
+
+?>
 
 <body>
    
-    <div class="row text-center justify-content-center">
+    <section class="row text-center justify-content-center">
         
            <div class="col-12 col-md-12 text-center card" style="max-width: 30rem;">
             
                <form action="../includes/login_server.php" method="POST">
+
+               <?php include '../includes/login_error_handling.php'; ?>
                
                 <h2 class="login">Login</h2>
                 
@@ -33,7 +39,7 @@ session_start();
                
         </div>
         
-    </div>
+    </section>
 
     <p class="member">Not a member? <a class="register_link" href="register.php">Register here</a></p>
 
