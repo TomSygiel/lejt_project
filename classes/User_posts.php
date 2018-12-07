@@ -14,7 +14,7 @@ class User
     public function getAlluserPosts() {
         $statement = $this->pdo->prepare("SELECT * FROM posts ORDER BY post_id DESC");
         $statement ->execute();
-        $admin = $statement ->fetchAll();
+        $user = $statement ->fetchAll();
 
         return $user;
     }
