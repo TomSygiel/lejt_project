@@ -48,21 +48,21 @@ class Comments
 
     public function deleteComments()
 
-    /* Go through this code if you push delete product in confirm.php, meaning delete specific product from addToCart table from specific userID */
+    /* Go through this code if you push delete product in single_post.php, meaning delete specific comment from comments table from specific post */
     {
-        if(isset($_GET["comments_id"]) && ($_GET["post_id"])){
+        if(isset($_GET["comments_id"])/* && ($_GET["post_id"])*/){
 
            $comments_id = $_GET["comments_id"];
-           $post_id = $_GET["post_id"];
+           //$post_id = $_GET["post_id"];
 
         $statement = $this->pdo->prepare("DELETE FROM comments
         WHERE comments_id = :comments_id
-        AND post_id = :post_id");
+        /*AND post_id = :post_id*/");
 
         $statement->execute(
             [
-                ":comments_id" => $comments_id,
-                ":post_id" => $post_id
+                ":comments_id" => $comments_id/*,
+                ":post_id" => $post_id*/
             ]
         );
 

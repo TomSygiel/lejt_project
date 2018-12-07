@@ -111,7 +111,9 @@ include '../classes/Comments.php';
                      /* Looping through and showing all comments posted on this specific post */
                      foreach($comments_array as $comments_part){ 
 
-                    $comments_id = $comments_part["comments_id"];?>
+                    $comments_id = $comments_part["comments_id"];
+                    //$post_id = $_GET["post_id"];
+                    ?>
     
                             <div class="comment_created_by_content">
                                 <h4><b><?php echo $comments_part["created_by"] . ":"?></b></h4>
