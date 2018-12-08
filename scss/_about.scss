@@ -1,7 +1,7 @@
 @import "mixins";
 
 .about_container {
-    padding: 2em 6em 6em 6em;
+    padding: 2em;
 }
 
 .about_frame {
@@ -41,15 +41,30 @@ padding: 1em;
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px){
 
+    .about_container {
+        padding: 2em;
+    }
+
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px){
 
+    .about_paragraph {
+        font-family: $font_main;
+        font-size: 1rem;
+        padding: 0.5em;
+        
+    }
+
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px){
+
+    .about_container {
+        padding: 2em 6em 6em 6em;
+    }
 
 }
 
