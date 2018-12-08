@@ -30,16 +30,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item nav_item_top">
-                    <a class="nav-link text-uppercase" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="#">Our vision</a>
+                    <a class="nav-link text-uppercase" href="../views/about.php">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-uppercase" href="#">Posts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="#">Contact</a>
+                    <a class="nav-link text-uppercase" href="../views/contact.php">Contact</a>
                 </li>
             </ul>
         </div>

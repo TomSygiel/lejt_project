@@ -2,7 +2,7 @@
   <footer class="row justify-content-center footer text-center text-md-left millhouse_footer">
       <div class="col-md-4">
         <h4 class="my-2 footer_heading"><b>Millhouse</b></h4>
-        <p>Beatae, vero consectetur? Ea, illum corporis sed dolor! Est eaque, vel, impedit inventore doloribus ducimus iusto maiores fugiat magni perferendis vero odit assumenda corrupti provident.
+        <p>From a wholesaler to retailer, the journey was long, and we had many lessons to learn along the way. We believe in the value of learning-by-doing, and the decision to cater our services directly to You, our customer, was an easy one. Carefully sourced and often unique products on the market are now at the reach of your fingertips! But do not take our word for it. We have created a blog dedicated to our online store. From daily inspirations, personal favourites, new in, to the latest must-have trend alerts, we have you up to date and up to speed! Make yourself at home, at Millhouse! 
         </p>
       </div>
    
@@ -12,13 +12,13 @@
         <h4 class="my-2 footer_heading"><b>About</b></h4>
         <ul class="list-unstyled link-unstyled">
           <li>
-            <a class="footer_link" href="#!">Our team</a>
+            <a class="footer_link" href="../views/about.php">Our team</a>
           </li>
           <li>
-            <a class="footer_link" href="#!">Our vision</a>
+            <a class="footer_link" href="../views/about.php">Our vision</a>
           </li>
           <li>
-            <a class="footer_link" href="#!">About us</a>
+            <a class="footer_link" href="../views/about.php">About us</a>
           </li>
         </ul>
       </div>
@@ -40,13 +40,13 @@
 
       <div class="col-md-2 text-center">
         <h4 class="my-2 footer_heading"><b>Follow Us</b></h4>
-        <a href="#">
+        <a href="https://www.facebook.com/">
           <i class="footer_icons fab fa-facebook-f"></i>
         </a>
-        <a href="#">
+        <a href="https://twitter.com/">
           <i class="footer_icons fab fa-twitter"></i>
         </a>
-        <a href="#">
+        <a href="https://www.instagram.com/?hl=en">
           <i class="footer_icons fab fa-instagram"></i>
         </a>
       </div>  
