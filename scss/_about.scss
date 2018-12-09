@@ -1,0 +1,75 @@
+@import "mixins";
+
+.about_container {
+    padding: 2em;
+}
+
+.about_frame {
+    min-width: 20%;
+    height: auto;
+    overflow: hidden;
+    background-color: white;
+    padding: 1em;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.about_hr {
+    border-top: 1px solid $secondary_light_purple;
+}
+
+
+.text_box {
+min-width: 100px;
+height: auto;
+background-color: white;
+padding: 1em;
+
+.about_paragraph {
+    font-family: $font_main;
+    font-size: 1.5rem;
+    padding: 1em;
+    
+}
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px){
+
+    .about_container {
+        padding: 2em;
+    }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px){
+
+    .about_paragraph {
+        font-family: $font_main;
+        font-size: 1rem;
+        padding: 0.5em;
+        
+    }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px){
+
+    .about_container {
+        padding: 2em 6em 6em 6em;
+    }
+
+}
+
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px){
+
+}

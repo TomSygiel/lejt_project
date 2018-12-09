@@ -11,31 +11,6 @@ session_start();
 
 <body class="blog_form_page">
 
-<?php
-
-//Error handling, checking for empty fields: Tomasz
-        
-$fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        
-if (strpos($fullUrl, "error=empty") == true) {
-    echo "<p class='error'>* No blog post to submit!</p>";
-    header ('refresh:5;url=new_post_form.php');
-    exit();
-}
-
-elseif (strpos($fullUrl, "error=notitle") == true) {
-    echo "<p class='error'>* Blog title is missing!</p>";
-    header ('refresh:5;url=new_post_form.php');
-    exit();
-}
-
-elseif (strpos($fullUrl, "error=nodescription") == true) {
-    echo "<p class='error'>* No blog description!</p>";
-    header ('refresh:5;url=new_post_form.php');
-    exit();
-}
-
-?>
     <!--Blog post form with image file upload functionality: Tomasz-->
 
     <div class="row justify-content-center">
@@ -43,6 +18,14 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
          <div class="col-12 col-md-12 col-lg-6 card">
 
             <h2 class="blog_heading">New Blog Post</h2>
+
+                <?php
+
+                //Error handling, checking for empty fields: Tomasz
+
+                include '../includes/new_post_error_handling.php';
+
+                ?>
 
                 <form class="post_form" action="../includes/post_server.php" method="POST" enctype="multipart/form-data">
 
