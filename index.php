@@ -147,9 +147,12 @@ include ("includes/index_server.php")
             }
             ?>
 
-            </div>          
-</div>
-<br/>
+            </div>
+            <div class="index_readall_link">
+            <i class="fab fa-readme"></i><a href="/views/admin_allposts.php">READ ALL POSTS</a>
+            </div>  
+        </div>
+    <br/>
 
 
 <!-- include Footer -->

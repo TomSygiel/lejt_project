@@ -144,6 +144,18 @@ body{
 }
 
 
+.index_readall_link{
+    padding-bottom: 2em;
+    a{
+        color: $primary_blue;
+        text-decoration: none;
+    }
+    a:hover{
+        color: $secondary_light_purple;
+    }
+}
+
+
 
 @media (min-width: 576px){
     

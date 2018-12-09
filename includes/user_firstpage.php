@@ -84,7 +84,7 @@ include ("index_user_server.php")
                             
                             <!-- Read more tag -->
                             <div class="index_readmore">   
-                                <a href="../views/single_post.php?post_id=<?= $i_array['post_id'];?>">Read more</a>
+                                <a href="../views/single_post.php?post_id=<?= $i_array['post_id'];?>">Read blog post</a>
                             </div>
 
                             <!-- Icons on lg screen -->
@@ -113,7 +113,10 @@ include ("index_user_server.php")
             }
             ?>
 
-            </div>        
+            </div>
+            <div class="index_readall_link">
+            <i class="fab fa-readme"></i><a href="/views/user_allposts.php"> READ ALL POSTS</a>
+            </div>     
         </div>
     <br/>
 
