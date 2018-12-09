@@ -41,7 +41,7 @@ session_start();
 
                 <h2 class="contact_h2">Send an e-mail to Millhouse!</h2>
 
-                <form action="action_page.php" class="card contact_card">
+                <form action="mailto:blog@millhouse.se" class="card contact_card">
 
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -55,8 +55,10 @@ session_start();
                     <br/>
 
                     <input name="mail_to" type="submit" class="btn btn-primary contact_button" value="Send">
-
+                    
                 </form>
+
+                <br/>
 
             </div>
 
