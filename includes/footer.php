@@ -1,15 +1,15 @@
 
   <footer class="row justify-content-center footer text-center text-md-left millhouse_footer">
       <div class="col-md-4">
-        <h4 class="my-2 footer_heading"><b>Millhouse</b></h4>
-        <p>From a wholesaler to retailer, the journey was long, and we had many lessons to learn along the way. We believe in the value of learning-by-doing, and the decision to cater our services directly to You, our customer, was an easy one. Carefully sourced and often unique products on the market are now at the reach of your fingertips! But do not take our word for it. We have created a blog dedicated to our online store. From daily inspirations, personal favourites, new in, to the latest must-have trend alerts, we have you up to date and up to speed! Make yourself at home, at Millhouse! 
+        <h4 class="my-2 footer_heading"><b>Millhouse</b></h4><br/>
+        <p class="bio_paragraph">From a wholesaler to retailer, the journey was long, and we had many lessons to learn along the way. We believe in the value of learning-by-doing, and the decision to cater our services directly to You, our customer, was an easy one. Carefully sourced and often unique products on the market are now at the reach of your fingertips! But do not take our word for it. We have created a blog dedicated to our online store. From daily inspirations, personal favourites, new in, to the latest must-have trend alerts, we have you up to date and up to speed! Make yourself at home, at Millhouse! 
         </p>
       </div>
    
       <hr class="w-100 d-md-none">
 
       <div class="col-md-2">
-        <h4 class="my-2 footer_heading"><b>About</b></h4>
+        <h4 class="my-2 footer_heading"><b>About</b></h4><br/>
         <ul class="list-unstyled link-unstyled">
           <li>
             <a class="footer_link" href="../views/about.php">Our team</a>
@@ -26,7 +26,7 @@
       <hr class="w-100 d-md-none">
 
       <div class="col-md-2 col-lg-2">
-        <h4 class="my-2 footer_heading"><b>Address</b></h4>
+        <h4 class="my-2 footer_heading"><b>Address</b></h4><br/>
         <ul class="list-unstyled">
           <li>
             <p>Tulegatan 41, 113 53 Stockholm<br>
@@ -39,7 +39,7 @@
       <hr class="w-100 d-md-none">
 
       <div class="col-md-2 text-center">
-        <h4 class="my-2 footer_heading"><b>Follow Us</b></h4>
+        <h4 class="my-2 footer_heading"><b>Follow Us</b></h4><br/>
         <a href="https://www.facebook.com/">
           <i class="footer_icons fab fa-facebook-f"></i>
         </a>
