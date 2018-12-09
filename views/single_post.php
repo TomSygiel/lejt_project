@@ -121,20 +121,13 @@ include '../classes/Comments.php';
                                 <p><?php echo $comments_part["content"]; ?></p>
                             </div>
                             
-                            <div class="comment_date">
+                            <div class="comment_date_delete">
                                 <p><i><?php echo $comments_part["comment_date"] . " "; ?></i></p>
                             </div>
-
                             <div class="delete_comment_trash">
-                            <?php
-                                if ($_SESSION["admin"] == 1){
-                                    echo "<a href='../includes/single_post_delete_comment_server.php?post_id=<?php echo $comments_part['post_id']?>&comments_id=<?php echo $comments_part['comments_id'];?>"><i class='fas fa-trash-alt'></i></a>"
-                                }
-                            ?> 
-
-
-                            /*GAMMAL, FUNKAR*/
-                                <a href="../includes/single_post_delete_comment_server.php?post_id=<?php echo $comments_part["post_id"]?>&comments_id=<?php echo $comments_part["comments_id"];?>"><i class="fas fa-trash-alt"></i></a>
+                            <?php if($_SESSION["admin"] === 1 || $_SESSION["username"] === $comments_part["created_by"]){ ?>
+                                <a href="../includes/single_post_delete_comment_server.php?post_id=<?= $comments_part["post_id"]?>&comments_id=<?= $comments_part["comments_id"];?>"><i class="fas fa-trash-alt"></i></a>
+<?php } ?>
                             </div>
 
                             <hr class="hr_printed_comment">
