@@ -33,7 +33,7 @@
                     <a class="nav-link text-uppercase" href="../views/about.php">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="#">Posts</a>
+                    <a class="nav-link text-uppercase" href="../views/user_allposts.php">Posts</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-uppercase" href="../views/contact.php">Contact</a>

@@ -63,6 +63,14 @@
             }
         }
 
+        .delete_comment_trash a{
+            color: $primary_blue;
+        }
+
+        .delete_comment_trash a:hover{
+            color: $secondary_light_purple;
+        }
+
     }
 
 }
