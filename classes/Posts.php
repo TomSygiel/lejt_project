@@ -9,21 +9,29 @@ class Post {
     }
 
 //Remove post from database
+
+public function deletePostAndComments() {
+
+    if(isset($_GET['post_id'])) {
+        $statement_to_delete_comments = $this->pdo->prepare("DELETE FROM comments WHERE post_id = :post_id");
+        $statement_to_delete_comments->execute(
+            [
+                ":post_id" => $_GET["post_id"]
+            ]
+        );
+
+        $statement_to_delete_post = $this->pdo->prepare("DELETE FROM posts WHERE post_id = :post_id");
+        $statement_to_delete_post->execute(
+            [
+                ":post_id" => $_GET["post_id"]
+            ]
+        );
     
-    public function deletePost() {
-
-        if(isset($_GET['post_id'])){
-            $statement_to_delete = $this->pdo->prepare("DELETE FROM posts WHERE post_id = :post_id");
-            $statement_to_delete->execute(
-                [
-                    ":post_id" => $_GET["post_id"]
-                ]
-            );
-
-                return true;
-        }
-
     }
+
+    return true;
+
+}
 
 //Edit post
 
