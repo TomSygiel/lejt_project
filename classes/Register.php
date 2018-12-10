@@ -38,9 +38,7 @@ class Register
     public function fetched_user($username) 
     { 
 
-        //$username = $_POST["username"];
-        
-        $statement = $this->pdo->prepare("SELECT * FROM users WHERE username=:username");
+      $statement = $this->pdo->prepare("SELECT * FROM users WHERE username=:username");
 
         $statement->execute(     
             [
@@ -51,8 +49,7 @@ class Register
         
         return $statement -> fetch();
         
-        //$_SESSION["username"] = $fetched_user["username"];
-        
+             
     }
     
 
