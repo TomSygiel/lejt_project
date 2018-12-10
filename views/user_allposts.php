@@ -55,7 +55,7 @@ session_start();
 
                 ?> 
                 <!-- to read more link to single posts -->
-                <a href="../views/single_post.php"><p class="readmore">read more</p></a><?php echo "</td>"?>
+                <a href="../views/single_post.php?post_id=<?php echo $single_user_post['post_id'];?>"><p class="readmore">read more</p></a><?php echo "</td>"?>
 
                 <?php echo "</tr>" ?>
 

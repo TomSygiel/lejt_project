@@ -33,7 +33,7 @@ class Comments
 
     public function getComments($post_id)
     {
-        $statement = $this->pdo->prepare("SELECT * FROM comments where post_id = :post_id");
+        $statement = $this->pdo->prepare("SELECT * FROM comments WHERE post_id = :post_id ORDER BY comments_id DESC");
 
         $statement->execute(
             [
