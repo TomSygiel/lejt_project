@@ -1,7 +1,14 @@
 @import "mixins";
 
 .error {
+  font-size: 1.5em;
   color: red;
+  align-self: auto;
+}
+
+.notice {
+  font-size: 1.5em;
+  color: green;
   align-self: auto;
 }
 
