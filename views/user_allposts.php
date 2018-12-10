@@ -27,7 +27,7 @@ session_start();
                 <thead>
                     <tr>
                         <th>Title</th>
-                        <th>Date</th>
+                        <th class="date">Date</th>
                         <th>Description</th>
 
                     </tr>
@@ -41,7 +41,7 @@ session_start();
 
                 <?php echo "<td>" ?><?php echo $single_user_post['title']?><?php echo "</td>"?>
                 <?php echo "<td>" ?><?php echo $single_user_post['post_date']?><?php echo "</td>"?>
-                <?php echo "<td>" ?>  
+                <?php echo "<td class='description'>" ?>  
 
                 <!-- if string length is more than 200, show 200 texts -->
                 <?php if(strlen($single_user_post['description']) >= 200){
@@ -55,7 +55,7 @@ session_start();
 
                 ?> 
                 <!-- to read more link to single posts -->
-                <a href="../views/single_post.php?post_id=<?php echo $single_user_post['post_id'];?>"><p class="readmore">read more</p></a><?php echo "</td>"?>
+                <a href="../views/single_post.php?post_id=<?php echo $single_user_post['post_id'];?>"><p class="readmore">Read more</p></a><?php echo "</td>"?>
 
                 <?php echo "</tr>" ?>
 

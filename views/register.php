@@ -14,8 +14,9 @@ session_start();
         <div class="col-12 col-md-12 text-center card" style="max-width: 30rem;">
 
             <form action="../includes/register_server.php" method="POST">
-
+               
                 <h2 class="register">Register</h2>
+                <?php include '../includes/register_server.php'; ?>
 
                 <label for="login_username">Username</label><br/>
 
@@ -30,6 +31,8 @@ session_start();
                 <input type="submit" value="Submit" class="btn btn-primary"><br/>
               
             </form>
+            
+            
 
         </div>
 
