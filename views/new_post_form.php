@@ -19,6 +19,8 @@ session_start();
 
             <h2 class="blog_heading">New Blog Post</h2>
 
+                <div class="text-center error_field text-center">
+
                 <?php
 
                 //Error handling, checking for empty fields: Tomasz
@@ -26,6 +28,8 @@ session_start();
                 include '../includes/new_post_error_handling.php';
 
                 ?>
+
+                </div>
 
                 <form class="post_form" action="../includes/post_server.php" method="POST" enctype="multipart/form-data">
 

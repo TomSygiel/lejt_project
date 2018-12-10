@@ -15,7 +15,6 @@ class Register
     }
     public function register($username, $password) 
     { 
-
         try{
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $stmt = $this->pdo->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
@@ -32,9 +31,9 @@ class Register
             die($ex->getMessage());
             return false;
         }
-
+        
     }
-
+    
     public function fetched_user($username) 
     { 
 

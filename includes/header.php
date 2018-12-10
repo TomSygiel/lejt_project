@@ -33,7 +33,16 @@
                     <a class="nav-link text-uppercase" href="../views/about.php">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="../views/user_allposts.php">Posts</a>
+
+                    <?php
+                    // If not admin echo all post link to user_allposts
+                    if(isset($_SESSION["admin"]) && ($_SESSION["admin"]) == 0){
+                        echo "<a class='nav-link text-uppercase' href='../views/user_allposts.php'>All posts</a>";
+                    //If admin echo all post link to admin_allposts
+                    }else{
+                        echo "<a class='nav-link text-uppercase' href='../views/admin_allposts.php'>All Posts</a>";
+                    }?>
+
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-uppercase" href="../views/contact.php">Contact</a>
