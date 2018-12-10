@@ -5,7 +5,7 @@ include ("database_connection.php");
 require '../classes/Posts.php';
 
 $posts = new Post($pdo);
-$posts->deletePost();
+$posts->deletePostAndComments();
 
 //Redirect to admin_allposts page
 
