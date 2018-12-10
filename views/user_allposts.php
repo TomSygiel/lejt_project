@@ -12,7 +12,7 @@ session_start();
 <?php include '../includes/user_server.php';?>    
 
 <!-- sceleton for page -->
-<div class="container">
+<div class="container" id="user_allposts">
     <div class="row align-items-center justify-content-center">
         <div class="col-10 card_admin_allposts text-left admin_panel">
             <div class="row align-items-center">
@@ -26,8 +26,9 @@ session_start();
             <table class="table table-hover">
                 <thead>
                     <tr>
+                        
+                        <th class="w-20">Date</th>
                         <th>Title</th>
-                        <th class="date">Date</th>
                         <th>Description</th>
 
                     </tr>
@@ -39,9 +40,10 @@ session_start();
                 foreach($userposts as $single_user_post):
                 ?>
 
-                <?php echo "<td>" ?><?php echo $single_user_post['title']?><?php echo "</td>"?>
+                
                 <?php echo "<td>" ?><?php echo $single_user_post['post_date']?><?php echo "</td>"?>
-                <?php echo "<td class='description'>" ?>  
+                <?php echo "<td>" ?><?php echo $single_user_post['title']?><?php echo "</td>"?>
+                <?php echo "<td>" ?>  
 
                 <!-- if string length is more than 200, show 200 texts -->
                 <?php if(strlen($single_user_post['description']) >= 200){
@@ -55,7 +57,7 @@ session_start();
 
                 ?> 
                 <!-- to read more link to single posts -->
-                <a href="../views/single_post.php?post_id=<?php echo $single_user_post['post_id'];?>"><p class="readmore">Read more</p></a><?php echo "</td>"?>
+                <p class="index_readmore"><a href="../views/single_post.php?post_id=<?php echo $single_user_post['post_id'];?>">Read more</a></p><?php echo "</td>"?>
 
                 <?php echo "</tr>" ?>
 
