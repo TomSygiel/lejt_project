@@ -149,7 +149,7 @@ include ("includes/index_server.php")
 
             </div>
             <div class="index_readall_link">
-            <i class="fab fa-readme"></i><a href="/views/admin_allposts.php">READ ALL POSTS</a>
+            <i class="fab fa-readme"></i><a href="/views/admin_allposts.php"> READ ALL POSTS</a>
             </div>  
         </div>
     <br/>
