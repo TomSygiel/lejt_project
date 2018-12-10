@@ -31,12 +31,12 @@ include ("index_user_server.php")
                     <div class="post_content">
                         <div class="post_inner">
                             <h1 class="h1_index"><?= $i_array['title']; ?></h1>
-                            <div><?= $i_array['post_date']; ?></div>
-                            <div><?= $i_array['category']; ?></div>
+                            <div class="index_italic"><?= $i_array['post_date']; ?></div>
+                            <div class="index_bold"><?= $i_array['category']; ?></div>
 
                             <!-- Description: if string legth is 70 characters or more, show only 70 characters -->
                             <?php if(strlen($i_array['description']) >= 70){
-                                echo '<div>' .  substr($i_array["description"],0,70) . '</div>';
+                                echo '<div>' .  substr($i_array["description"],0,70) . ' ...</div>';
                                 }
                                 else {
                                     echo '<div>' . $i_array["description"] . '</div>';
@@ -71,12 +71,12 @@ include ("index_user_server.php")
                     <div class="small_post_content">
                         <div class="small_post_inner">
                             <h1 class="h2_index"><?= $i_array['title']; ?></h1>
-                            <div><?= $i_array['post_date']; ?></div>
-                            <div><?= $i_array['category']; ?></div>
+                            <div class="index_italic"><?= $i_array['post_date']; ?></div>
+                            <div class="index_bold"><?= $i_array['category']; ?></div>
 
                             <!-- Description: if string legth is 20 characters or more, show only 20 characters -->
                             <?php if(strlen($i_array['description']) >= 20){
-                                echo '<div>' .  substr($i_array["description"],0,20) . '</div>';
+                                echo '<div>' .  substr($i_array["description"],0,20) . ' ...</div>';
                                 }
                                 else {
                                     echo '<div>' . $i_array["description"] . '</div>';
