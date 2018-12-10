@@ -4,7 +4,7 @@ class SinglePost
 
 {
 
-    public $single_post; //objekt, för att komma åt måste du använda pilar
+    public $single_post;
 
     private $pdo;
 
@@ -14,6 +14,7 @@ class SinglePost
         $this->pdo = $pdo;
     }
 
+    /* Method for fetching specific post from table posts in database, this is called on in single_post.php. */
     public function getSinglePost()
     {
         $post_id = $_GET["post_id"];
@@ -30,73 +31,6 @@ class SinglePost
 
         $this->single_post = $single_post;
 
-        //return $single_post;
     }
 
 }
-
-/*
-class SinglePost
-
-{
-
-    private $pdo;
-
-    public function __construct($pdo)
-
-    {
-        $this->pdo = $pdo;
-    }
-
-    public function collectSinglePost()
-    {
-        $statement = $this->pdo->prepare("SELECT title, description, created_by, image, category, post_date FROM posts 
-        WHERE post_id = 3");
-
-        $statement->execute();
-
-        $display_post = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-        return $display_post /*true*//*;
-
-    }
-
-}*/
-
-/*$statement = $pdo->prepare("SELECT * *//*title, description, created_by, image*/ /*FROM posts 
-WHERE post_id = 3");
-
-$statement->execute();
-
-$single_post = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-var_dump($single_post);*/
-
-/*
-
-TRYING TO WHILE-LOOP
-
-class SinglePost
-
-{
-
-    private $pdo;
-
-    public function __construct($pdo)
-
-    {
-        $this->pdo = $pdo;
-    }
-
-    public function collectSinglePost()
-    {
-        $statement = $this->pdo->prepare("SELECT title, description, created_by, image, category, post_date FROM posts 
-        WHERE post_id = 3");
-        while ($post = $statement->fetch()){
-            $single_post = $post["post_id"];
-            return $post_id;
-        }
-        var_dump($post_id);
-    }
-
-}*/
