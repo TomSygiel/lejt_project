@@ -125,7 +125,7 @@ include '../classes/Comments.php';
                                 <p><i><?php echo $comments_part["comment_date"] . " "; ?></i></p>
                             </div>
                             <div class="delete_comment_trash">
-                            <?php if($_SESSION["admin"] === 1 || $_SESSION["username"] === $comments_part["created_by"]){ ?>
+                            <?php if($_SESSION["admin"] == 1 || $_SESSION["username"] === $comments_part["created_by"]){ ?>
                                 <a href="../includes/single_post_delete_comment_server.php?post_id=<?= $comments_part["post_id"]?>&comments_id=<?= $comments_part["comments_id"];?>"><i class="fas fa-trash-alt"></i></a>
 <?php } ?>
                             </div>
