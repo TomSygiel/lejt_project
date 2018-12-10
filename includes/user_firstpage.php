@@ -18,7 +18,7 @@ include ("index_user_server.php")
 
         <?php
         //Loops through associative array
-        foreach($all_posts as $i => $i_array) {
+        foreach($posts as $i => $i_array) {
             
             //Check value of variable i. If 0 echo main blog post.
             if($i === 0){?>

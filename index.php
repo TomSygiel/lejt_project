@@ -18,7 +18,8 @@ include ("includes/head.php");
 include ("includes/header.php");
 
 // Fetch selected posts from database
-include ("includes/index_server.php")
+
+include ("includes/index_server.php");
 
 //check if correct array is returned
 //highlight_string("<?php =\n" . var_export($all_posts, true) . "\n")
@@ -32,7 +33,7 @@ include ("includes/index_server.php")
 
         <?php
         //Loops through associative array
-        foreach($all_posts as $i => $i_array) {
+        foreach($posts as $i => $i_array) {
             
             //Check value of variable i. If 0 echo main blog post.
             if($i === 0){?>
