@@ -25,11 +25,11 @@ include '../includes/header.php';
                 
                 <label for="login_username">Username</label><br/>
                 
-                <input type="text" name="username" placeholder="username" id="login_username"><br/>
+                <input type="text" name="username" placeholder="Username" id="login_username"><br/>
                 
                 <label for="login_password">Password</label><br/>
                 
-                <input type="password" name="password" placeholder="password" id="login_password"><br/>
+                <input type="password" name="password" placeholder="Password" id="login_password"><br/>
                 
                 <input type="hidden" name="user_id" id="user_id"><br/>
                 
