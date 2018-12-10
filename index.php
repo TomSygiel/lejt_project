@@ -18,7 +18,8 @@ include ("includes/head.php");
 include ("includes/header.php");
 
 // Fetch selected posts from database
-include ("includes/index_server.php")
+
+include ("includes/index_server.php");
 
 //check if correct array is returned
 //highlight_string("<?php =\n" . var_export($all_posts, true) . "\n")
@@ -32,7 +33,7 @@ include ("includes/index_server.php")
 
         <?php
         //Loops through associative array
-        foreach($all_posts as $i => $i_array) {
+        foreach($posts as $i => $i_array) {
             
             //Check value of variable i. If 0 echo main blog post.
             if($i === 0){?>
@@ -45,12 +46,12 @@ include ("includes/index_server.php")
                     <div class="post_content">
                         <div class="post_inner">
                             <h1 class="h1_index"><?= $i_array['title']; ?></h1>
-                            <div><?= $i_array['post_date']; ?></div>
-                            <div><?= $i_array['category']; ?></div>
+                            <div class="index_italic"><?= $i_array['post_date']; ?></div>
+                            <div class="index_bold"><?= $i_array['category']; ?></div>
 
                             <!-- Description: if string legth is 70 characters or more, show only 70 characters -->
                             <?php if(strlen($i_array['description']) >= 70){
-                                echo '<div>' .  substr($i_array["description"],0,70) . '</div>';
+                                echo '<div>' .  substr($i_array["description"],0,70) . ' ...</div>';
                                 }
                                 else {
                                     echo '<div>' . $i_array["description"] . '</div>';
@@ -90,12 +91,12 @@ include ("includes/index_server.php")
                     <div class="small_post_content">
                         <div class="small_post_inner">
                             <h1 class="h2_index"><?= $i_array['title']; ?></h1>
-                            <div><?= $i_array['post_date']; ?></div>
-                            <div><?= $i_array['category']; ?></div>
+                            <div class="index_italic"><?= $i_array['post_date']; ?></div>
+                            <div class="index_bold"><?= $i_array['category']; ?></div>
 
                             <!-- Description: if string legth is 20 characters or more, show only 20 characters -->
                             <?php if(strlen($i_array['description']) >= 20){
-                                echo '<div>' .  substr($i_array["description"],0,20) . '</div>';
+                                echo '<div>' .  substr($i_array["description"],0,20) . ' ...</div>';
                                 }
                                 else {
                                     echo '<div>' . $i_array["description"] . '</div>';
@@ -149,7 +150,7 @@ include ("includes/index_server.php")
 
             </div>
             <div class="index_readall_link">
-            <i class="fab fa-readme"></i><a href="/views/admin_allposts.php">READ ALL POSTS</a>
+            <i class="fab fa-readme"></i><a href="/views/admin_allposts.php"> READ ALL POSTS</a>
             </div>  
         </div>
     <br/>
