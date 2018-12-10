@@ -4,7 +4,7 @@ class Comments
 
 {
 
-    public $comments; //objekt, för att komma åt måste du använda pilar
+    public $comments;
 
     private $pdo;
 
@@ -14,9 +14,11 @@ class Comments
         $this->pdo = $pdo;
     }
 
+    /* Method for posting a comment, this is called on in single_post.php. The comment is inserted into table comments in database */
     public function postComment($content, $post_id, $created_by, $comment_date)
     {
         $statement = $this->pdo->prepare("INSERT INTO comments (content, post_id, created_by, comment_date) VALUES (:content, :post_id, :created_by, :comment_date)");
+
 
         $statement->execute(
             [
@@ -30,7 +32,7 @@ class Comments
         return true;
 
     }
-
+    /* Method for fetching all posted comments on specific post from table comments, this is called on in single_post.php. */
     public function getComments($post_id)
     {
         $statement = $this->pdo->prepare("SELECT * FROM comments WHERE post_id = :post_id ORDER BY comments_id DESC");
@@ -46,6 +48,7 @@ class Comments
         $this->all_comments = $all_comments;
     }
 
+    /* Method for deleting comments on specific post from table comments, this is called on in single_post.php. */
     public function deleteComments()
 
     /* Go through this code if you push delete product in single_post.php, meaning delete specific comment from comments table from specific post */

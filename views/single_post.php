@@ -16,11 +16,11 @@ include '../classes/Comments.php';
 <main class="container single_post_main">
 
         <?php
-
-           $post = new SinglePost($pdo);
-           $post->getSinglePost();
-           $post->single_post; //hämtar public $single_post från klass (det är en arrray)
-           $array = $post->single_post; //istället för att skriva $post->single_post; hela tiden
+            /* Call methods from Class Comments.php and fetch chosen single post-page, display Title, image, text, category and date. */
+            $post = new SinglePost($pdo);
+            $post->getSinglePost();
+            $post->single_post;
+            $array = $post->single_post;
 
             /* Looping through and showing chosen values to display a specific blog post from reaching out to database above. sp_part stands for single post part */
             foreach($array as $sp_part){
@@ -100,7 +100,7 @@ include '../classes/Comments.php';
         <section class="col-12 col-md-6 printed_comments">
 
         <?php
-        
+            /* Fetch all comments for chosen post through method getComments in class Comments.php */
             $post_id = $_GET["post_id"];
 
             $comments = new Comments($pdo);
@@ -112,7 +112,6 @@ include '../classes/Comments.php';
                      foreach($comments_array as $comments_part){ 
 
                     $comments_id = $comments_part["comments_id"];
-                    //$post_id = $_GET["post_id"];
                     ?>
     
                             <div class="comment_created_by_content">
@@ -124,10 +123,13 @@ include '../classes/Comments.php';
                             <div class="comment_date_delete">
                                 <p><i><?php echo $comments_part["comment_date"] . " "; ?></i></p>
                             </div>
+                            <!-- If logged in as admin, show trashcan so that you can delete all the comments if you wish. Also show trashcan if a user made comments - so that that specific user can delete it's own comments -->
                             <div class="delete_comment_trash">
                             <?php if($_SESSION["admin"] == 1 || $_SESSION["username"] === $comments_part["created_by"]){ ?>
                                 <a href="../includes/single_post_delete_comment_server.php?post_id=<?= $comments_part["post_id"]?>&comments_id=<?= $comments_part["comments_id"];?>"><i class="fas fa-trash-alt"></i></a>
-<?php } ?>
+        <?php 
+                    }
+        ?>
                             </div>
 
                             <hr class="hr_printed_comment">
