@@ -17,7 +17,7 @@
         font-family: $font_header;
     }
 
-    .single_post_title, .single_post_date{
+    .single_post_title{
         font-family: $font_header;
         margin-bottom: 2em;
     }
@@ -26,9 +26,9 @@
         font-family: $font_main;
     }
 
-    .single_post_category{
+    .single_post_category, .single_post_date{
         margin-top: 1.5em;
-        font-family: $font_header;
+        font-family: $font_main;
     }
 
     .comments{
