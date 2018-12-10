@@ -14,7 +14,7 @@ $title = $_POST["title"];
 $description = $_POST["description"];
 
 
-//Call on functions in class
+//Call on method in class
 
 $posts = new Post($pdo);
 $posts->editPost($title, $description, $post_id);
