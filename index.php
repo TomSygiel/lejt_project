@@ -137,7 +137,7 @@ include ("includes/index_server.php");
 
                             <!-- Link with post_id to delete post on small screens -->
                             <div class="d-lg-none post_share_right">
-                                <a href="includes/delete_posts_index.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon fas fa-trash-alt"></i></a>
+                                <a href="includes/delete_posts.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon fas fa-trash-alt"></i></a>
                             </div>
                         </div>
                     </div>
