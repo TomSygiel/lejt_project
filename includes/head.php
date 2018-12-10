@@ -25,7 +25,6 @@
     
     <!-- Own CSS -->
     <link rel="stylesheet" href="<?= $SITE_URL ?>/css/style.css" type="text/css">
-    
     <title>Millhouse</title>
 </head>
     

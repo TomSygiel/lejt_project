@@ -1,14 +1,12 @@
 @import "mixins";
 
+
 .readmore a{
-     color: $primary_blue;
-    
+    color: #1C3045 !important;
+    text-decoration: none !important;
+
 }
 
-th.date{
-
-  width: 20%;   
-}
 
 
 
@@ -28,7 +26,7 @@ th.date{
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px){
 
- 
+
 
 }
 
