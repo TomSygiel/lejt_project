@@ -113,7 +113,7 @@ foreach($posts as $i => $i_array) {
 
     </div> <!-- closing row -->
         <div class="index_readall_link">
-            <i class="fab fa-readme"></i><a href="/views/user_allposts.php"> READ ALL POSTS</a>
+            <i class="fas fa-book-reader"></i><a href="/views/user_allposts.php"> READ ALL POSTS</a>
         </div>     
 </main> <!--closing main -->
 <br/>
