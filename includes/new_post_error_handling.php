@@ -20,4 +20,10 @@ elseif (strpos($fullUrl, "error=nodescription") == true) {
     exit();
 }
 
+elseif (strpos($fullUrl, "error=nocategory") == true) {
+    echo "<p class='error'>* Please select category!</p>";
+    header ('refresh:3;url=../views/new_post_form.php');
+    exit();
+}
+
 ?>
