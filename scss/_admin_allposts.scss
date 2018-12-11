@@ -25,7 +25,6 @@
     }
 }
 
-
 .admin_allposts_button{
     background-color: $secondary_light_purple;
     border-color: $secondary_light_purple;
@@ -42,6 +41,21 @@
 .admin_icon{
     color: $primary_blue;
 }
+
+.admin_link{
+    a{
+    color: $primary_blue;
+    text-decoration: none;
+
+    }
+    a:hover{
+        color: $secondary_light_purple;
+        text-decoration: none;
+    }
+}
+
+
+
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px){

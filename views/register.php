@@ -9,13 +9,18 @@ session_start();
 
 <body> 
 
-    <div class="row text-center justify-content-center">
+    <main class="row text-center justify-content-center">
 
         <div class="col-12 col-md-12 text-center card" style="max-width: 30rem;">
 
             <form action="../includes/register_server.php" method="POST">
                
                 <h2 class="register">Register</h2>
+
+                
+                <!-- include error register handling -->
+
+
 
                 <?php include '../includes/error_register.php'; ?>
 
@@ -35,7 +40,7 @@ session_start();
 
         </div>
 
-    </div>
+    </main>
 
 </body> 
 

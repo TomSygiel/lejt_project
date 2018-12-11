@@ -76,6 +76,11 @@ public function deletePostAndComments() {
             header('Location: ../views/new_post_form.php?error=nodescription');
             exit();
 
+        } if (empty($category)) {
+        
+            header('Location: ../views/new_post_form.php?error=nocategory');
+            exit();
+            
         }
 
         if (isset($_POST["post"])) {
