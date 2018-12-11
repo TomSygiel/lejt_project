@@ -216,8 +216,6 @@ body{
 
 
     .post_content{
-        left: 0;
-        bottom: 0;
         width: calc(100% + 92px);
         margin: 0 -4em;
         padding-bottom: 7em;
@@ -228,7 +226,7 @@ body{
         background-color: #fff;
         background:rgba(255,255,255, 0.9);
         width: 500px;
-        padding: 4em 6em;
+        padding: 3em 5em;
     }
     
     
@@ -256,8 +254,6 @@ body{
     
     
     .small_post_content{
-        left: 0;
-        bottom: 0;
         width: calc(100% + 92px);
         margin: 0 -4em;
         padding-bottom: 7em;
