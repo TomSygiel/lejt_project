@@ -70,7 +70,7 @@ include ("includes/index_server.php");
 
                         <!-- Link with post_id to edit post -->
                         <div class="post_share_left">
-                            <a href="views/edit_post_form.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon fas fa-pen"></i></a>
+                            <a href="views/edit_post_form.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon far fa-edit"></i></a>                    
                         </div>
 
                         <!-- Link with post_id to delete post -->
@@ -116,12 +116,12 @@ include ("includes/index_server.php");
                             <div class="d-none d-lg-flex row justify-content-center">
                                 <!-- Link with post_id to edit post on lg screens -->    
                                 <div class="col-lg-3 d-none d-lg-block">
-                                    <a href="views/edit_post_form.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon_comment fas fa-pen"></i></a>
+                                    <a href="views/edit_post_form.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon_comment far fa-edit"></i></a>
                                 </div>
                                 
                                 <!-- Link with post_id to delete post on lg screens -->
                                 <div class="col-lg-3 d-none d-lg-block">
-                                    <a href="includes/delete_posts_index.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon_comment fas fa-trash-alt"></i></a>
+                                    <a href="includes/delete_posts.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon_comment fas fa-trash-alt"></i></a>
                                 </div>
 
                                 <!-- Link with post_id to single post page with comments -->
@@ -137,7 +137,7 @@ include ("includes/index_server.php");
 
                             <!-- Link with post_id to delete post on small screens -->
                             <div class="d-lg-none post_share_right">
-                                <a href="includes/delete_posts_index.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon fas fa-trash-alt"></i></a>
+                                <a href="includes/delete_posts.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon fas fa-trash-alt"></i></a>
                             </div>
                         </div>
                     </div>
