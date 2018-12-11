@@ -13,7 +13,7 @@ include '../includes/header.php';
 
 <body>
    
-    <section class="row text-center justify-content-center">
+    <main class="row text-center justify-content-center">
         
            <div class="col-12 col-md-12 text-center card" style="max-width: 30rem;">
             
@@ -39,7 +39,7 @@ include '../includes/header.php';
                
         </div>
         
-    </section>
+    </main>
 
     <p class="member">Not a member? <a class="register_link" href="register.php">Register here</a></p>
 
