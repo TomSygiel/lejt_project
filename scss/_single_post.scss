@@ -24,6 +24,12 @@
 
     .single_post_description{
         font-family: $font_main;
+        line-height: $line_height;
+        font-size: 1.5rem;
+        padding-top: 2em;
+        @media (min-width: 768px){
+            padding: 0 3em;
+        }
     }
 
     .single_post_category, .single_post_date{
