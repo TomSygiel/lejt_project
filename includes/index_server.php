@@ -13,5 +13,4 @@ $statement = $pdo->prepare("SELECT * FROM `posts` ORDER BY post_id DESC LIMIT 3"
 $statement->execute();
 //Fetch every row that it returns. $posts is now an Associative array
 $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
-
 ?>

@@ -70,7 +70,7 @@ foreach($posts as $i => $i_array) {
 
                 <!-- Delete post with post_id -->
                 <div class="post_share_right">
-                    <a href="includes/delete_posts_index.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon fas fa-trash-alt"></i></a>
+                    <a href="includes/delete_posts.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon fas fa-trash-alt"></i></a>
                 </div>
             </div>
         </section>
