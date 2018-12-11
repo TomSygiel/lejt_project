@@ -64,6 +64,7 @@
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
 <script>
+    
 /**
  * use the id of the textarea in the form to initialize this text-editor: #text
 */

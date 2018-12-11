@@ -1,8 +1,8 @@
 <?php
 
 // Include database connection
-include ('database_connection.php');
-include ('classes/Index_posts.php');
+include 'database_connection.php';
+include 'classes/Index_posts.php';
 
 $object = new Posts($pdo);
 $posts = $object->getAllPosts();
