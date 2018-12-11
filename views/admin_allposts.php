@@ -13,7 +13,7 @@ session_start();
 <?php include '../includes/admin_server.php';?>
 
 <!-- sceleton for page -->
-<div class="container">
+<main class="container">
     <div class="row align-items-center justify-content-center">
         <div class="col-10 card_admin_allposts text-left admin_panel">
             <div class="row align-items-center">
@@ -56,7 +56,7 @@ session_start();
             </table>
         </div>
     </div>
-</div>
+</main>
 
 <!-- include Footer-->
 <?php include '../includes/footer.php';?> 
