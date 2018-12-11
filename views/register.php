@@ -16,7 +16,8 @@ session_start();
             <form action="../includes/register_server.php" method="POST">
                
                 <h2 class="register">Register</h2>
-
+                
+                <!-- include error register handling -->
                 <?php include '../includes/error_register.php'; ?>
 
                 <label for="login_username">Username</label><br/>
