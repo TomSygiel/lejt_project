@@ -39,11 +39,11 @@ session_start();
                     <input type="file" name="image" id="image">
 
                     <label for="blog_title"><h4>Title</h4></label><br/>
-                    <input type="text" name="title" placeholder="Title" value="<?php if(isset($_POST["Title"])){ echo $_POST["Title"];} ?>" id="blog_title"><br/>
+                    <input type="text" name="title" placeholder="Title" value="<?php if(isset($title)) { echo $title;} ?>" id="blog_title"><br/>
 
                     <label for="category"><h4>Category: </h4></label><br/>
 
-                    <select name="category_select" value="<?php if(isset($_POST["category_select"])){ echo $_POST["category_select"];} ?>">
+                    <select name="category_select" value="<?php if(isset($category)) { echo $category;} ?>">
                         <option value="" disabled selected hidden>Please select..</option>
                         <option value="Watches">Watches</option>
                         <option value="Sunglasses">Sunglasses</option>
@@ -56,7 +56,7 @@ session_start();
 
                     <label for="blog_text"><h4>Text</h4></label><br/>
                    
-                    <textarea type="text" name="description" value="<?php if(isset($_POST["description"])){ echo $_POST["description"];} ?>"placeholder="..." id="text" ></textarea><br/>
+                    <textarea type="text" name="description" value="<?php if(isset($description)) { echo $description;} ?>"placeholder="..." id="text" ></textarea><br/>
 
                     <input type="hidden" name="user_ID" id="user_ID"><br/>
 

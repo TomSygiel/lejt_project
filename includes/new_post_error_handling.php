@@ -26,4 +26,16 @@ elseif (strpos($fullUrl, "error=nocategory") == true) {
     exit();
 }
 
+elseif (strpos($fullUrl, "error=wrongformat") == true) {
+    echo "<p class='error'>* Wrong file format!<br/>Only JPG, JPEG, PNG & GIF files are allowed.</p>";
+    header ('refresh:3;url=../views/new_post_form.php');
+    exit();
+}
+
+elseif (strpos($fullUrl, "error=filetoolarge") == true) {
+    echo "<p class='error'>* Selected file is too large!</p>";
+    header ('refresh:3;url=../views/new_post_form.php');
+    exit();
+}
+
 ?>
