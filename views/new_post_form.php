@@ -19,7 +19,7 @@ session_start();
 
             <h2 class="blog_heading">New Blog Post</h2>
 
-                <div class="text-center error_field text-center">
+                <div class="text-center error_field">
 
                 <?php
 
@@ -56,7 +56,7 @@ session_start();
 
                     <label for="blog_text"><h4>Text</h4></label><br/>
                    
-                    <textarea type="text" name="description" value="<?php if(isset($description)) { echo $description;} ?>"placeholder="..." id="text" ></textarea><br/>
+                    <textarea type="text" name="description" value="<?php if(isset($description)) { echo $description;} ?>" id="text" ></textarea><br/>
 
                     <input type="hidden" name="user_ID" id="user_ID"><br/>
 

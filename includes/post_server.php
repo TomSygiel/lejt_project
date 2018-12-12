@@ -7,7 +7,6 @@ require '../classes/Posts.php';
 
 $image = $_FILES["image"];
 $file_size = $_FILES["image"]["size"];
-$file_error = $_FILES["image"]["error"];
 $title = $_POST["title"];
 $description = $_POST["description"];
 $created_by = $_SESSION["username"];
@@ -22,14 +21,16 @@ $file_format = explode(".", $_FILES["image"]["name"]);
 
 $file_format = strtolower(end($file_format));
 
-//print_r used for capture extension
+//print_r used to capture extension
 
 print_r($file_format);
 
-if (!in_array($file_format, $allowed_file_extension)) {
+if (empty($image) && !in_array($file_format, $allowed_file_extension)) {
     header('Location: ../views/new_post_form.php?error=wrongformat&title='.$title.'&description='.$description.'&category='.$category);
     exit();
 }
+
+//Limit fir file size is set high to allow for high quality images
 
 elseif ($file_size > 2000000) {
     header('Location: ../views/new_post_form.php?error=filetoolarge&title='.$title.'&description='.$description.'&category='.$category);
