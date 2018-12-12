@@ -63,28 +63,28 @@ public function deletePostAndComments() {
 
         if (empty($title) && empty($description)) {
 
-            header('Location: ../views/new_post_form.php?error=empty&title='.$title.'&description='.$description.'&category='.$category);
+            header('Location: ../views/new_post_form.php?error=empty&category='.$category);
             exit();
             
         } 
         
         if (empty($title)) {
         
-            header('Location: ../views/new_post_form.php?error=notitle&title='.$title.'&description='.$description.'&category='.$category);
+            header('Location: ../views/new_post_form.php?error=notitle&description='.$description.'&category='.$category);
             exit();
             
         } 
         
         if (empty($description)) {
         
-            header('Location: ../views/new_post_form.php?error=nodescription&title='.$title.'&description='.$description.'&category='.$category);
+            header('Location: ../views/new_post_form.php?error=nodescription&title='.$title.'&category='.$category);
             exit();
 
         } 
         
         if (empty($category)) {
         
-            header('Location: ../views/new_post_form.php?error=nocategory&title='.$title.'&description='.$description.'&category='.$category);
+            header('Location: ../views/new_post_form.php?error=nocategory&title='.$title.'&description='.$description);
             exit();
             
         } 
