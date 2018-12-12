@@ -1,5 +1,9 @@
 <?php
-        
+/*
+Error handling removes the data on reload and i find it limiting, 
+even if I tried to pass the information back with $_GET.
+In real life situation I could recommend alternative, like the error handling inbuild in boostrap
+*/      
 $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         
 if (strpos($fullUrl, "error=empty") == true) {
