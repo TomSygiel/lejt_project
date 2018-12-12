@@ -13,13 +13,11 @@ session_start();
 
     <!--Blog post form with image file upload functionality: Tomasz-->
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center form_row">
         
-         <div class="col-12 col-md-12 col-lg-6 card">
+         <div class="col-10 col-md-8 col-lg-6 card blog_form">
 
             <h2 class="blog_heading">New Blog Post</h2>
-
-                <div class="text-center error_field">
 
                 <?php
 
@@ -28,8 +26,6 @@ session_start();
                 include '../includes/new_post_error_handling.php';
 
                 ?>
-
-                </div>
 
                 <form class="post_form" action="../includes/post_server.php" method="POST" enctype="multipart/form-data">
 
