@@ -15,7 +15,7 @@ session_start();
 
     <div class="row justify-content-center">
         
-         <div class="col-12 col-md-12 col-lg-6 card">
+         <div class="col-10 col-md-8 col-lg-6 card">
 
             <h2 class="blog_heading">Edit Blog Post</h2>
 

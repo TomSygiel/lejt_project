@@ -13,13 +13,11 @@ session_start();
 
     <!--Blog post form with image file upload functionality: Tomasz-->
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center form_row">
         
-         <div class="col-12 col-md-12 col-lg-6 card">
+         <div class="col-10 col-md-8 col-lg-6 card blog_form">
 
             <h2 class="blog_heading">New Blog Post</h2>
-
-                <div class="text-center error_field text-center">
 
                 <?php
 
@@ -29,8 +27,6 @@ session_start();
 
                 ?>
 
-                </div>
-
                 <form class="post_form" action="../includes/post_server.php" method="POST" enctype="multipart/form-data">
 
                     <br/>
@@ -39,11 +35,11 @@ session_start();
                     <input type="file" name="image" id="image">
 
                     <label for="blog_title"><h4>Title</h4></label><br/>
-                    <input type="text" name="title" placeholder="Title" value="<?php if(isset($_POST["Title"])){ echo $_POST["Title"];} ?>" id="blog_title"><br/>
+                    <input type="text" name="title" placeholder="Title" value="<?php if(isset($title)) { echo $title;} ?>" id="blog_title"><br/>
 
                     <label for="category"><h4>Category: </h4></label><br/>
 
-                    <select name="category_select" value="<?php if(isset($_POST["category_select"])){ echo $_POST["category_select"];} ?>">
+                    <select name="category_select" value="<?php if(isset($category)) { echo $category;} ?>">
                         <option value="" disabled selected hidden>Please select..</option>
                         <option value="Watches">Watches</option>
                         <option value="Sunglasses">Sunglasses</option>
@@ -56,7 +52,7 @@ session_start();
 
                     <label for="blog_text"><h4>Text</h4></label><br/>
                    
-                    <textarea type="text" name="description" value="<?php if(isset($_POST["description"])){ echo $_POST["description"];} ?>"placeholder="..." id="text" ></textarea><br/>
+                    <textarea type="text" name="description" value="<?php if(isset($description)) { echo $description;} ?>" id="text" ></textarea><br/>
 
                     <input type="hidden" name="user_ID" id="user_ID"><br/>
 

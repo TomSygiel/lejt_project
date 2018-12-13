@@ -37,7 +37,6 @@ class Register
 
     /* to check for username is already in database */
 
-
     public function fetched_user($username) 
     { 
 

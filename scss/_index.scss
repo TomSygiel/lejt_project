@@ -32,6 +32,7 @@ body{
 .index_readmore{
     text-decoration: none;
     margin: 1em 0;
+    font-weight: bold;
     a{
         color: $primary_blue; 
     }
@@ -70,7 +71,7 @@ body{
     position: absolute;
     width: 100%;
     bottom: -10%;
-    margin: 0 -16px;
+    margin: 0 -1em;
     overflow: hidden;
 }
 
@@ -79,7 +80,7 @@ body{
     background-color: white;
     width: 80%;
     margin: 0 auto;
-    padding: 10px 75px;
+    padding: 1em 7em;
     text-align: center;
 }
 
@@ -93,7 +94,7 @@ body{
     border-radius: 50%;
     background-color: white;
     display: inline-block;
-    padding: 36px;
+    padding: 2.5em;
 }
 
 
@@ -106,7 +107,7 @@ body{
     border-radius: 50%;
     background-color: white;
     display: inline-block;
-    padding: 36px;
+    padding: 2.5em;
 }
 
 
@@ -138,7 +139,7 @@ body{
     position: absolute;
     width: 100%;
     bottom: -10%;
-    margin: 0 -16px;
+    margin: 0 -1em;
     overflow: hidden;
 }
 
@@ -147,7 +148,7 @@ body{
     background-color: white;
     width: 80%;
     margin: 0 auto;
-    padding: 10px 75px;
+    padding: 1em 7em;
     text-align: center;
 }
 
@@ -169,12 +170,12 @@ body{
 @media (min-width: 576px){
     
     .post_inner{
-        padding: 20px 40px;
+        padding: 2em 4em;
     }
     
     
     .small_post_inner{
-        padding: 10px 20px;
+        padding: 2em 4em;
     } 
 }
 
@@ -216,11 +217,9 @@ body{
 
 
     .post_content{
-        left: 0;
-        bottom: 0;
         width: calc(100% + 92px);
-        margin: 0 -46px;
-        padding-bottom: 70px;
+        margin: 0 -4em;
+        padding-bottom: 7em;
     }
     
     
@@ -228,7 +227,7 @@ body{
         background-color: #fff;
         background:rgba(255,255,255, 0.9);
         width: 500px;
-        padding: 40px 60px;
+        padding: 3em 5em;
     }
     
     
@@ -256,18 +255,16 @@ body{
     
     
     .small_post_content{
-        left: 0;
-        bottom: 0;
         width: calc(100% + 92px);
-        margin: 0 -46px;
-        padding-bottom: 70px;
+        margin: 0 -4em;
+        padding-bottom: 7em;
     }
     
     
     .small_post_inner{
         background:rgba(255,255,255, 0.9);
         width: 300px;
-        padding: 20px 30px;
+        padding: 2em 3em;
     }
     
 
