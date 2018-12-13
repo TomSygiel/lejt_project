@@ -42,7 +42,7 @@ class Login
 
         } 
         
-        /* error handling for empty in username form and password form*/
+        /* error handling for empty in username form or password form*/
         elseif(empty($username) || empty($password)) {
 
             header('Location: ../views/login.php?error=empty');
@@ -51,7 +51,7 @@ class Login
         } 
         
         else{
-    
+                    /* Redirect to login.php with error massage */
             header ('Location: ../views/login.php?error=login_failed');
             
         }
