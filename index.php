@@ -47,9 +47,9 @@ foreach($posts as $i => $i_array) {
                     <!-- Description: if string legth is 70 characters or more, show only 70 characters -->
                     <?php 
                     if(strlen($i_array['description']) >= 70){
-                        echo '<div class="admin_description">' .  substr($i_array["description"],0,70) . ' ...</div>';
+                        echo '<div class="index_description">' .  substr($i_array["description"],0,70) . ' ...</div>';
                     }else{
-                        echo '<div class="admin_description">' . $i_array["description"] . '</div>';
+                        echo '<div class="index_description">' . $i_array["description"] . '</div>';
                     }?>
                                 
                     <!-- Read more tag -->
@@ -92,9 +92,9 @@ foreach($posts as $i => $i_array) {
                     <!-- Description: if string legth is 20 characters or more, show only 20 characters -->
                     <?php 
                     if(strlen($i_array['description']) >= 20){
-                        echo '<div>' .  substr($i_array["description"],0,20) . ' ...</div>';
+                        echo '<div class="index_description">' .  substr($i_array["description"],0,20) . ' ...</div>';
                     }else{
-                        echo '<div>' . $i_array["description"] . '</div>';
+                        echo '<div class="index_description">' . $i_array["description"] . '</div>';
                     }?>
 
                     <!-- Read more tag -->

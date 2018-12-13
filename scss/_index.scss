@@ -12,7 +12,7 @@ body{
 }
 
 .main_post_wrapper{
-    margin-bottom: 5em;
+    margin-bottom: 8em;
 }
 
 
@@ -70,7 +70,7 @@ body{
 .post_content{
     position: absolute;
     width: 100%;
-    bottom: -10%;
+    bottom: -20%;
     margin: 0 -1em;
     overflow: hidden;
 }
@@ -112,7 +112,7 @@ body{
 
 
 .small_post_wrapper{
-    margin-bottom: 5em;
+    margin-bottom: 8em;
 }
 
 
@@ -138,7 +138,7 @@ body{
 .small_post_content{
     position: absolute;
     width: 100%;
-    bottom: -10%;
+    bottom: -20%;
     margin: 0 -1em;
     overflow: hidden;
 }
@@ -165,6 +165,10 @@ body{
     }
 }
 
+.index_description{
+    display: none;
+}
+
 
 
 @media (min-width: 576px){
@@ -177,8 +181,11 @@ body{
     .small_post_inner{
         padding: 2em 4em;
     } 
-}
 
+    .index_description{
+        display: block;
+    }
+}
 
 
 // Medium devices (tablets, 768px and up)
@@ -218,6 +225,7 @@ body{
 
     .post_content{
         width: calc(100% + 92px);
+        bottom: -10%;
         margin: 0 -4em;
         padding-bottom: 7em;
     }
@@ -256,6 +264,7 @@ body{
     
     .small_post_content{
         width: calc(100% + 92px);
+        bottom: -10%;
         margin: 0 -4em;
         padding-bottom: 7em;
     }
