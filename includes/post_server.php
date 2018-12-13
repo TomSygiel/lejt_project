@@ -26,14 +26,14 @@ $file_format = strtolower(end($file_format));
 print_r($file_format);
 
 if (!in_array($file_format, $allowed_file_extension)) {
-    header('Location: ../views/new_post_form.php?error=wrongformat&title='.$title.'&description='.$description.'&category='.$category);
+    header('Location: ../views/new_post_form.php?error=wrongformat');
     exit();
 }
 
 //Limit fir file size is set high to allow for high quality images
 
 elseif ($file_size > 2000000) {
-    header('Location: ../views/new_post_form.php?error=filetoolarge&title='.$title.'&description='.$description.'&category='.$category);
+    header('Location: ../views/new_post_form.php?error=filetoolarge');
     exit();
 }else {
 
