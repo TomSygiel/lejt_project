@@ -29,9 +29,10 @@ session_start();
             <table class="table table-hover">
 
                 <tr>
-                    <th>Date</th>
-                    <th>Title</th>
-                    <th>Created by</th>
+                    <th class="table_width">Date</th>
+                    <th class="table_width">Title</th>
+                    <th>Description</th>
+                    <th class="table_width">Created by</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -42,8 +43,21 @@ session_start();
                     foreach($admin as $single_admin){
                     ?>
                     
-                    <?php echo "<td>" ?><?php echo $single_admin['post_date'] ?><?php echo "</td>"?>
-                    <?php echo "<td class='admin_link'>" ?><a href="single_post.php?post_id=<?= $single_admin['post_id'];?>"><?= $single_admin['title'];?></a>
+                    <?php echo "<td>" ?><?php echo $single_admin['post_date']; ?><?php echo "</td>"?>
+                    <?php echo "<td class='admin_link'>" ?><a href="single_post.php?post_id=<?= $single_admin['post_id'];?>"><?= $single_admin['title'];?></a><?php echo "</td>"?>
+
+                    <!-- If string length is more than 200 characters, show only 200 characters -->
+                    <?php if(strlen($single_admin['description']) >= 200){
+                            echo '<td>' . substr($single_admin["description"],0,200) . ' ... <p class="index_readmore">' ?><a href="../views/single_post.php?post_id=<?php echo $single_admin['post_id'];?>">Read more</a></p><?php echo "</td>"?>
+
+                        <?php
+                        }else {
+                            echo '<td>' . $single_admin["description"] . ' ... <p class="index_readmore">' ?><a href="../views/single_post.php?post_id=<?php echo $single_admin['post_id'];?>">Read more</a></p><?php echo "</td>"?>
+                        <?php
+                        }
+
+                    ?>
+
                     <?php echo "<td>" ?><?php echo $single_admin['created_by']?><?php echo "</td>"?>
                     <?php echo "<td>" ?><a href="../views/edit_post_form.php?post_id=<?= $single_admin['post_id']; ?>"><i class="far fa-edit admin_icon"></i></a><?php echo "</td>"?>
                     <?php echo "<td>"?><a href="../includes/delete_posts.php?post_id=<?= $single_admin['post_id']; ?>"><i class="fas fa-trash-alt admin_icon"></i></a><?php echo "</td>"?>
