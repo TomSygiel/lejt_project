@@ -91,7 +91,7 @@ include '../classes/Comments.php';
 
                     <label for="single_comment_submit">Post your comment</label><br/>
 
-                    <input type="submit" value="Comment" class="btn btn-primary">
+                    <input name="comment_submit" type="submit" value="Comment" class="btn btn-primary">
 
             </form>
 
