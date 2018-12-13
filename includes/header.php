@@ -18,7 +18,7 @@
                 if(isset($_SESSION["username"]) && $_SESSION["admin"] == 1){
                     echo "<a class='navbar-brand' href='../views/admin_allposts.php'><i class='fas fa-pen header_icons'></i></a>";
                     }
-            ?> 
+            ?>
 
         </div>
 
