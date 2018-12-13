@@ -31,7 +31,7 @@ session_start();
                 <tr>
                     <th class="table_width">Date</th>
                     <th class="table_width">Title</th>
-                    <th>Description</th>
+                    <th class="admin_description">Description</th>
                     <th class="table_width">Created by</th>
                     <th>Edit</th>
                     <th>Delete</th>
@@ -48,11 +48,11 @@ session_start();
 
                     <!-- If string length is more than 200 characters, show only 200 characters -->
                     <?php if(strlen($single_admin['description']) >= 200){
-                            echo '<td>' . substr($single_admin["description"],0,200) . ' ... <p class="index_readmore">' ?><a href="../views/single_post.php?post_id=<?php echo $single_admin['post_id'];?>">Read more</a></p><?php echo "</td>"?>
+                            echo '<td class="admin_description">' . substr($single_admin["description"],0,200) . ' ... <p class="index_readmore">' ?><a href="../views/single_post.php?post_id=<?php echo $single_admin['post_id'];?>">Read more</a></p><?php echo "</td>"?>
 
                         <?php
                         }else {
-                            echo '<td>' . $single_admin["description"] . ' ... <p class="index_readmore">' ?><a href="../views/single_post.php?post_id=<?php echo $single_admin['post_id'];?>">Read more</a></p><?php echo "</td>"?>
+                            echo '<td class="admin_description">' . $single_admin["description"] . ' ... <p class="index_readmore">' ?><a href="../views/single_post.php?post_id=<?php echo $single_admin['post_id'];?>">Read more</a></p><?php echo "</td>"?>
                         <?php
                         }
 
