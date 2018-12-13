@@ -31,8 +31,6 @@ session_start();
 
             <div class="col-sm-12 col-xl-6 text-center content_element">
 
-               <!-- <img src="../images/team_spirit.jpg" alt="Team spirit">-->
-
             </div>
 
             <div class="col-sm-12 col-xl-6 justify-content-center text-center content_element">
