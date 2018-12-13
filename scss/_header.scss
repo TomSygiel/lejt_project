@@ -2,37 +2,52 @@
 
 .header_wrapper{
     @media (min-width: 768px){
-        padding: 0 2em 2em 2em;
+        padding: 0 2em 2em 0;
     }
 
     .logged_in{
 
         @media (min-width: 300px){
-            margin: 3em 0 1em 1em;
+            margin: 3em 0 2em 1em;
         }
 
         @media (min-width: 576px){
             margin: 0em 0 1em 1em;
         }
-
             p a{
                 color: #1C3045;
             }
     }
 
     .navbar-brand{
-        margin-right: 0;
         color: $primary_blue;
+        margin: 0;
+        height: 1em;
+        padding: 0 !important;
+
+        i.fa-user{
+            margin-right: 0.5em;
+
+            @media (max-width: 300px){
+                margin-right: 0;
+            }
+        }
     }
 
     .navbar_logo{
+        margin: 0;
         @media (min-width: 768px){
             position: absolute;
             margin: 0;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-        }   
+        } 
+
+    }
+
+    .navbar-toggler{
+        font-size: 2rem;
     }
     
     .navbar_image{
@@ -41,6 +56,14 @@
     
     .nav-link{
         color: $primary_blue;
+    }
+
+    .navbar{
+        padding: 0;
+
+        @media (min-width: 576px){
+            padding-left: 2em;
+        }
     }
     
     .navbar-nav{
