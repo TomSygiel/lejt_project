@@ -16,20 +16,25 @@ class Comments
 
     /* Method for posting a comment, this is called on in single_post.php. The comment is inserted into table comments in database */
     public function postComment($content, $post_id, $created_by, $comment_date)
-    {
-        $statement = $this->pdo->prepare("INSERT INTO comments (content, post_id, created_by, comment_date) VALUES (:content, :post_id, :created_by, :comment_date)");
+    {   
+        if (isset($_POST["comment_submit"])) 
+        {
+            $content = strip_tags($_POST["single_comment_text"]);
+            
+            $statement = $this->pdo->prepare("INSERT INTO comments (content, post_id, created_by, comment_date) VALUES (:content, :post_id, :created_by, :comment_date)");
 
 
-        $statement->execute(
-            [
-            ":content" => $content,
-            ":post_id" => $post_id,
-            ":created_by" => $created_by,
-            ":comment_date" => $comment_date
-            ]
-        );
+            $statement->execute(
+                [
+                ":content" => $content,
+                ":post_id" => $post_id,
+                ":created_by" => $created_by,
+                ":comment_date" => $comment_date
+                ]
+            );
 
-        return true;
+            return true;
+        }
 
     }
     /* Method for fetching all posted comments on specific post from table comments, this is called on in single_post.php. */

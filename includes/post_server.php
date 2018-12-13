@@ -25,7 +25,7 @@ $file_format = strtolower(end($file_format));
 
 print_r($file_format);
 
-if (empty($image) && !in_array($file_format, $allowed_file_extension)) {
+if (!in_array($file_format, $allowed_file_extension)) {
     header('Location: ../views/new_post_form.php?error=wrongformat&title='.$title.'&description='.$description.'&category='.$category);
     exit();
 }

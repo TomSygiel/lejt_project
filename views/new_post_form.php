@@ -35,11 +35,11 @@ session_start();
                     <input type="file" name="image" id="image">
 
                     <label for="blog_title"><h4>Title</h4></label><br/>
-                    <input type="text" name="title" placeholder="Title" value="<?php if(isset($title)) { echo $title;} ?>" id="blog_title"><br/>
+                    <input type="text" name="title" placeholder="Title" value="<?php if(isset($title)) { echo $title;} ?>" id="blog_title" autofocus required><br/>
 
                     <label for="category"><h4>Category: </h4></label><br/>
 
-                    <select name="category_select" value="<?php if(isset($category)) { echo $category;} ?>">
+                    <select name="category_select" value="<?php if(isset($category)) { echo $category;} ?>" autofocus required>
                         <option value="" disabled selected hidden>Please select..</option>
                         <option value="Watches">Watches</option>
                         <option value="Sunglasses">Sunglasses</option>
