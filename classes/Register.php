@@ -1,6 +1,5 @@
 <?php
 
-
 class Register
 
 {
@@ -13,7 +12,8 @@ class Register
         $this->pdo = $pdo;
 
     }
-    /* Method for saving username and hashed password in database */
+    
+    // Method for saving username and hashed password in database
     public function register($username, $password) 
     { 
         try{
@@ -35,8 +35,7 @@ class Register
         
     }
 
-    /* to check for username is already in database */
-
+    // To check for username is already in database
     public function fetched_user($username) 
     { 
 

@@ -11,34 +11,36 @@ if(!isset($_SESSION["username"])){
     header('Location: views/login.php');
 }
 
-// Include Head
-include 'includes/head.php';
-
-// Include Header
+// Include head, header and index_server.php
+require 'includes/head.php';
 include 'includes/header.php';
-
-// Fetch selected posts from database
 include 'includes/index_server.php';
+
 ?>
 
 <body>
 
-<!--Index structure-->
+<!-- Index structure -->
 <main class="container">
 
 <?php
-//Loops through associative array
+
+// Loops through associative array
 foreach($posts as $i => $i_array) {
             
     //Check value of variable i. If 0 echo main blog post.
     if($i === 0){?>
 
     <div class="row">
+
         <section class="col-12 main_post_wrapper">
+
             <div class="main_picture_frame">
-                <img class="main_picture" src="includes/<?= $i_array['image']; ?>">
+                <img class="main_picture" alt="Blog_post_image" src="includes/<?= $i_array['image']; ?>"/>
             </div>
+
             <div class="post_content">
+
                 <div class="post_inner">
                     <h1 class="h1_index"><?= $i_array['title']; ?></h1>
                     <div class="index_italic"><?= $i_array['post_date']; ?></div>
@@ -61,6 +63,7 @@ foreach($posts as $i => $i_array) {
                     <div>
                         <a href="views/single_post.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon far fa-comments"></i></a>
                     </div>
+
                 </div>
 
                 <!-- Edit post with post_id -->
@@ -72,7 +75,9 @@ foreach($posts as $i => $i_array) {
                 <div class="post_share_right">
                     <a href="includes/delete_posts.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon fas fa-trash-alt"></i></a>
                 </div>
+
             </div>
+
         </section>
  
     <?php
@@ -80,9 +85,11 @@ foreach($posts as $i => $i_array) {
     }else{?>
             
         <section class="col-12 col-lg-6 small_post_wrapper">
+
             <div class="secondary_picture_frame">
-                <img class="secondary_picture" src="includes/<?= $i_array['image']; ?>">
+                <img class="secondary_picture" alt ="Blog_post_image" src="includes/<?= $i_array['image']; ?>"/>
             </div>
+
             <div class="small_post_content">
                 <div class="small_post_inner">
                     <h1 class="h2_index"><?= $i_array['title']; ?></h1>
@@ -123,6 +130,7 @@ foreach($posts as $i => $i_array) {
                         <div class="col-lg-3 d-lg-block">
                             <a href="views/single_post.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon_comment far fa-comments"></i></a>
                         </div>
+
                     </div>
                         
                     <!-- Small screens: Link with post_id to edit post-->
@@ -134,23 +142,29 @@ foreach($posts as $i => $i_array) {
                     <div class="d-lg-none post_share_right">
                         <a href="includes/delete_posts.php?post_id=<?= $i_array['post_id'];?>"><i class="mainpic_icon fas fa-trash-alt"></i></a>
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
-    <?php
-        }
-    }
-    ?>
+<?php
 
-    </div> <!-- closing row -->
+        }
+}
+    
+?>
+
+    </div> <!-- Closing row -->
     
     <div class="index_readall_link">
         <i class="fas fa-book-reader"></i><a href="/views/admin_allposts.php"> READ ALL POSTS</a>
     </div>
      
-</main> <!--closing main -->
+</main> <!-- Closing main -->
+
 <br/>
 
-<!-- Include Footer -->
+<!-- Include footer -->
 <?php include 'includes/footer.php';?>
