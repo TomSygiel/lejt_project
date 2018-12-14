@@ -10,7 +10,8 @@ class Login
         $this->pdo = $pdo;
 
     }
-    /* Method for check username and password in database. */
+
+    // Method for check username and password in database.
     public function login($username) 
     { 
 
@@ -28,7 +29,7 @@ class Login
 
         $is_password_correct = password_verify($password, $fetched_user["password"]);
         
-        /* error handling for matching username and password */
+        // Error handling for matching username and password
         if($is_password_correct){
 
             $_SESSION["username"] = $fetched_user["username"];
@@ -42,7 +43,7 @@ class Login
 
         } 
         
-        /* error handling for empty in username form or password form*/
+        // Error handling for empty in username form or password form
         elseif(empty($username) || empty($password)) {
 
             header('Location: ../views/login.php?error=empty');
@@ -51,7 +52,8 @@ class Login
         } 
         
         else{
-                    /* Redirect to login.php with error massage */
+
+            //Redirect to login.php with error massage
             header ('Location: ../views/login.php?error=login_failed');
             
         }
