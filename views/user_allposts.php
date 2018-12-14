@@ -37,9 +37,9 @@ include '../includes/user_server.php';
                     foreach($userposts as $single_user_post){
                     ?>
 
-                    <?php echo "<td>" ?><?php echo $single_user_post['post_date']?><?php echo "</td>"?>
-                    <?php echo "<td>" ?><?php echo $single_user_post['title']?><?php echo "</td>"?>
-                    <?php echo "<td>" ?>  
+                    <?= "<td>" . $single_user_post['post_date'] . "</td>" ?>
+                    <?= "<td>" . $single_user_post['title'] . "</td>" ?>
+                    <?= "<td>" ?>  
 
                     <!-- If string length is more than 200, show 200 texts -->
                     <?php if(strlen($single_user_post['description']) >= 200){
@@ -51,9 +51,9 @@ include '../includes/user_server.php';
                     ?>
 
                     <!-- To read more link to single posts -->
-                    <p class="index_readmore"><a href="../views/single_post.php?post_id=<?php echo $single_user_post['post_id'];?>">Read more</a></p><?php echo "</td>"?>
+                    <p class="index_readmore"><a href="../views/single_post.php?post_id=<?= $single_user_post['post_id'];?>">Read more</a></p><?= "</td>"?>
 
-                    <?php echo "</tr>" ?>
+                    <?= "</tr>" ?>
 
                     <?php
                     }
