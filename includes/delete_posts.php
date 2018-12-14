@@ -8,6 +8,6 @@ $posts = new Post($pdo);
 $posts->deletePostAndComments();
 
 //Redirect to admin_allposts page
-header('Location: ../views/admin_allposts.php');
+header('Location: ../index.php');
 
 ?>
