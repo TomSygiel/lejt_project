@@ -7,10 +7,6 @@ body{
 }
 
 
-.blog_post_window{
-    max-width: 100%;
-}
-
 .main_post_wrapper{
     margin-bottom: 8em;
 }
@@ -224,9 +220,7 @@ body{
 
 
     .post_content{
-        width: calc(100% + 92px);
         bottom: -10%;
-        margin: 0 -4em;
         padding-bottom: 7em;
     }
     
@@ -240,13 +234,13 @@ body{
     
     
     .post_share_left{
-        left: 0;
+        left: -3%;
         background-color: $primary_beige;
     }
     
     
     .post_share_right{
-        right: 0;
+        right: -3%;
         background-color: $primary_beige;
     }
     
@@ -263,9 +257,7 @@ body{
     
     
     .small_post_content{
-        width: calc(100% + 92px);
         bottom: -10%;
-        margin: 0 -4em;
         padding-bottom: 7em;
     }
     

@@ -14,7 +14,7 @@ include '../includes/header.php';
 
             <div class="d-none d-md-block col-12 text-center welcome_note">
 
-                <h1>Welcome to MILLHOUSE</h1>
+                <h1 class="about_contact_h1">Welcome to MILLHOUSE</h1>
 
             </div>
 
@@ -30,7 +30,7 @@ include '../includes/header.php';
 
             <div class="col-sm-12 col-lg-6 text-center text_box">
 
-                <h2>Our Team!</h2>
+                <h2 class="about_h2">Our Team!</h2>
 
                 <p class="about_paragraph">Hello to you, and welcome to Millhouse! We could not be happier to have you with us on this journey. You may not know it, but it is possible that you have been our customer before. In the past, we have predominately concentrated on supplying others with our products. But no more, we are changing and we could not achieve this without our amazing team!</p>
 
@@ -48,7 +48,7 @@ include '../includes/header.php';
 
             <div class="col-sm-12 col-lg-6 text-center text_box">
 
-                <h2>Our Vision</h2>
+                <h2 class="about_h2">Our Vision</h2>
 
                 <p class="about_paragraph">Our vision is a simple one, we are here for you. We have many years of experience in supplying others with quality merchandise. Carefully sourced and often unique products on the market are now at the reach of your fingertips! But do not take our word for it. We have created a blog dedicated to our online store. From daily inspirations, personal favourites, new in, to the latest must-have trend alerts, we have you up to date and up to speed! We encourage community engagement and believe in the power of your voice.</p>
 
@@ -78,7 +78,7 @@ include '../includes/header.php';
 
             <div class="col-sm-12 col-lg-6 text-center text_box">
 
-                <h2>About Us</h2>
+                <h2 class="about_h2">About Us</h2>
 
                 <p class="about_paragraph">It took us a long time to get where we are today! From a wholesaler to retailer, the journey was long and we had many lessons to learn along the way. We believe in the value of learning-by-doing, the decision to cater our services, knowledge and expertise directly to you was an easy one! An we are here to learn and listen, so make sure you join us, and share your thoughts as we begin this exciting journey.</p>
 

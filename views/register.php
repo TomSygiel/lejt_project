@@ -8,7 +8,7 @@ include '../includes/header.php';
 
 <body> 
 
-    <main class="row text-center justify-content-center">
+    <main class="row text-center justify-content-center register__main">
 
         <div class="col-12 col-md-12 text-center card" style="max-width: 30rem;">
 

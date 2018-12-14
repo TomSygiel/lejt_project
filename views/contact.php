@@ -13,7 +13,7 @@ include '../includes/header.php';
         <section class="row">
 
             <div class="d-none d-md-block col-12 text-center welcome_note">
-                <h1>Contact Us!</h1>
+                <h1 class="about_contact_h1">Contact Us!</h1>
             </div>
 
         </section>
