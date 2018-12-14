@@ -1,13 +1,10 @@
 <?php
-
 session_start();
 
+// Including head and header
+require '../includes/head.php';
+include '../includes/header.php';
 ?>
-
-<!--including head-->
-<?php include '../includes/head.php';?>
-
-<?php include '../includes/header.php';?>
 
 <body>
 
@@ -28,9 +25,7 @@ session_start();
         <section class="row Our_team">
 
             <div class="col-sm-12 col-lg-6 text-center about_frame">
-
-                <img src="../images/team_spirit.jpg" alt="Team spirit">
-
+                <img src="../images/team_spirit.jpg" alt="Team spirit"/>
             </div>
 
             <div class="col-sm-12 col-lg-6 text-center text_box">
@@ -41,13 +36,13 @@ session_start();
 
                 <p class="about_paragraph">We work hard, and take our job seriously, but not without taking the opportunity to create something special and meaningful. We are almost like our own little family, a helping hand when needed, a little tension here and there, and lots of love and respect for each other, we all know how it goes! We all have our expertise in a different part of the business, maybe not always see eye to eye, but always bring forward the best solution for you, our customer! From gift ideas to accessories that help you reflect your personality at home, we are here to help along the way, and always go that extra mile! So don’t be shy and make yourself at home at Millhouse!</p>
 
-                <hr class="d-md-none d-lg-none about_hr">
+                <hr class="d-md-none d-lg-none about_hr"/>
 
             </div>
 
         </section>
 
-        <hr class="d-none d-md-block about_hr">
+        <hr class="d-none d-md-block about_hr"/>
 
         <section class="row Our_vision">
 
@@ -63,21 +58,21 @@ session_start();
 
             <div class="col-sm-12 col-lg-6 about_frame">
 
-                <img src="../images/delivery_service.jpg" alt="Organizing work">
+                <img src="../images/delivery_service.jpg" alt="Organizing work"/>
 
-                <hr class="d-md-none d-lg-none about_hr">
+                <hr class="d-md-none d-lg-none about_hr"/>
 
             </div>
 
         </section>
 
-        <hr class="d-none d-md-block about_hr">
+        <hr class="d-none d-md-block about_hr"/>
 
         <section class="row About_us">
 
             <div class="col-sm-12 col-lg-6 about_frame">
 
-                <img src="../images/open_sign.jpg" alt="Open for business">
+                <img src="../images/open_sign.jpg" alt="Open for business"/>
 
             </div>
 
@@ -95,12 +90,9 @@ session_start();
 
     </main>
 
-
-
 </body> 
 
 <br/>
 
-<!--include footer-->
-
+<!-- Include footer -->
 <?php include '../includes/footer.php';?> 

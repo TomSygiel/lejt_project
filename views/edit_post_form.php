@@ -1,28 +1,22 @@
 <?php
-
 session_start();
 
+// Including head and header
+require '../includes/head.php';
+include '../includes/header.php';
 ?>
-
-<!--including head-->
-<?php include '../includes/head.php';?>
-
-<?php include '../includes/header.php';?>
 
 <body class="edit_post_form_page">
 
-    <!--Blog post form with image file upload functionality: Tomasz-->
-
     <div class="row justify-content-center">
         
-         <div class="col-10 col-md-8 col-lg-6 card">
+        <div class="col-10 col-md-8 col-lg-6 card">
 
             <h2 class="blog_heading">Edit Blog Post</h2>
 
                 <?php
 
                 //Fetch selected post from database
-
                 include '../includes/fetch_post_to_edit.php';
 
                 ?>
@@ -44,16 +38,13 @@ session_start();
 
                 </form>         
             
-            </div>
-        
         </div>
-
-        <br/>
-
+        
     </div>
+
+    <br/>
 
 </body> 
 
-<!--include footer-->
-
+<!-- Include footer -->
 <?php include '../includes/footer.php';?> 

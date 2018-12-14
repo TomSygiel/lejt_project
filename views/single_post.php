@@ -1,15 +1,11 @@
 <?php
 session_start();
 
-// Include head
+// Include head, header, database-connection, class SinglePost, class Comments
 include '../includes/head.php';
-// Include header
 include '../includes/header.php';
-// Include database-connection
 include '../includes/database_connection.php';
-// Include SinglePost class
 include '../classes/Single_post.php';
-// Include Comments class
 include '../classes/Comments.php';
 ?>
 
@@ -59,6 +55,7 @@ include '../classes/Comments.php';
                         <div class="col-6 single_post_date">
                             <?php echo "<p>" . $sp_part["post_date"] . "</p>"; ?>
                         </div>
+
                     </div>
 
         <?php
@@ -87,7 +84,7 @@ include '../classes/Comments.php';
                     <!-- Sending $comments_id to single_post_delete_comment_server.php -->
                     <input type="hidden" name="comments_id" value="<?php echo $comments_id; ?>">
 
-                    <br>
+                    <br/>
 
                     <label for="single_comment_submit">Post your comment</label><br/>
 
@@ -108,35 +105,36 @@ include '../classes/Comments.php';
             $comments->all_comments;
             $comments_array = $comments->all_comments;
 
-                     /* Looping through and showing all comments posted on this specific post */
-                     foreach($comments_array as $comments_part){ 
+                    /* Looping through and showing all comments posted on this specific post */
+                    foreach($comments_array as $comments_part){ 
 
                     $comments_id = $comments_part["comments_id"];
-                    ?>
-    
-                            <div class="comment_created_by_content">
-                                <h4><b><?php echo $comments_part["created_by"] . ":"?></b></h4>
-                        
-                                <p><?php echo $comments_part["content"]; ?></p>
-                            </div>
-                            
-                            <div class="comment_date_delete">
-                                <p><i><?php echo $comments_part["comment_date"] . " "; ?></i></p>
-                            </div>
-                            <!-- If logged in as admin, show trashcan so that you can delete all the comments if you wish. Also show trashcan if a user made comments - so that that specific user can delete it's own comments -->
-                            <div class="delete_comment_trash">
-                            <?php if($_SESSION["admin"] == 1 || $_SESSION["username"] === $comments_part["created_by"]){ ?>
-                                <a href="../includes/single_post_delete_comment_server.php?post_id=<?= $comments_part["post_id"]?>&comments_id=<?= $comments_part["comments_id"];?>"><i class="fas fa-trash-alt"></i></a>
-        <?php 
-                    }
         ?>
-                            </div>
+    
+                        <div class="comment_created_by_content">
+                            <h4><b><?php echo $comments_part["created_by"] . ":"?></b></h4>
+                        
+                            <p><?php echo $comments_part["content"]; ?></p>
+                        </div>
+                            
+                        <div class="comment_date_delete">
+                            <p><i><?php echo $comments_part["comment_date"] . " "; ?></i></p>
+                        </div>
 
-                            <hr class="hr_printed_comment">
+                        <!-- If logged in as admin, show trashcan so that you can delete all the comments if you wish. Also show trashcan if a user made comments - so that that specific user can delete it's own comments -->
+                        <div class="delete_comment_trash">
+                        <?php if($_SESSION["admin"] == 1 || $_SESSION["username"] === $comments_part["created_by"]){ ?>
+                            <a href="../includes/single_post_delete_comment_server.php?post_id=<?= $comments_part["post_id"]?>&comments_id=<?= $comments_part["comments_id"];?>"><i class="fas fa-trash-alt"></i></a>
+                    <?php 
+                        }
+                    ?>
+                        </div>
 
-            <?php
-                }
-            ?>
+                        <hr class="hr_printed_comment"/>
+
+                <?php
+                    }
+                ?>
         
         </section>
 
@@ -144,7 +142,5 @@ include '../classes/Comments.php';
 
 </main>
 
-<?php
-// Include footer
-include '../includes/footer.php';
-?>
+<!-- Include footer -->
+<?php include '../includes/footer.php';?>
