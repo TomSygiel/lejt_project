@@ -24,7 +24,7 @@ include 'includes/index_server.php';
 <body>
 
 <!--Index structure-->
-<main class="container blog_post_window">
+<main class="container">
 
 <?php
 //Loops through associative array
