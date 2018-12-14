@@ -49,7 +49,7 @@ require '../includes/admin_server.php';
 
                         <?php
                         }else{
-                            echo '<td class="admin_description">' . $single_admin["description"] . ' ...' ?> <p class="index_readmore"><a href="../views/single_post.php?post_id=<?= $single_admin['post_id'];?>">Read more</a></p><?= "</td>"?>
+                            echo '<td class="admin_description">' . $single_admin["description"]?> <p class="index_readmore"><a href="../views/single_post.php?post_id=<?= $single_admin['post_id'];?>">Read more</a></p><?= "</td>"?>
 
                         <?php
                         }
