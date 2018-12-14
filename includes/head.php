@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="<?= $SITE_URL ?>/css/style.css" type="text/css">
 
     <!-- Title icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/MILLHOUSElogo.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/MILLHOUSElogo.ico">
 
     <title>Millhouse</title>
 </head>
