@@ -1,8 +1,9 @@
 <?php
 session_start();
 
-include "database_connection.php";
-include "../classes/Comments.php";
+// Include database connection and class Comments
+require 'database_connection.php';
+include '../classes/Comments.php';
 
 $content = $_POST["single_comment_text"];
 $post_id = $_POST["post_id"];
