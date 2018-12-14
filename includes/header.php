@@ -1,12 +1,12 @@
-<?php 
+<?php
     include 'siteurl.php';
-    include 'database_connection.php';
+    require 'database_connection.php';
 ?>
 
 <header class="header_wrapper">
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> vill ändra färgen på navbaren ...gör en egen klass och ta bort bottstrap stylingen-->
+    
     <nav class="navbar navbar-expand-md">
-        <!--ändra färgerna på rubrikerna i navbaren, jobba med egna klasser eller använd deras vilket är bäst-->
+        
         <div class="navbar-icons">
             <a class="navbar-brand" href="<?php if(isset($_SESSION["username"])){
                 echo '../index.php';
@@ -19,42 +19,59 @@
                     echo "<a class='navbar-brand' href='../views/admin_allposts.php'><i class='fas fa-pen header_icons'></i></a>";
                     }
             ?>
-
         </div>
 
-        <a class="navbar-brand navbar_logo" href="../index.php"><img class="navbar_image" src="<?= $SITE_URL ?>/images/logo_dark.png" alt="Millhouse logo"></a>
+        <a class="navbar-brand navbar_logo" href="../index.php">
+            <img class="navbar_image" src="<?= $SITE_URL ?>/images/logo_dark.png" alt="Millhouse logo"/>
+        </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars header_icons"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
             <ul class="navbar-nav ml-auto">
+
                 <li class="nav-item nav_item_top">
                     <a class="nav-link text-uppercase" href="../views/about.php">About</a>
                 </li>
+
                 <li class="nav-item">
 
                     <?php
+
                     // If not admin echo all post link to user_allposts
                     if(isset($_SESSION["admin"]) && ($_SESSION["admin"]) == 0){
                         echo "<a class='nav-link text-uppercase' href='../views/user_allposts.php'>All posts</a>";
+
                     //If admin echo all post link to admin_allposts
                     }else{
                         echo "<a class='nav-link text-uppercase' href='../views/admin_allposts.php'>All Posts</a>";
-                    }?>
+                    }
+                    
+                    ?>
 
                 </li>
+                
                 <li class="nav-item">
                     <a class="nav-link text-uppercase" href="../views/contact.php">Contact</a>
                 </li>
+
             </ul>
+
         </div>
+
     </nav>
+    
     <div class="logged_in">
+
             <?php
                 if (isset($_SESSION["username"])){ ?>
                     <p>You are logged in as <b><?= $_SESSION["username"]; ?></b><br>
                     <a href="../includes/logout.php">Log out</a></p>
             <?php } ?>
+
     </div>
+
 </header>
