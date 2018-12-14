@@ -9,7 +9,6 @@ class Post {
     }
 
 //Remove post from database
-
 public function deletePostAndComments() {
 
     if(isset($_GET['post_id'])) {

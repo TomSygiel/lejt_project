@@ -25,7 +25,7 @@ include '../classes/Comments.php';
                     <div class="row text-center">
 
                         <div class="col-12 single_post_title">
-                            <?php echo "<h1>" . $sp_part["title"] . "</h1>"; ?>
+                            <?= "<h1>" . $sp_part["title"] . "</h1>"; ?>
                         </div>
 
                     </div>
@@ -33,11 +33,11 @@ include '../classes/Comments.php';
                     <div class="row text-center">
 
                         <div class="col-12 col-md-6 single_post_image_frame">
-                            <img class="single_post_image" src="../includes/<?php echo $sp_part['image']; ?>" alt="blog post image">
+                            <img class="single_post_image" src="../includes/<?= $sp_part['image']; ?>" alt="blog post image">
                         </div>
 
                         <div class="col-12 col-md-6 text-center single_post_description">
-                            <?php echo "<p>" . $sp_part["description"] . "</p>"; ?>
+                            <?= "<p>" . $sp_part["description"] . "</p>"; ?>
                         </div>
 
                     </div>
@@ -45,7 +45,7 @@ include '../classes/Comments.php';
                     <div class="row">
                             
                         <div class="col-6 single_post_category">
-                            <?php echo "<p>" . "Category: " . $sp_part["category"] . "</p>" . " "; ?>
+                            <?= "<p>" . "Category: " . $sp_part["category"] . "</p>" . " "; ?>
                         </div>  
 
                     </div>
@@ -53,7 +53,7 @@ include '../classes/Comments.php';
                     <div class="row">
 
                         <div class="col-6 single_post_date">
-                            <?php echo "<p>" . $sp_part["post_date"] . "</p>"; ?>
+                            <?= "<p>" . $sp_part["post_date"] . "</p>"; ?>
                         </div>
 
                     </div>
@@ -66,7 +66,7 @@ include '../classes/Comments.php';
 
         <section class="card col-12 col-md-6 single_comment_form">
 
-            <form action="../includes/single_post_comment_server.php?post_id=<?php echo $post_id; ?>" method="POST">
+            <form action="../includes/single_post_comment_server.php?post_id=<?= $post_id; ?>" method="POST">
 
                 <h2 class="single_h2_form">Comment</h2>
 
@@ -76,13 +76,13 @@ include '../classes/Comments.php';
                     class="single_comment_text" rows="5"></textarea>
 
                     <!-- Sending $_SESSION["username"] to single_post_comment_server.php -->
-                    <input type="hidden" name="comment_username" value="<?php echo $_SESSION["username"]; ?>">
+                    <input type="hidden" name="comment_username" value="<?= $_SESSION["username"]; ?>">
 
                     <!-- Sending $post_id to single_post_comment_server.php -->
-                    <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
+                    <input type="hidden" name="post_id" value="<?= $post_id; ?>">
 
                     <!-- Sending $comments_id to single_post_delete_comment_server.php -->
-                    <input type="hidden" name="comments_id" value="<?php echo $comments_id; ?>">
+                    <input type="hidden" name="comments_id" value="<?= $comments_id; ?>">
 
                     <br/>
 
@@ -112,13 +112,13 @@ include '../classes/Comments.php';
         ?>
     
                         <div class="comment_created_by_content">
-                            <h4><b><?php echo $comments_part["created_by"] . ":"?></b></h4>
+                            <h4><b><?= $comments_part["created_by"] . ":"?></b></h4>
                         
-                            <p><?php echo $comments_part["content"]; ?></p>
+                            <p><?= $comments_part["content"]; ?></p>
                         </div>
                             
                         <div class="comment_date_delete">
-                            <p><i><?php echo $comments_part["comment_date"] . " "; ?></i></p>
+                            <p><i><?= $comments_part["comment_date"] . " "; ?></i></p>
                         </div>
 
                         <!-- If logged in as admin, show trashcan so that you can delete all the comments if you wish. Also show trashcan if a user made comments - so that that specific user can delete it's own comments -->
