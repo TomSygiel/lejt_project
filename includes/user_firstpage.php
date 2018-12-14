@@ -25,7 +25,7 @@ foreach($posts as $i => $i_array) {
         <section class="col-12 main_post_wrapper">
 
             <div class="main_picture_frame">
-                <img class="main_picture" src="<?= $i_array['image']; ?>"/>
+                <img class="main_picture" src="<?= $i_array['image']; ?>" alt="blogpost_image"/>
             </div>
 
             <div class="post_content">
@@ -71,7 +71,7 @@ foreach($posts as $i => $i_array) {
         <section class="col-12 col-lg-6 small_post_wrapper">
 
             <div class="secondary_picture_frame">
-                <img class="secondary_picture" src="<?= $i_array['image']; ?>"/>
+                <img class="secondary_picture" src="<?= $i_array['image']; ?>" alt="blogpost_image"/>
             </div>
 
             <div class="small_post_content">
