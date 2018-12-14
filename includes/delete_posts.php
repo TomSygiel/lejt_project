@@ -7,7 +7,7 @@ include '../classes/Posts.php';
 $posts = new Post($pdo);
 $posts->deletePostAndComments();
 
-//Redirect to admin_allposts page
+//Redirect to index page
 header('Location: ../index.php');
 
 ?>
