@@ -1,8 +1,9 @@
 <?php
 session_start();
 
-include "database_connection.php";
-include "../classes/Comments.php";
+// Include database connection and class Comments
+include 'database_connection.php';
+include '../classes/Comments.php';
 
 $delete_comment = new Comments($pdo);
 $delete_comment->deleteComments($_GET["comments_id"]);

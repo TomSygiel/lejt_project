@@ -1,9 +1,6 @@
 <?php
 
 //Error handling reads url and shows error message on screen
-
-
-
 $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
     if (strpos($fullUrl, "error=empty") == true) {

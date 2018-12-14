@@ -1,6 +1,6 @@
 <?php
 
-// Include database connection
+// Include database connection and class Index_posts
 include 'database_connection.php';
 include '../classes/Index_posts.php';
 
@@ -9,8 +9,11 @@ $posts = $object->getAllPosts();
 
 //Selects from database in descending order
 $statement = $pdo->prepare("SELECT * FROM `posts` ORDER BY post_id DESC LIMIT 3");
+
 //Execute it
 $statement->execute();
+
 //Fetch every row that it returns. $posts is now an Associative array
 $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
