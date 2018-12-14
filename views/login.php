@@ -12,8 +12,6 @@ include '../includes/header.php';
 ?>
 
 <body>
-
-    <br/>
    
     <main class="row text-center justify-content-center login_main">
         
