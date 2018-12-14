@@ -1,28 +1,22 @@
 <?php
-
 session_start();
 
+// Including head and header
+require '../includes/head.php';
+include '../includes/header.php';
 ?>
-
-<!--including head-->
-<?php include '../includes/head.php';?>
-
-<?php include '../includes/header.php';?>
 
 <body class="blog_form_page">
 
-    <!--Blog post form with image file upload functionality: Tomasz-->
-
     <div class="row justify-content-center form_row">
         
-         <div class="col-10 col-md-8 col-lg-6 card blog_form">
+        <div class="col-10 col-md-8 col-lg-6 card blog_form">
 
             <h2 class="blog_heading">New Blog Post</h2>
 
                 <?php
 
-                //Error handling, checking for empty fields: Tomasz
-
+                // Include new_post_error_handling
                 include '../includes/new_post_error_handling.php';
 
                 ?>
@@ -60,15 +54,13 @@ session_start();
 
                 </form>
             
-            </div>
-        
         </div>
-
-        <br/>
-
+        
     </div>
+
+    <br/>
 
 </body> 
 
-<!--include footer-->
+<!-- Include footer -->
 <?php include '../includes/footer.php';?> 
