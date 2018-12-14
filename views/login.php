@@ -12,8 +12,10 @@ include '../includes/header.php';
 ?>
 
 <body>
+
+    <br/>
    
-    <main class="row text-center justify-content-center">
+    <main class="row text-center justify-content-center login_main">
         
            <div class="col-12 col-md-12 text-center card" style="max-width: 30rem;">
             
@@ -41,9 +43,11 @@ include '../includes/header.php';
         
     </main>
 
+    <br/>
+
     <p class="member">Not a member? <a class="register_link" href="register.php">Register here</a></p>
 
-</body>  
+</body> 
 
 <br/>
 

@@ -39,6 +39,14 @@ body {
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px){
 
+    .register__main {
+        margin: 5em 0;
+    }
+
+    .login_main {
+        margin: 1em 0;
+    }
+
 }
 
 // Large devices (desktops, 992px and up)
