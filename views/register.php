@@ -1,11 +1,10 @@
 <?php
 session_start();
+
+// Including head and header
+require '../includes/head.php';
+include '../includes/header.php';
 ?>
-
-<!-- include Head -->
-<?php include '../includes/head.php';?>
-
-<?php include '../includes/header.php';?>
 
 <body> 
 
@@ -17,12 +16,8 @@ session_start();
                
                 <h2 class="register">Register</h2>
 
-                
-                <!-- include error register handling -->
-
-
-
-                <?php include '../includes/error_register.php'; ?>
+                <!-- Include error handling for register-->
+                <?php include '../includes/error_register.php';?>
 
                 <label for="login_username">Username</label><br/>
 
@@ -46,7 +41,7 @@ session_start();
 
 <br/>
 
-<!-- include Head -->
+<!-- Include footer -->
 <?php include '../includes/footer.php';?> 
 
 
