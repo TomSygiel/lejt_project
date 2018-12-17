@@ -9,17 +9,12 @@
     bottom: 0;
     min-width: 100%;
     padding: 5em 0 5em 0;
-
-        @media (min-width: 768px){
-        }
-
+    min-height: 100%;
+    
     .footer_heading{
         font-family: $font_main;
         font-weight: 100;
         font-size: 1.5rem;
-
-            @media (min-width: 768px){
-            }
     }
     
     hr{
