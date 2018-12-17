@@ -33,6 +33,14 @@ padding: 1em;
     font-family: $font_main;
     font-size: 1.5rem;
     padding: 1em;
+
+    @media (min-width: 576px){
+        padding: 1em 8em;
+    }
+
+    @media (min-width: 992px){
+        padding: 1em;
+    }
     
 }
 
