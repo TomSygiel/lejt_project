@@ -73,7 +73,7 @@ include '../classes/Comments.php';
                     <label for="single_comment_text">What do you think?</label><br/>
                     
                     <textarea type="text" name="single_comment_text" placeholder="What do you think?" id="single_comment_text"
-                    class="single_comment_text" rows="5" autofocus required></textarea>
+                    class="single_comment_text" rows="5" required></textarea>
 
                     <!-- Sending $_SESSION["username"] to single_post_comment_server.php -->
                     <input type="hidden" name="comment_username" value="<?= $_SESSION["username"]; ?>">
